@@ -1,16 +1,16 @@
 # Submitting the Assignment
 
-This homework is due on Thursday, 9/3/2020 at 11:59PM PDT (GMT-7).
+This homework is due on **Thursday, 9/3/2020 at 11:59PM PDT (GMT-7)**.
 
-See [the main readme](README.md#submitting-assignments) for submission instructions. The assignment number for this homework is hw0.
+See [the main readme](README.md#submitting-assignments) for submission instructions.
 
-You should make sure that all code you modify belongs to files with TODO\(hw0\) comments in them. A full list of files that you may modify follows:
+You should make sure that all code you modify belongs to files with TODO\(hw0\) comments in them. A full list of files that you may modify are as follows:
 
 * `databox/StringDataBox.java`
 
 ### Grading
 
-* 100% of your grade will be made up of tests released to you \(the tests that we
+* 100% of your grade will be made up of test released to you \(the test that we
 
   provided in `database.databox.TestWelcome`\)
 

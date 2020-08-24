@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This homework is due Thursday, 9/3/2020 at 11:59PM PDT (GMT-7). It is worth 0% of your overall grade, but failure to complete it may result in being administratively dropped from the class.
+This homework is due **Thursday, 9/3/2020 at 11:59PM PDT (GMT-7)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
 
 ## Prerequisites
 
