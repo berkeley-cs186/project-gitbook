@@ -1,6 +1,6 @@
 # Overview
 
-![The official unofficial mascot of the class projects](.gitbook/assets/derpydb-small%20%281%29%20%281%29.jpg)
+![The official unofficial mascot of the class projects](.gitbook/assets/derpydb-small%20%281%29%20%281%29%20%281%29.jpg)
 
 MOOCbase is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 
@@ -120,7 +120,7 @@ This interface is partially implemented by the `AbstractTransactionContext` abst
 
 ### Database.java
 
-The `Database` class represents the entire database. It is the public interface of our database - we do not parse SQL statements in our database, and instead, users of our database use it like a Java library.
+The `Database` class represents the entire database. It is the public interface of our database - users of our database can use it like a Java library.
 
 All work is done in transactions, so to use the database, a user would start a transaction with `Database#beginTransaction`, then call some of `Transaction`'s numerous methods to perform selects, inserts, and updates.
 
