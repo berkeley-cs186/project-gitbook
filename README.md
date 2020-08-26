@@ -28,7 +28,7 @@ The `common` directory contains bits of useful code and general interfaces that 
 
 ### concurrency
 
-The `concurrency` directory contains a skeleton for adding multigranularity locking to the database. You will be implementing this in HW4.
+The `concurrency` directory contains a skeleton for adding multigranularity locking to the database. You will be implementing this in Project 4.
 
 ### databox
 
@@ -48,7 +48,7 @@ String s = x.getString();       // An exception is thrown, since x is not a stri
 
 ### index
 
-The `index` directory contains a skeleton for implementing B+ tree indices. You will be implementing this in HW2.
+The `index` directory contains a skeleton for implementing B+ tree indices. You will be implementing this in Project 2.
 
 ### memory
 
@@ -76,13 +76,13 @@ The `DiskSpaceMangerImpl` class is the implementation of the disk space manager,
 
 The `query` directory contains classes for managing and manipulating queries.
 
-The various operator classes are query operators \(pieces of a query\), some of which you will be implementing in HW3.
+The various operator classes are query operators \(pieces of a query\), some of which you will be implementing in Project 3.
 
-The `QueryPlan` class represents a plan for executing a query \(which we will be covering in more detail later in the semester\). It currently executes the query as given \(runs things in logical order, and performs joins in the order given\), but you will be implementing a query optimizer in HW3 to run the query in a more efficient manner.
+The `QueryPlan` class represents a plan for executing a query \(which we will be covering in more detail later in the semester\). It currently executes the query as given \(runs things in logical order, and performs joins in the order given\), but you will be implementing a query optimizer in Project 3 to run the query in a more efficient manner.
 
 ### recovery
 
-The `recovery` directory contains a skeleton for implementing database recovery a la ARIES. You will be implementing this in HW5.
+The `recovery` directory contains a skeleton for implementing database recovery a la ARIES. You will be implementing this in Project 5.
 
 ### table
 
@@ -102,7 +102,7 @@ The `PageDirectory` class is an implementation of `HeapFile` that uses a page di
 
 #### **table/stats**
 
-The `table/stats` directory contains classes for keeping track of statistics of a table. These are used to compare the costs of different query plans, when you implement query optimization in HW4.
+The `table/stats` directory contains classes for keeping track of statistics of a table. These are used to compare the costs of different query plans, when you implement query optimization in Project 4.
 
 ### Transaction.java
 
