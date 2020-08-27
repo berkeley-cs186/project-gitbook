@@ -8,11 +8,11 @@ To submit a project, navigate to the cloned repo in a terminal and stage the fil
 
 `git add src/main/java/edu/berkeley/cs186/database/databox/StringDataBox.java`
 
-to stage your change to `StringDataBox.java`. Once your changes are staged commit them with `git commit -m "Put your own informative commit message here"`. Finally use`git push` to __push all of your changes to the remote GitHub repository created by GitHub Classroom. 
+to stage your change to `StringDataBox.java`. Once your changes are staged commit them with `git commit -m "Put your own informative commit message here"`. Finally use`git push` to push all of your changes to the remote GitHub repository created by GitHub Classroom.
 
 ## Submitting to Gradescope
 
-Once your changes are on GitHub go to the CS186 Gradescope and click on the project for which you want to submit your code. Select GitHub for the submission method \(if it hasn't been selected already\), and select the repository and branch with the code you want to upload and submit. If you have not done this before, then you will have to link your GitHub account to Gradescope using the "Connect to GitHub" button. If you are unable to find the appropriate repository, then you might need to go to [https://github.com/settings/applications](https://github.com/settings/applications), click Gradescope, and grant access to the `berkeley-cs186-student` organization. 
+Once your changes are on GitHub go to the CS186 Gradescope and click on the project for which you want to submit your code. Select GitHub for the submission method \(if it hasn't been selected already\), and select the repository and branch with the code you want to upload and submit. If you have not done this before, then you will have to link your GitHub account to Gradescope using the "Connect to GitHub" button. If you are unable to find the appropriate repository, then you might need to go to [https://github.com/settings/applications](https://github.com/settings/applications), click Gradescope, and grant access to the `berkeley-cs186-student` organization.
 
 Note that you are only allowed to modify certain files for each assignment, and changes to other files you are not allowed to modify will be discarded when we run tests.
 
