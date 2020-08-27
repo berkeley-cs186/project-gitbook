@@ -34,7 +34,7 @@ We recommend setting up a local development environment by installing Java 8 loc
 
 [Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions. Java 14 isn't compatible due to an unfortunate namespace collision with the
+If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11 (the most recent version used by 61B). We won't be able to support any new syntaxes or features introduced in Java 12 or later. Java 14 isn't compatible at all due to an unfortunate namespace collision with the
 experimental `java.lang.Record` class, so you'll need to set up your project structure to use a lower
 version of the JDK if you run into the following error:
 
