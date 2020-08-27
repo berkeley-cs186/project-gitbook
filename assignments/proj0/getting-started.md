@@ -34,7 +34,7 @@ We recommend setting up a local development environment by installing Java 8 loc
 
 [Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-If you have a newer version of Java installed that should be fine as well, we'll do our best to support grading for those versions as well.
+If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions.
 
 To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
 
