@@ -24,7 +24,7 @@ For each project, we will provide a GitHub Classroom link. Follow the link to cr
 
 `git clone https://github.com/berkeley-cs186-student/fa20-proj0-oski`
 
-The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i).
+The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i?cid=24).
 
 ## Setting up your local development environment
 
