@@ -20,7 +20,11 @@ If you'd like to use git for managing your own code versioning, there are many g
 
 ### Fetching the released code
 
-For each project, we will provide a GitHub Classroom link. Follow the link to create a GitHub repository with the starter code for the project you are working on. Use `git clone` to get a local copy of the newly created repository. The invitation link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i).
+For each project, we will provide a GitHub Classroom link. Follow the link to create a GitHub repository with the starter code for the project you are working on. Use `git clone` to get a local copy of the newly created repository. For example, if your GitHub username is `oski` after being assigned your repo through GitHub Classroom you would run:
+
+`git clone https://github.com/berkeley-cs186-student/fa20-proj0-oski`
+
+The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i).
 
 ## Setting up your local development environment
 
@@ -30,7 +34,7 @@ We recommend setting up a local development environment by installing Java 8 loc
 
 [Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-If you have another version of Java installed it's probably fine to use it as long as you do not use any features not in Java 8. You should run tests somewhat frequently inside the container to make sure that your code works with our setup.
+If you have a newer version of Java installed that should be fine as well, we'll do our best to support grading for those versions as well.
 
 To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
 

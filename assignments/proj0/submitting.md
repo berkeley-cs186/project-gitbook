@@ -6,7 +6,7 @@ This project is due on **Thursday, 9/3/2020 at 11:59PM PDT (GMT-7)**.
 
 To submit a project, navigate to the cloned repo in a terminal and stage the files for your submission using `git add`. For example, in this project you would run:
 
-`git commit src/main/java/edu/berkeley/cs186/database/databox/StringDataBox.java` 
+`git add src/main/java/edu/berkeley/cs186/database/databox/StringDataBox.java`
 
 to stage your change to `StringDataBox.java`. Once your changes are staged commit them with `git commit -m "Put your own informative commit message here"`. Finally use`git push` to __push all of your changes to the remote GitHub repository created by GitHub Classroom. 
 
