@@ -107,8 +107,8 @@ More details on testing can be found in the [Testing](testing.md) section.
 
 SQLite doesn't support every SQL feature covered in lecture, specifically:
 
-* There is support for `LEFT OUTER JOIN` but not `RIGHT OUTER` or `FULL OUTER`. 
-  * To get equivalent output to `RIGHT OUTER` you can reverse the order of the tables \(i.e. `A RIGHT JOIN B` is the same as `B LEFT JOIN A`. 
+* There is support for `LEFT OUTER JOIN` but not `RIGHT OUTER` or `FULL OUTER`.
+  * To get equivalent output to `RIGHT OUTER` you can reverse the order of the tables \(i.e. `A RIGHT JOIN B` is the same as `B LEFT JOIN A`.
   * While it isn't required to complete this assignment, the equivalent to `FULL OUTER JOIN` can be done by `UNION`ing `RIGHT OUTER` and `LEFT OUTER`
 * There is no regex match \(`~`\) tilde operator. You can use `LIKE` instead.
 * There is no `ANY` or `ALL` operator.
@@ -179,6 +179,7 @@ _Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](ht
 * Note: `binid` 0 corresponds to the lowest salaries, and `binid` 9 corresponds to the highest. The ranges are left-inclusive \(i.e. `[low, high)`\) -- so the `high` value is excluded. For example, if bin 2 has a `high` value of 100000, salaries of 100000 belong in bin 3, and bin 3 should have a `low` value of 100000.
 * Note: The `high` value for bin 9 may be inclusive\).
 * Note: The test for this question is broken into two parts. Use `python3 test.py -q 4ii_bins_0_to_8` and `python3 test.py -q 4ii_bin_9` to run the tests
+* Hidden testing advice: we will be testing the case where a bin has zero player salaries in it. The correct behavior in this case is to display the correct `binid`, `low` and `high` with a `count` of zero, NOT just excluding the bin altogether.
 
 Some useful information:
 
