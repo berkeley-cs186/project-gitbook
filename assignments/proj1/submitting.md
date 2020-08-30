@@ -2,7 +2,7 @@
 
 This project is due on **Thursday, 9/10/2020 at 11:59PM PDT (GMT-7)**.
 
-Push your changes to your GitHub Classroom private repository and then submit through Gradescope. You may find it helpful to read through the project 0 submission procedure again [here](submitting.md).
+Push your changes to your GitHub Classroom private repository and then submit through Gradescope. You may find it helpful to read through the project 0 submission procedure again [here](submitting.md). The autograder will be released some time after the SQL II lecture.
 
 A full list of files that you may modify are as follows:
 

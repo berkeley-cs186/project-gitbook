@@ -1,6 +1,6 @@
 # Your Tasks
 
-![Databaseball](../../.gitbook/assets/derpydb-proj1%20%281%29.jpg)
+![Databaseball](../../.gitbook/assets/databaseball.jpg)
 
 In this project we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/) \(our friends at the San Francisco Giants tell us they use it!\) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2019. It includes data from the two current leagues \(American and National\), four other "major" leagues \(American Association, Union Association, Players League, and Federal League\), and the National Association of 1871-1875.
 
