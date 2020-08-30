@@ -10,7 +10,7 @@ A full list of files that you may modify are as follows:
 
 ### Grading
 
-* $public-weight$ of your grade will be made up of test released to you
-* $hidden-weight$ will be determined by hidden tests unreleased tests that we will run on your submission after the deadline
+* 50% of your grade will be made up of test released to you
+* 50% will be determined by hidden tests unreleased tests that we will run on your submission after the deadline
 * This project will be worth 4% of your overall grade in the class
 
