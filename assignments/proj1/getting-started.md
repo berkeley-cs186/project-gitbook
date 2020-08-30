@@ -52,7 +52,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Extract the data set
 
-Unzip the `lahman.db.zip` file that came with the skeleton code. You should now have a `lahman.db` file in your `fa20-proj0-yourname` directory \(the same place as the `proj1.sql` file\)
+Unzip the `lahman.db.zip` file that came with the skeleton code. You should now have a `lahman.db` file in your `fa20-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 ## Running the tests
 
