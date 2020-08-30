@@ -38,7 +38,7 @@ SQLite comes pre-installed, but it is the wrong version.
 1. Visit the download page linked above and navigate to the section **Precompiled Binaries for Mac OS X \(x86\)**. Click on the link **sqlite-tools-osx-x86-\*.zip** to download the binary.
 2. Unzip the file. There should be a `sqlite3` file in the directory after extraction.
 3. Navigate to the folder containing the `sqlite3` file and check that the version is at least 3.8.3: `cd path/to/sqlite_folder` `./sqlite3 --version`
-4. Move the `sqlite3` file into your `fa20-proj-yourname` directory \(the same place as the `proj1.sql` file\)
+4. Move the `sqlite3` file into your `fa20-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 #### Ubuntu
 
