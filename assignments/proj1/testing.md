@@ -25,10 +25,10 @@ Become familiar with the UNIX [diff](http://en.wikipedia.org/wiki/Diff) format, 
 ```text
 - 1|1|1
 + Jumbo|Diaz|1984
-+ Walter|Young|198
++ Walter|Young|1980
 ```
 
-indicates that your output has an extra `1|1|1` \(the `-` at the beginning means the expected output _doesn't_ include this line\) and is missing the lines `Jumboungo|Diaz|1984` and `Walter|Young|198` \(the plus at the beginning means the _does_ does include those lines\). If there is neither a `+` nor `-` at the beginning then it means that the line is in both your output and the expected output.
+indicates that your output has an extra `1|1|1` \(the `-` at the beginning means the expected output _doesn't_ include this line\) and is missing the lines `Jumbo|Diaz|1984` and `Walter|Young|1980` \(the plus at the beginning means the _does_ does include those lines\). If there is neither a `+` nor `-` at the beginning then it means that the line is in both your output and the expected output.
 
 If you care to look at the query outputs directly, ours are located in the `expected_output` directory. Your view output should be located in your solution's `your_output` directory once you run the tests.
 

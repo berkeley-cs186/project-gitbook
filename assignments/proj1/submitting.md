@@ -8,7 +8,7 @@ A full list of files that you may modify are as follows:
 
 * `proj1.sql`
 
-### Grading
+## Grading
 
 * 50% of your grade will be made up of tests released to you
 * 50% will be determined by hidden tests unreleased tests that we will run on your submission after the deadline
