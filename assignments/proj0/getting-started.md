@@ -34,20 +34,18 @@ We recommend setting up a local development environment by installing Java 8 loc
 
 [Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11 (the most recent version used by 61B). We won't be able to support any new syntaxes or features introduced in Java 12 or later. Java 14 isn't compatible at all due to an unfortunate namespace collision with the
-experimental `java.lang.Record` class, so you'll need to set up your project structure to use a lower
-version of the JDK if you run into the following error:
+If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11 \(the most recent version used by 61B\). We won't be able to support any new syntaxes or features introduced in Java 12 or later. Java 14 isn't compatible at all due to an unfortunate namespace collision with the experimental `java.lang.Record` class, so you'll need to set up your project structure to use a lower version of the JDK if you run into the following error:
 
-```
+```text
 /src/main/java/edu/berkeley/cs186/database/Database.java:[619,50] reference to Record is ambiguous
 [ERROR]   both class edu.berkeley.cs186.database.table.Record in edu.berkeley.cs186.database.table and class java.lang.Record in java.lang match
 ```
 
 To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
 
-![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%281%29.png)
+![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%281%29%20%281%29.png)
 
-If launching IntelliJ takes you to an existing workspace instead of showing you the popup above you can open the project by navigating to `File -> New -> Project From Existing Sources`  and then select the `pom.xml` file.
+If launching IntelliJ takes you to an existing workspace instead of showing you the popup above you can open the project by navigating to `File -> New -> Project From Existing Sources` and then select the `pom.xml` file.
 
 ### Running tests in IntelliJ
 

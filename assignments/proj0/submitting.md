@@ -24,7 +24,7 @@ Once you've submitted you should see a score of 1.0/1.0. If so, congratulations!
 
 ## Grading
 
-* 100% of your grade will be made up of test released to you \(the test that we
+* 100% of your grade will be made up of one test released to you \(the test that we
 
   provided in `database.databox.TestWelcome`\)
 
