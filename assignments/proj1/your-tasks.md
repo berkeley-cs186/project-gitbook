@@ -1,6 +1,6 @@
 # Your Tasks
 
-![Databaseball](../../.gitbook/assets/databaseball%20%281%29.jpg)
+![Databaseball](../../.gitbook/assets/databaseball%20%281%29%20%281%29.jpg)
 
 In this project we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/) \(our friends at the San Francisco Giants tell us they use it!\) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2019. It includes data from the two current leagues \(American and National\), four other "major" leagues \(American Association, Union Association, Players League, and Federal League\), and the National Association of 1871-1875.
 
@@ -66,7 +66,7 @@ It is supplemented by these tables:
   HomeGames - Number of homegames played by each team in each ballpark
 ```
 
-For more detailed information, see the [docs online](http://www.seanlahman.com/files/database/readme2017.txt).
+For more detailed information, see the [docs online](http://www.seanlahman.com/files/database/readme2019.txt).
 
 ## Writing Queries
 
@@ -136,6 +136,7 @@ Note: Some birth years have no players; your answer can simply skip those years.
 **ii.** Find the people who were successfully inducted into the Hall of Fame and played in college at a school located in the state of California. For each person, return their `namefirst`, `namelast`, `playerid`, `schoolid`, and `yearid` in _descending_ order of `yearid`. Break ties on `yearid` by `schoolid, playerid` \(ascending\). For this question, `yearid` refers to the year of induction into the Hall of Fame.
 
 * Note: a player may appear in the results multiple times \(once per year in a college in California\).
+* Note: There's a discrepancy between the documentation for the data set and the data set itself. The `schools.schoolState` column is actually `schools.state` in the data set.
 
 **iii.** Find the `playerid`, `namefirst`, `namelast` and `schoolid` of all people who were successfully inducted into the Hall of Fame -- whether or not they played in college. Return people in _descending_ order of `playerid`. Break ties on `playerid` by `schoolid` \(ascending\). \(Note: `schoolid` will be `NULL` if they did not play in college.\)
 
