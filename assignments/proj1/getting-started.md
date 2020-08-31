@@ -14,9 +14,9 @@ The GitHub Classroom link for this project is on the Project 1 release post on P
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues (i.e. the page froze or some error message appeared), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/fa20-proj1-{{username}}`, replacing `{{username}}` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal (again replacing `{{username}}` with your GitHub username):
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/fa20-proj1-{{username}}`, replacing `{{username}}` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `{{username}}` with your GitHub username\):
 
-```
+```text
 git clone https://github.com/berkeley-cs186/fa20-proj1
 cd fa20-proj1/
 git remote remove origin

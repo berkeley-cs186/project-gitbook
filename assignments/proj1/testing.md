@@ -28,13 +28,13 @@ Become familiar with the UNIX [diff](http://en.wikipedia.org/wiki/Diff) format, 
 + Walter|Young|1980
 ```
 
-indicates that your output has an extra `1|1|1` \(the `-` at the beginning means the expected output _doesn't_ include this line\) and is missing the lines `Jumbo|Diaz|1984` and `Walter|Young|1980` \(the plus at the beginning means the _does_ does include those lines\). If there is neither a `+` nor `-` at the beginning then it means that the line is in both your output and the expected output.
+indicates that your output has an extra `1|1|1` \(the `-` at the beginning means the expected output _doesn't_ include this line but your output has it\) and is missing the lines `Jumbo|Diaz|1984` and `Walter|Young|1980` \(the plus at the beginning means the expected output _does_ include those lines but your output is missing it\). If there is neither a `+` nor `-` at the beginning then it means that the line is in both your output and the expected output \(your output is correct for that line\).
 
 If you care to look at the query outputs directly, ours are located in the `expected_output` directory. Your view output should be located in your solution's `your_output` directory once you run the tests.
 
 **Note:** For queries where we don't specify the order, it doesn't matter how you sort your results; we will reorder before comparing. Note, however, that our test query output is sorted for these cases, so if you're trying to compare yours and ours manually line-by-line, make sure you use the proper ORDER BY clause \(you can determine this by looking in `test.py`\). Different versions of SQLite handle floating points slightly differently so we also round certain floating point values in our own queries. A full list is specified here for convenience:
 
-```text
+```sql
 SELECT * FROM q0;
 SELECT * FROM q1i ORDER BY namefirst, namelast, birthyear;
 SELECT * FROM q1ii ORDER BY namefirst, namelast, birthyear;
