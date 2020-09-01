@@ -146,8 +146,9 @@ Note: Some birth years have no players; your answer can simply skip those years.
 
 * Baseball note: Slugging Percentage is not provided in the database; it is computed according to a [simple formula](https://en.wikipedia.org/wiki/Slugging_percentage) you can calculate from the data in the database.
 * SQL note: You should compute `slg` properly as a floating point number---you'll need to figure out how to convince SQL to do this!
-* Data set note: The online documentation `batting` mentions two columns `2B` and `3B`. On your local copy of the data set these have been renamed `H2B` and `H3B` respectively \(columns starting with numbers tedious to write queries on\).
+* Data set note: The online documentation `batting` mentions two columns `2B` and `3B`. On your local copy of the data set these have been renamed `H2B` and `H3B` respectively \(columns starting with numbers are tedious to write queries on\).
 * Data set note: The column `H` o f the `batting` table represents all hits = \(\# singles\) + \(\# doubles\) + \(\# triples\) + \(\# home runs\), not just \(\# singles\) so you’ll need to account for some double-counting
+* If a player played on multiple teams during the same season \(for example `anderma02` in 2006\) treat their time on each team separately for this calculation
 
 **ii.** Following the results from Part i, find the `playerid`, `namefirst`, `namelast` and `lslg` \(Lifetime Slugging Percentage\) for the players with the top 10 Lifetime Slugging Percentage. Lifetime Slugging Percentage \(LSLG\) uses the same formula as Slugging Percentage \(SLG\), but it uses the number of singles, doubles, triples, home runs, and at bats each player has over their entire career, rather than just over a single season.
 
