@@ -71,7 +71,7 @@ We've provided a `sync()` method in `LeafNode` and `InnerNode`. The purpose of `
 
 Much like the methods from the previous task, you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L139) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75:
 
-![](../../.gitbook/assets/vis.gif)
+![](../../.gitbook/assets/vis%20%281%29.gif)
 
 After completing this task you should be passing `TestLeafNode::testSmallBulkLoad` and `TestBPlusTree::testSimpleBulkLoad`.
 
