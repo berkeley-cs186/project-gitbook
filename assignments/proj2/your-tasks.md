@@ -1,6 +1,6 @@
 # Your Tasks
 
-![Datarake](../../.gitbook/assets/b_tree.png)
+![](../../.gitbook/assets/b_tree.jpg)
 
 In this project you'll be implementing B+ tree indices. Since you'll be diving into the code base for the first time we've provided an introduction to the existing skeleton code.
 
@@ -18,9 +18,7 @@ A record in a table is uniquely identified by its page number \(the number of th
 
 ### Index
 
-The [`index`](
-https://github.com/berkeley-cs186/fa20-moocbase/tree/master/src/test/java/edu/berkeley/cs186/database/index
-) directory contains a partial implementation of an Alternative 2 B+ tree, an implementation that you will complete in this project. Some of the important files in this directory are:
+The [`index`](https://github.com/berkeley-cs186/fa20-moocbase/tree/master/src/test/java/edu/berkeley/cs186/database/index%20) directory contains a partial implementation of an Alternative 2 B+ tree, an implementation that you will complete in this project. Some of the important files in this directory are:
 
 * [`BPlusTree.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java) - This file contains the class that manages the structure of the B+ tree. Every B+ tree maps keys of a type `DataBox` \(a single value or "cell" in a table\) to values of type `RecordId` \(identifiers for records on data pages\). An example of inserting and a retrieving records using keys can be found in the comments at [`@BPlusTree.java#L12`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L124)
 * [`BPlusNode.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java) - A B+ node represents a node in the B+ tree, and contains similar methods to `BPlusTree` such as `get`, `put` and `delete`. `BPlusNode` is an abstract class and is implemented as either a `LeafNode` or an `InnerNo`
@@ -86,8 +84,7 @@ Finally, you will need to implement the following methods in `BPlusTree`:
 
 In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L396) inner class in `BPlusTree.java`.
 
-After this you should pass all the Project 2 tests we have provided to you \(and any you add yourselves\). These are all the provided tests in [`database.index.*`](
-https://github.com/berkeley-cs186/fa20-moocbase/tree/master/src/test/java/edu/berkeley/cs186/database/index).
+After this you should pass all the Project 2 tests we have provided to you \(and any you add yourselves\). These are all the provided tests in [`database.index.*`](https://github.com/berkeley-cs186/fa20-moocbase/tree/master/src/test/java/edu/berkeley/cs186/database/index).
 
 ## Debugging
 
