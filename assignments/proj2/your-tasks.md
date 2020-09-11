@@ -1,6 +1,6 @@
 # Your Tasks
 
-![](../../.gitbook/assets/b_tree.jpg)
+![Datarake](../../.gitbook/assets/b_tree.jpg)
 
 In this project you'll be implementing B+ tree indices. Since you'll be diving into the code base for the first time we've provided an introduction to the existing skeleton code.
 
