@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Thursday, 9/10/2020 at 11:59PM PDT (GMT-7)**. It is worth of 4% your overall grade in the class.
+This project is due **Thursday, 9/10/2020 at 11:59PM PDT \(GMT-7\)**. It is worth of 4% your overall grade in the class.
 
 ## Prerequisites
 
