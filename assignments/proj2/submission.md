@@ -14,9 +14,9 @@ Make sure that your code does _not_ use any \(non-final\) static variables -- th
 
 ### Grading
 
-* $public-weight$ of your grade will be made up of tests released to you \(the tests that we provided in
+* 60% of your grade will be made up of tests released to you \(the tests that we provided in
 
   `database.index.*`\).
 
-* $hidden-weight$ of your grade will be made up of hidden, unreleased tests that we will run on your submission after the deadline.
+* 40% of your grade will be made up of hidden, unreleased tests that we will run on your submission after the deadline.
 
