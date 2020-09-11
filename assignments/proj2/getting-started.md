@@ -37,7 +37,7 @@ Once you both have access to the repo you can share files over git, pushing and 
 
 ![](../../.gitbook/assets/image%20%288%29.png)
 
-![Invite your partner](../../.gitbook/assets/image%20%289%29.png)
+![Invite your partner \(replace JoeBruin with your partner&apos;s GitHub username\)](../../.gitbook/assets/image%20%289%29.png)
 
 ## Debugging Issues with GitHub Classroom
 

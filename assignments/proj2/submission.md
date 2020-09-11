@@ -12,7 +12,11 @@ You should make sure that all code you modify belongs to files with `TODO(proj2)
 
 Make sure that your code does _not_ use any \(non-final\) static variables -- this may cause odd behavior when running with the autograder vs. in your IDE \(tests run through the IDE often run with a new instance of Java for each test, so the static variables get reset, but multiple tests per Java instance may be run when using maven, where static variables _do not_ get reset\).
 
-### Grading
+### Gradescope
+
+Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for project 0. If you worked with a partner make sure to add your partner to the submission so they can get credit.
+
+### Grade breakdown
 
 * 60% of your grade will be made up of tests released to you \(the tests that we provided in
 

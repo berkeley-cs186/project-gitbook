@@ -36,13 +36,13 @@ You should read through all of the code in the [`index`](https://github.com/berk
 
 ### LockContext objects
 
-There are a couple of points in this project, where a method will take in objects of the type `LockContext`. You do not need to worry too much about these objects right now; they will become more relevant in Project 4.
+There are a few parts in this project where a method will take in objects of the type `LockContext`. You do not need to worry too much about these objects right now; they will become more relevant in Project 4.
 
 If there are any methods you wish to call that require these objects, use the ones passed in to the method you are implementing, or defined in the class of the method you are implementing \(`this.lockContext` for `BPlusTree` and `this.treeContext` for `InnerNode` and `LeafNode`\).
 
 ### Optional&lt;T&gt; objects
 
-This part of the project makes extensive use of `Optional<T>` objects. We recommend reading through the documentation [here](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) to get a feel for them. In particular, we use Optionals for values that may not necessarily present. For example, a call to `get` may not yield any value for a key that doesn't correspond to a record, in which case an `Optional.empty()` would be returned. If the key did correspond to a record, a populated `Optional.of(RecordId(pageNum, entryNum))` would be returned instead.
+This part of the project makes extensive use of `Optional<T>` objects. We recommend reading through the documentation [here](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) to get a feel for them. In particular, we use `Optional`s for values that may not necessarily present. For example, a call to `get` may not yield any value for a key that doesn't correspond to a record, in which case an `Optional.empty()` would be returned. If the key did correspond to a record, a populated `Optional.of(RecordId(pageNum, entryNum))` would be returned instead.
 
 ## Your Tasks
 
