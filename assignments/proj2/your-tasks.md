@@ -8,7 +8,7 @@ In this project you'll be implementing B+ tree indices. Since you'll be diving i
 
 ### DataBox
 
-Every modern database supports a variety of data types to use in records, and MOOCBase is no exception. For consistency and convenience most implementations choose to have their own internal representation of their data types built on top of the implementation language's defaults. In MOOCBase we represent them using data boxes. 
+Every modern database supports a variety of data types to use in records, and MOOCBase is no exception. For consistency and convenience most implementations choose to have their own internal representation of their data types built on top of the implementation language's defaults. In MOOCBase we represent them using data boxes.
 
 A data box can contain data of the following types: `Boolean` \(1 byte\), `Int` \(4 bytes\), `Float` \(4 bytes\), `Long` \(8 bytes\) and `String(N)` \(N bytes\). For this project you'll be working with the abstract [`DataBox`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/databox/DataBox.java) class which implements `Comparable<DataBox>`. You may find it useful to review how the [Comparable interface works](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) for this project.
 
@@ -67,7 +67,7 @@ After implementing `fromBytes`, you will need to implement the following methods
 
 For more information on what these methods should do refer to the comments in `BPlusTree` and `BPlusNode`.
 
-Each of these methods, although split into three different classes, can be viewed as one recursive action each - the `BPlusTree` method starts the call, the `InnerNode` method is the recursive case, and the `LeafNode` method is the base case. It's suggested that you work on one method at a time \(over all three classes\). 
+Each of these methods, although split into three different classes, can be viewed as one recursive action each - the `BPlusTree` method starts the call, the `InnerNode` method is the recursive case, and the `LeafNode` method is the base case. It's suggested that you work on one method at a time \(over all three classes\).
 
 We've provided a `sync()` method in `LeafNode` and `InnerNode`. The purpose of `sync()` is to ensure that representation of a node in our buffers is up-to-date with the representation of the node in program memory. **Do not forget to call `sync()` when implementing the two mutating methods** \(`put` and `remove`\); it's easy to forget.
 
@@ -77,7 +77,7 @@ Much like the methods from the previous task, you'll need to implement `bulkLoad
 
 ![](../../.gitbook/assets/vis.gif)
 
-After completing this task you should be passing `TestLeafNode::testSmallBulkLoad` and `TestBPlusTree::testSimpleBulkLoad`. 
+After completing this task you should be passing `TestLeafNode::testSmallBulkLoad` and `TestBPlusTree::testSimpleBulkLoad`.
 
 ### Task 4: Scans
 
