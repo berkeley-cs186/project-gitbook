@@ -51,7 +51,7 @@ Here's a diagram that shows the structure of the project with color-coded compon
 ![\(Click on the image to zoom in\)](../../.gitbook/assets/impldetails.jpg)
 
 * Green Boxes: functions that you need to implement
-* White boxes: next to each function, contains a quick summary of the important points that you need to consider for that function. **To find more detailed descriptions look at the comments of each method**\). 
+* White boxes: next to each function, contains a quick summary of the important points that you need to consider for that function. **To find more detailed descriptions look at the comments of each method**.
 * Orange boxes: hints for each function which may point you to helper functions.
 
 ## Your Tasks
@@ -60,7 +60,7 @@ Here's a diagram that shows the structure of the project with color-coded compon
 
 You should first implement the `fromBytes` in `LeafNode`. This method reads a `LeafNode` from a page. For information on how a leaf node is serialized, see `LeafNode::toBytes`. For an example on how to read a node from disk, see `InnerNode::fromBytes`. Your code should be similar to the inner node version but should account for the differences between how inner nodes and leaf nodes are serialized. You may find the documentation in [`ByteBuffer.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/common/ByteBuffer.java#L5) helpful.
 
-Once you have implemented `fromBytes`, you should be passing `TestLeafNode::testToAndFromBytes`.
+Once you have implemented `fromBytes` you should be passing `TestLeafNode::testToAndFromBytes`.
 
 ### Task 2: get, getLeftmostLeaf, put, remove
 
@@ -84,7 +84,7 @@ Finally, you will need to implement the following methods in `BPlusTree`:
 * `scanAll`
 * `scanGreaterEqual`
 
-In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L396) inner class in `BPlusTree.java`to complete these two methods. 
+In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L396) inner class in `BPlusTree.java`to complete these two methods.
 
 After completing this Task you should be passing `TestBPlusTree::testRandomPuts`
 

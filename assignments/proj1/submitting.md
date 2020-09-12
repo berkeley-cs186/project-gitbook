@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Thursday, 9/10/2020 at 11:59PM PDT (GMT-7)**.
+This project is due on **Thursday, 9/10/2020 at 11:59PM PDT \(GMT-7\)**.
 
 Push your changes to your GitHub Classroom private repository and then submit through Gradescope. You may find it helpful to read through the project 0 submission procedure again [here](submitting.md). Alternatively you can submit your `proj1.sql` file directly \(make sure it is named `proj1.sql` or the autograder won't recognize it\).
 
