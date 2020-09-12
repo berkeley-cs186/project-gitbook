@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Thursday, 9/24/2020 at 11:59PM PDT \(GMT-7\)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if they want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kducz9b1i3h78i?cid=5)!
+This project is due **Thursday, 9/24/2020 at 11:59PM PDT (GMT-7)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if they want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kducz9b1i3h78i?cid=5)!
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ You should watch the B+ Trees lecture before beginning this project. Later parts
 “_As a member of the UC Berkeley community, I act with honesty, integrity, and respect for others._”  
 — UC Berkeley Honor Code
 
-**Read through the academic integrity guidelines** [**here**](https://piazza.com/class/kducz9b1i3h78i?cid=42)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://sa.berkeley.edu/student-code-of-conduct-section6) and a grade penalty based on the severity of the infraction.
+**Read through the academic integrity guidelines** [**here**](https://piazza.com/class/kducz9b1i3h78i?cid=42)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://sa.berkeley.edu/student-code-of-conduct-section6) and a grade penalty based on the severity of the infraction. 
 
 As long as you follow the guidelines there isn't anything to worry about here. While we do rely on software to find possible cases of academic dishonesty every case is reviewed by multiple TAs who can filter out false positives.
 
@@ -29,7 +29,7 @@ If you're using IntelliJ you can follow the instructions [in project 0](../proj0
 
 If you choose to work with a partner and want to share your code over GitHub you'll need to pick between the two of you who's copy of the starter code you want to work off of. For example, if users `OskiBear` and `JoeBruin` want to collaborate then they might both choose to work off of `fa20-proj2-OskiBear`. In that case `OskiBear` would navigate to "Settings", "Manage access", then "Invite teams or people" and add `JoeBruin`\(see images below\). `JoeBruin` should receive an email afterwards containing an invitation to the repo. Alternatively `OskiBear` can share the link to the repo after sending the invitation.
 
-Once you both have access to the repo you can share files over git, pushing and pulling updates as you collaborate. **Do not add anyone other than your project partner to your repository.** You aren't allowed to share code with any students other than your project partner for this project.
+Once you both have access to the repo you can share files over git, pushing and pulling updates as you collaborate. **Do not add anyone other than your project partner to your repository.** You aren't allowed to share code with any students other than your project partner for this project. 
 
 ![Navigate to your fa20-proj2-yourname repo&apos;s Settings](../../.gitbook/assets/image%20%287%29.png)
 
