@@ -44,6 +44,16 @@ If there are any methods you wish to call that require these objects, use the on
 
 This part of the project makes extensive use of `Optional<T>` objects. We recommend reading through the documentation [here](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) to get a feel for them. In particular, we use `Optional`s for values that may not necessarily be present. For example, a call to `get` may not yield any value for a key that doesn't correspond to a record, in which case an `Optional.empty()` would be returned. If the key did correspond to a record, a populated `Optional.of(RecordId(pageNum, entryNum))` would be returned instead.
 
+### Project Structure Diagram
+
+Here's a diagram that shows the structure of the project with color-coded components. You may find it helpful to refer back to this after you start working on the tasks.
+
+![\(Click on the image to zoom in\)](../../.gitbook/assets/impldetails.png)
+
+* Green Boxes: functions that you need to implement
+* White boxes: next to each function, contains a quick summary of the important points that you need to consider for that function. **To find more detailed descriptions look at the comments of each method**\). 
+* Orange boxes: hints for each function which may point you to helper functions.
+
 ## Your Tasks
 
 ### Task 1: LeafNode::fromBytes
