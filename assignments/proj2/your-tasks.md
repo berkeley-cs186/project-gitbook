@@ -48,7 +48,7 @@ This part of the project makes extensive use of `Optional<T>` objects. We recomm
 
 Here's a diagram that shows the structure of the project with color-coded components. You may find it helpful to refer back to this after you start working on the tasks.
 
-![\(Click on the image to zoom in\)](../../.gitbook/assets/impldetails.png)
+![\(Click on the image to zoom in\)](../../.gitbook/assets/impldetails.jpg)
 
 * Green Boxes: functions that you need to implement
 * White boxes: next to each function, contains a quick summary of the important points that you need to consider for that function. **To find more detailed descriptions look at the comments of each method**\). 
