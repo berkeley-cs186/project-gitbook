@@ -98,7 +98,7 @@ After this you should pass all the Project 2 tests we have provided to you \(and
 
 ## Debugging
 
-To help you debug, we have implemented the `toDotPDFFile` method of `BPlusTree`. You can add a call to this method in a test to generate a PDF file of your B+ tree.
+To help you debug we have implemented the `toDotPDFFile` method of `BPlusTree`. You can add a call to this method in a test to generate a PDF file of your B+ tree.
 
 For example,
 
