@@ -19,15 +19,15 @@ As long as you follow the guidelines there isn't anything to worry about here. W
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 2 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i). Once your private repo is set up clone the project 2 skeleton code onto your local machine. You'll be working off of a fresh copy of the MOOCBase skeleton instead of reusing the one from project 0.
+The GitHub Classroom link for this project is in the Project 2 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i). Once your private repo is set up clone the Project 2 skeleton code onto your local machine. You'll be working off of a fresh copy of the MOOCBase skeleton instead of reusing the one from Project 0.
 
 ### Setting up your local development environment
 
-If you're using IntelliJ you can follow the instructions [in project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Your Tasks](your-tasks.md) and begin working on the assignment.
+If you're using IntelliJ you can follow the instructions [in Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Your Tasks](your-tasks.md) and begin working on the assignment.
 
 ## Adding a partner
 
-If you choose to work with a partner and want to share your code over GitHub you'll need to pick between the two of you whose copy of the starter code you want to work off of. For example, if users `OskiBear` and `JoeBruin` want to collaborate then they might both choose to work off of `fa20-proj2-OskiBear`. In that case `OskiBear` would navigate to "Settings", "Manage access", then "Invite teams or people" and add `JoeBruin`\(see images below\). `JoeBruin` should receive an email afterwards containing an invitation to the repo. Alternatively `OskiBear` can share the link to the repo after sending the invitation.
+Once you've found a partner **fill out** [**this form**](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. If you want to share your code over GitHub you'll need to pick between the two of you whose copy of the starter code you want to work off of. For example, if users `OskiBear` and `JoeBruin` want to collaborate then they might both choose to work off of `fa20-proj2-OskiBear`. In that case `OskiBear` would navigate to "Settings", "Manage access", then "Invite teams or people" and add `JoeBruin`\(see images below\). `JoeBruin` should receive an email afterwards containing an invitation to the repo. Alternatively `OskiBear` can share the link to the repo after sending the invitation.
 
 Once you both have access to the repo you your partner can clone the repo to get a local copy to work off of. From there you can share files over git, pushing and pulling updates as you collaborate. **Do not add anyone other than your project partner to your repository.** You aren't allowed to share code with any students other than your project partner for this project. 
 

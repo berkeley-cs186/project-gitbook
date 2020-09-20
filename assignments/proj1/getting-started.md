@@ -38,7 +38,7 @@ If you don't have access to your repo at all after following these steps, feel f
 
 Check if you already have sqlite3 instead by opening a terminal and running `sqlite3 --version`. Any version at 3.8.3 or higher should be fine.
 
-The simplest way to start using SQLite is to download a precompiled binary from the [SQLite website](http://www.sqlite.org/download.html). The latest version of SQLite at the time of writing is 3.33.0, but you can check for additional updates on the website.
+If you don't already have SQLite on your machine, the simplest way to start using it is to download a precompiled binary from the [SQLite website](http://www.sqlite.org/download.html). The latest version of SQLite at the time of writing is 3.33.0, but you can check for additional updates on the website.
 
 #### Windows <a id="windows"></a>
 
