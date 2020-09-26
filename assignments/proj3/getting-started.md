@@ -25,7 +25,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Once you've found a partner fill out [this form](https://forms.gle/gHif9nNmHoJSpKB37) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 
