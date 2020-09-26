@@ -27,17 +27,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner **fill out** [**this form**](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. If you want to share your code over GitHub you'll need to pick between the two of you whose copy of the starter code you want to work off of. For example, if users `OskiBear` and `JoeBruin` want to collaborate then they might both choose to work off of `fa20-proj2-OskiBear`. In that case `OskiBear` would navigate to "Settings", "Manage access", then "Invite teams or people" and add `JoeBruin`\(see images below\). `JoeBruin` should receive an email afterwards containing an invitation to the repo. Alternatively `OskiBear` can share the link to the repo after sending the invitation.
-
-Once you both have access to the repo you your partner can clone the repo to get a local copy to work off of. From there you can share files over git, pushing and pulling updates as you collaborate. **Do not add anyone other than your project partner to your repository.** You aren't allowed to share code with any students other than your project partner for this project. 
-
-![Navigate to your fa20-proj2-yourname repo&apos;s Settings](../../.gitbook/assets/image%20%287%29.png)
-
-![Go to Manage Access](../../.gitbook/assets/image%20%286%29.png)
-
-![](../../.gitbook/assets/image%20%288%29.png)
-
-![Invite your partner \(replace JoeBruin with your partner&apos;s GitHub username\)](../../.gitbook/assets/image%20%289%29.png)
+Once you've found a partner fill out ****[**this form**](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 
@@ -53,7 +43,7 @@ git push -u origin master
 
 Then, you can proceed as usual.
 
-### 404 Not Found
+#### 404 Not Found
 
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i).
 
