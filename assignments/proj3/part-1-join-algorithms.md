@@ -33,7 +33,7 @@ The `fetchNextRecord` method should, as its name suggests, fetches the next reco
 * Case 3: Neither the right nor left iterators have values to yield, but there's more right pages
 * Case 4: Neither right nor left iterators have values nor are there more right pages, but there are still left blocks
 
-We've provided the following animation to give you a feel for how the blocks, pages, and records are traversed during the nested looping process. Identify where each of these cases take place in the diagram may help guide you as what to do in each case.
+We've provided the following animation to give you a feel for how the blocks, pages, and records are traversed during the nested looping process. Identifying where each of these cases take place in the diagram may help guide on what to do in each case.
 
 ![BNLJ Animation, B=4](../../.gitbook/assets/bnlj-final.gif)
 
@@ -66,7 +66,7 @@ You will need to implement the `sortRun`, `mergeSortedRuns`, `mergePass`, and `s
 * `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\).
 * `mergeSortedRuns(runs)` should return a new run given a list of sorted runs.
 * `mergePass(runs)` should perform a single merge pass of external mergesort, given a list of all the sorted runs from the previous pass.
-* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data.
+* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
 
 Each of these methods may be tested independently, so you **must** implement each one as described. You may add additional helper methods as you see fit.
 
