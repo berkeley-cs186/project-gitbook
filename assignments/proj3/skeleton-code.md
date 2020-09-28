@@ -46,7 +46,7 @@ The `query` directory contains what are called query operators. A single query t
 
 [`JoinOperator.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) is the base class of all the join operators. **Reading this file and understanding the methods given to you can save you a lot of time on Part 1.** It provides methods you may need to deal with tables and the current transaction. You should not be dealing directly with `Table` objects nor `TransactionContext` objects while implementing join algorithms in Part 1 \(aside from passing them into methods that require them\).
 
-Some helper methods you might want to be aware of are located [here](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/query/TestJoinOperator.java#L235-L253).
+Some helper methods you might want to be aware of are located [here](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java#L167-L207).
 
 ### Scan Operators
 
