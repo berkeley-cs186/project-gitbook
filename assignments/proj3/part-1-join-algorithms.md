@@ -37,7 +37,7 @@ We've provided the following animation to give you a feel for how the blocks, pa
 
 ![BNLJ Animation, B=4](../../.gitbook/assets/bnlj-final.gif)
 
-Animations of SNLJ and PNLJ can be found [here](https://imgur.com/a/xhoQpTa). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
+Animations of SNLJ and PNLJ can be found [here](../../common/misc/nested-loop-join-animations.md). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
 
 Once you have implemented `BNLJOperator`, all the PNLJ and BNLJ tests in `TestJoinOperator` should pass.
 
