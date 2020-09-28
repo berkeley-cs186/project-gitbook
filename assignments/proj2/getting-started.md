@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Thursday, 9/24/2020 at 11:59PM PDT \(GMT-7\)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if they want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kducz9b1i3h78i?cid=5)!
+This project is due **Thursday, 9/24/2020 at 11:59PM PDT (GMT-7)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if they want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kducz9b1i3h78i?cid=5)!
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ You should watch the B+ Trees lecture before beginning this project. Later parts
 “_As a member of the UC Berkeley community, I act with honesty, integrity, and respect for others._”  
 — UC Berkeley Honor Code
 
-**Read through the academic integrity guidelines** [**here**](https://piazza.com/class/kducz9b1i3h78i?cid=42)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://sa.berkeley.edu/student-code-of-conduct-section6) and a grade penalty based on the severity of the infraction.
+**Read through the academic integrity guidelines** [**here**](https://piazza.com/class/kducz9b1i3h78i?cid=42)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://sa.berkeley.edu/student-code-of-conduct-section6) and a grade penalty based on the severity of the infraction. 
 
 As long as you follow the guidelines there isn't anything to worry about here. While we do rely on software to find possible cases of academic dishonesty every case is reviewed by multiple TAs who can filter out false positives.
 
@@ -27,7 +27,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner fill out **\*\*\[**this form\*\*\]\([https://forms.gle/REQPugJuLDEK8hfr7](https://forms.gle/REQPugJuLDEK8hfr7)\) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Once you've found a partner fill out ****[**this form**](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 

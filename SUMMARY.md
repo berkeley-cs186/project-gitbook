@@ -25,9 +25,9 @@
   * [Part 2: Query Optimization](assignments/proj3/part-2-query-optimization.md)
   * [Testing](assignments/proj3/testing.md)
   * [Submitting the Assignment](assignments/proj3/submitting-the-assignment.md)
-* [Project 4: Concurrency](assignments/proj4.md)
-* [Project 5: Recovery](assignments/proj5.md)
-* [Project 6: NoSQL](assignments/proj6.md)
+* [Project 4: Concurrency](assignments/proj4/README.md)
+* [Project 5: Recovery](assignments/proj5/README.md)
+* [Project 6: NoSQL](assignments/proj6/README.md)
 
 ## Common
 
