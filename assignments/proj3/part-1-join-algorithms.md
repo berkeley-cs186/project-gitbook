@@ -35,7 +35,7 @@ The `fetchNextRecord` method should, as its name suggests, fetches the next reco
 
 We've provided the following animation to give you a feel for how the blocks, pages, and records are traversed during the nested looping process. Identifying where each of these cases take place in the diagram may help guide on what to do in each case.
 
-![BNLJ Animation, B=4](../../.gitbook/assets/bnlj-final.gif)
+![](../../.gitbook/assets/bnlj-slower.gif)
 
 Animations of SNLJ and PNLJ can be found [here](../../common/misc/nested-loop-join-animations.md). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
 
