@@ -8,6 +8,8 @@ Hash codes can be negative. Make sure you handle that case. The hash codes can a
 
 This means that you're doing recursive partitioning infinitely. The most likely cause of this is partitioning using the the same hash function every single time. Make sure to use the `hashFunc` object we provide, which should be a different hash function for each pass.
 
+If you're certain that you're doing both of those things, make sure your condition for recursive partitioning is correct. An off by one \(for example `<=` vs `<` \) is enough to make it so you never reach the build and probe phase. 
+
 ### Code running forever/recursion depth limit exceeded/java.lang.OutOfMemoryError
 
 Make sure every time you make a recursive call to run that you increment the pass number.
