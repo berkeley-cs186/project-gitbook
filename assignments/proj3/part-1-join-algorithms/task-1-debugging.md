@@ -116,7 +116,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ## Cases
 
-Here's examples of the cases look mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next record that should be considered for the join.
+Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next record that should be considered for the join.
 
 ![](../../../.gitbook/assets/cases.png)
 
@@ -321,5 +321,33 @@ the join when the mismatch occurred. Key:
  - A was the record that you actually yielded
 ```
 
-In the above case make sure that by then of case 4 that you've set leftRecordIterator to be an iterator over left page \#2. 
+In the above case make sure that by then of case 4 that you've set leftRecordIterator to be an iterator over left page \#2.
+
+```text
+== MISSING OR EXTRA RECORDS == 
+         +---------+---------+
+ Left  0 | ? ? ? ? | ? ? ? ? |
+ Page  0 | ? ? ? ? | ? ? ? ? |
+ #2    0 | ? ? ? ? | ? ? ? ? |
+       0 | ? ? ? ? | ? ? ? ? |
+         +---------+---------+
+ Left  0 | x x x x | x x x x |
+ Page  0 | x x x x | x x x x |
+ #1    0 | x x x x | x x x x |
+       0 | x x x x | x x x x |
+         +---------+---------+
+           0 0 0 0    0 0 0 0  
+           Right      Right    
+           Page #1    Page #2  
+
+You either excluded or included records when you shouldn't have. Key:
+ - x means we expected this record to be included and you included it
+ - + means we expected this record to be excluded and you included it
+ - ? means we expected this record to be included and you excluded it
+ - r means you included this record multiple times
+ - a blank means we expected this record to be excluded and you excluded it
+
+```
+
+In the above case you're probably doing something wrong in case 4. In particular make sure that your code resets your right record iterator to be an iterator over the first page of the right relation. Remember that you you'll need to reset your `rightIterator` to do this!
 
