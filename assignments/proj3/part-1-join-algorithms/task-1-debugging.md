@@ -118,7 +118,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 Here's examples of the cases look mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next record that should be considered for the join.
 
-![](../../../.gitbook/assets/image%20%284%29.png)
+![](../../../.gitbook/assets/cases.png)
 
 Try to think about what should be advanced and what should be reset in each case. As a reminder:
 

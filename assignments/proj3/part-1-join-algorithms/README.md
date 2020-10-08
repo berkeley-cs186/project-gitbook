@@ -22,9 +22,9 @@ PNLJ has already been implemented for you as a special case of BNLJ with B=3. Th
 
 #### Block Nested Loop Join \(BNLJ\)
 
-You should read through the given skeleton code in `BNLJOperator`. The `next` and `hasNext` methods of the iterator have already been filled out for you, but you will need to implement the `fetchNextRecord` method, which should do most of the heavy lifting of the BNLJ algorithm.
+You should read through the given skeleton code in `BNLJOperator`. The `next` and `hasNext` methods of the iterator have already been filled out for you, but you will need to implement the `fetchNextRecord` method, which should do most of the heavy lifting of the BNLJ algorithm. 
 
-There are also two suggested helper methods: `fetchNextLeftBlock`, which should fetch the next non-empty block of left table pages from `leftIterator`, and `fetchNextRightPage`, which should fetch the next non-empty page of the right table \(from `rightIterator`\). We suggest breaking up the problem into smaller subproblems, and adding more helper methods than the two suggested ones -- it will make debugging your code much easier.
+There are also two suggested helper methods: `fetchNextLeftBlock`, which should fetch the next non-empty block of left table pages from `leftIterator`, and `fetchNextRightPage`, which should fetch the next non-empty page of the right table \(from `rightIterator`\). We suggest breaking up the problem into smaller subproblems, and adding more helper methods than the two suggested ones -- it will make debugging your code much easier. 
 
 The `fetchNextRecord` method should, as its name suggests, fetches the next record of the join output. When implementing this method there are 4 important cases you should consider:
 
@@ -66,7 +66,7 @@ You will need to implement the `sortRun`, `mergeSortedRuns`, `mergePass`, and `s
 * `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\).
 * `mergeSortedRuns(runs)` should return a new run given a list of sorted runs.
 * `mergePass(runs)` should perform a single merge pass of external mergesort, given a list of all the sorted runs from the previous pass.
-* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
+* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/$sem$-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
 
 Each of these methods may be tested independently, so you **must** implement each one as described. You may add additional helper methods as you see fit.
 
@@ -91,4 +91,6 @@ Follow the submission instructions [here](../submitting-the-assignment.md) for t
 * `database.query.TestJoinOperator` 
 * `database.query.TestGraceHashJoin`
 * `database.query.TestSortOperator`
+
+
 
