@@ -66,7 +66,7 @@ You either excluded or included records when you shouldn't have. Key:
  - a blank means we expected this record to be excluded and you excluded it
 ```
 
-In this example we expect every single record in the left table to be joined with every single table in the right table. The question marks on the top row of the box tells you that you're missing 4 records. A likely reason for why this is the case is that your join logic exits too early, before the last left record is ever compared against the right records. The exact cause of this particular problem is stopping iteration as soon as `!this.leftRecordIterator.hasNext()`, before considering the last left record against any right records.
+In this example we expect every single record in the left table to be joined with every single table in the right table. The question marks on the top row of the box tell you that you're missing 4 records. A likely reason for why this is the case is that your join logic exits too early, before the last left record is ever compared against the right records. The exact cause of this particular problem is stopping iteration as soon as `!this.leftRecordIterator.hasNext()`, before considering the last left record against any right records.
 
 Here's a more complicated case that we see in office hours a lot in testPNLJ2x2Full :
 
