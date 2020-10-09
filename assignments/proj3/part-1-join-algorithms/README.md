@@ -66,7 +66,7 @@ You will need to implement the `sortRun`, `mergeSortedRuns`, `mergePass`, and `s
 * `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\).
 * `mergeSortedRuns(runs)` should return a new run given a list of sorted runs.
 * `mergePass(runs)` should perform a single merge pass of external mergesort, given a list of all the sorted runs from the previous pass.
-* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/$sem$-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
+* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
 
 Each of these methods may be tested independently, so you **must** implement each one as described. You may add additional helper methods as you see fit.
 
