@@ -8,7 +8,7 @@ Note on terminology: in this project, "children" and "parent" refer to the resou
 
 ## Task 1: LockType
 
-Before you start implementing the queuing logic, you need to keep track of all the lock types supported, and how they interact with each other. The `LockType` class contains methods reasoning about this, which will come in handy in the rest of the project.
+Before you start implementing the queuing logic, you need to keep track of all the lock types supported, and how they interact with each other. The [`LockType`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java) class contains methods reasoning about this, which will come in handy in the rest of the project.
 
 For the purposes of this project, a transaction with:
 
@@ -22,15 +22,15 @@ For the purposes of this project, a transaction with:
 
 You will need to implement the `compatible`, `canBeParentLock`, and `substitutable` methods:
 
-* `compatible(A, B)` checks if lock type A is compatible with lock type B -- can one transaction have lock A while another transaction has lock B on the same resource? For example, two transactions can have S locks on the same resource, so `compatible(S, S) = true`, but two transactions cannot have X locks on the same resource, so `compatible(X, X) = false`.
-* `canBeParentLock(A, B)` returns true if having A on a resource lets a transaction acquire a lock of type B on a child. For example, in order to get an S lock on a table, we must have \(at the very least\) an IS lock on the parent of table: the database. So `canBeParentLock(IS, S) = true`.
-* `substitutable(substitute, required)` checks if one lock type \(`substitute`\) can be used in place of another \(`required`\). This is only the case if a transaction having `substitute` can do everything that a transaction having `required` can do. Another way of looking at this is: let a transaction request the required lock. Can there be any problems if we secretly give it the substitute lock instead? For example, if a transaction requested an X lock, and we quietly gave it an S lock, there would be problems if the transaction tries to write to the resource. Therefore, `substitutable(S, X) = false`.
+* [`compatible(A, B)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L17) checks if lock type A is compatible with lock type B -- can one transaction have lock A while another transaction has lock B on the same resource? For example, two transactions can have S locks on the same resource, so `compatible(S, S) = true`, but two transactions cannot have X locks on the same resource, so `compatible(X, X) = false`.
+* [`canBeParentLock(A, B)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L49) returns true if having A on a resource lets a transaction acquire a lock of type B on a child. For example, in order to get an S lock on a table, we must have \(at the very least\) an IS lock on the parent of table: the database. So `canBeParentLock(IS, S) = true`.
+* [`substitutable(substitute, required)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L64) checks if one lock type \(`substitute`\) can be used in place of another \(`required`\). This is only the case if a transaction having `substitute` can do everything that a transaction having `required` can do. Another way of looking at this is: let a transaction request the required lock. Can there be any problems if we secretly give it the substitute lock instead? For example, if a transaction requested an X lock, and we quietly gave it an S lock, there would be problems if the transaction tries to write to the resource. Therefore, `substitutable(S, X) = false`.
 
-Once you complete this task you should be passing all the tests in `TestLockType.java`.
+Once you complete this task you should be passing all the tests in [`TestLockType.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockType.java).
 
 ## Task 2: LockManager
 
-The `LockManager` class handles locking for individual resources. We will add multigranularity constraints in Part 2.
+The [`LockManager`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java) class handles locking for individual resources. We will add multigranularity constraints in Part 2.
 
 **Before you start coding**, you should understand what the lock manager does, what each method of the lock manager is responsible for, and how the internal state of the lock manager changes with each operation. The different methods of the lock manager are not independent: trying to implement one without consideration of the others will cause you to spend significantly more time on this project. There is a fair amount of logic shared between methods, and it may be worth spending a bit of time writing some helper methods.
 
@@ -38,11 +38,11 @@ A simple example of a blocking acquire call is described at the bottom of this s
 
 You will need to implement the following methods of `LockManager`:
 
-* `acquireAndRelease`: this method atomically \(from the user's perspective\) acquires one lock and releases zero or more locks. This method has priority over any queued requests \(it should proceed even if there is a queue, and it is placed in the front of the queue if it cannot proceed\).
-* `acquire`: this method is the standard `acquire` method of a lock manager. It allows a transaction to request one lock, and grants the request if there is no queue and the request is compatible with existing locks. Otherwise, it should queue the request \(at the back\) and block the transaction. We do not allow implicit lock upgrades, so requesting an X lock on a resource the transaction already has an S lock on is invalid.
-* `release`: this method is the standard `release` method of a lock manager. It allows a transaction to release one lock that it holds.
-* `promote`: this method allows a transaction to explicitly promote/upgrade a held lock. The lock the transaction holds on a resource is replaced with a stronger lock on the same resource. This method has priority over any queued requests \(it should proceed even if there is a queue, and it is placed in the front of the queue if it cannot proceed\). We do not allow promotions to SIX, those types of requests should go to `acquireAndRelease`. This is because during SIX lock upgrades, it is possible we might need to also release redundant locks, so we need to handle these upgrades with `acquireAndRelease`.
-* `getLockType`: this is the main way to query the lock manager, and returns the type of lock that a transaction has on a specific resource., which was implemented in the previous step.
+* [`acquireAndRelease`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L156): this method atomically \(from the user's perspective\) acquires one lock and releases zero or more locks. This method has priority over any queued requests \(it should proceed even if there is a queue, and it is placed in the front of the queue if it cannot proceed\).
+* [`acquire`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L183): this method is the standard `acquire` method of a lock manager. It allows a transaction to request one lock, and grants the request if there is no queue and the request is compatible with existing locks. Otherwise, it should queue the request \(at the back\) and block the transaction. We do not allow implicit lock upgrades, so requesting an X lock on a resource the transaction already has an S lock on is invalid.
+* [`release`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L208): this method is the standard `release` method of a lock manager. It allows a transaction to release one lock that it holds.
+* [`promote`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L238): this method allows a transaction to explicitly promote/upgrade a held lock. The lock the transaction holds on a resource is replaced with a stronger lock on the same resource. This method has priority over any queued requests \(it should proceed even if there is a queue, and it is placed in the front of the queue if it cannot proceed\). We do not allow promotions to SIX, those types of requests should go to `acquireAndRelease`. This is because during SIX lock upgrades, it is possible we might need to also release redundant locks, so we need to handle these upgrades with `acquireAndRelease`.
+* [`getLockType`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L256): this is the main way to query the lock manager, and returns the type of lock that a transaction has on a specific resource., which was implemented in the previous step.
 
 ### Queues
 
@@ -144,7 +144,7 @@ resourceEntries: { db => { locks: [ {2, X(db)} ], queue: [] } }
 
 ## Submission
 
-After this, you should pass all the tests we have provided to you in `database.concurrency.TestLockType` and `database.concurrency.TestLockManager`.
+After this, you should pass all the tests we have provided to you in [`database.concurrency.TestLockType`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockType.java) and [`database.concurrency.TestLockManager`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockUtil.java).
 
 Note that you may **not** modify the signature of any methods or classes that we provide to you, but you're free to add helper methods. Also, you should only modify code in the `concurrency` directory for this part.
 
