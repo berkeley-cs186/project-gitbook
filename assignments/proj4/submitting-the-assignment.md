@@ -8,12 +8,12 @@ You should make sure that all code you modify belongs to files with `TODO(proj4)
 
 * `src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java`
 * `src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java`
-* `src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java (Part 2 only)`
-* `src/main/java/edu/berkeley/cs186/database/concurrency/LockUtil.java (Part 2 only)`
-* `src/main/java/edu/berkeley/cs186/database/table/Table.java (Part 2 only)`
-* `src/main/java/edu/berkeley/cs186/database/table/PageDirectory.java (Part 2 only)`
-* `src/main/java/edu/berkeley/cs186/database/memory/Page.java (Part 2 only)`
-* `src/main/java/edu/berkeley/cs186/database/Database.java (Part 2 only)`
+* `src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java` (Part 2 only)
+* `src/main/java/edu/berkeley/cs186/database/concurrency/LockUtil.java` (Part 2 only)
+* `src/main/java/edu/berkeley/cs186/database/table/Table.java` (Part 2 only)
+* `src/main/java/edu/berkeley/cs186/database/table/PageDirectory.java` (Part 2 only)
+* `src/main/java/edu/berkeley/cs186/database/memory/Page.java` (Part 2 only)
+* `src/main/java/edu/berkeley/cs186/database/Database.java` (Part 2 only)
 
 Make sure that your code does _not_ use any static \(non-final\) variables - this may cause odd behavior when running with maven vs. in your IDE \(tests run through the IDE often run with a new instance of Java for each test, so the static variables get reset, but multiple tests per Java instance may be run when using maven, where static variables _do not_ get reset\).
 
@@ -23,7 +23,7 @@ Once all of your files are prepared in your repo you can submit to Gradescope th
 
 ### Partners
 
-If you haven't yet already be sure to fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. We're no longer allowing partner submissions on Gradescope. If you worked with a partner you'll both need to submit individually. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already make sure [this form](https://docs.google.com/forms/d/e/1FAIpQLSdCDn90HrLA-awYHCjj0IDkK7aWYem-2u7b2eh7nNuw-oXofA/viewform) has the correct partner information so we know who you're working with. We're no longer allowing partner submissions on Gradescope. If you worked with a partner you'll both need to submit individually. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ### Grading
 
