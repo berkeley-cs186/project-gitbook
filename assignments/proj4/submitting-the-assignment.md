@@ -19,11 +19,11 @@ Make sure that your code does _not_ use any static \(non-final\) variables - thi
 
 ### Gradescope
 
-Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for [Project 0](../proj0/submitting.md#pushing-changes-to-github-classroom). 
+Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for [Project 0](../proj0/submitting.md#pushing-changes-to-github-classroom).
 
 ### Partners
 
-If you haven't yet already be sure to fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. When submitting to Gradescope sure remember add your partner to the submission so they can get credit. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already be sure to fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. We're no longer allowing partner submissions on Gradescope. If you worked with a partner you'll both need to submit individually. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ### Grading
 
