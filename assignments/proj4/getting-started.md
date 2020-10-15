@@ -14,7 +14,7 @@ You should watch both Transactions & Concurrency lectures before beginning this 
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 4 release post on [Piazza](https://piazza.com/class/$piazza-link$). Once your private repo is set up clone the Project 4 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 4 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i?cid=410). Once your private repo is set up clone the Project 4 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -40,7 +40,7 @@ Then, you can proceed as usual.
 
 #### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Piazza](https://piazza.com/class/$piazza-link$).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i?cid=410).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
 
