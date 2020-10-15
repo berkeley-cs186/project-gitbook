@@ -50,7 +50,7 @@ Whenever a request for a lock cannot be satisfied \(either because it conflicts 
 
 The queue for each resource is processed independently of other queues, and must be processed after a lock on the resource is released, in the following manner:
 
-* The request at the front of the queue is considered, and if it can now be it doesn't conflict with any of the existing locks on the resource, it should be removed from the queue and:
+* The request at the front of the queue is considered, and if it doesn't conflict with any of the existing locks on the resource, it should be removed from the queue and:
   * the transaction that made the request should be given the lock
   * any locks that the request stated should be released are released
   * the transaction that made the request should be unblocked
@@ -130,7 +130,7 @@ In the second call, T2 requests an X lock on the database. T1 already has an X l
 ```text
 transactionLocks: {1 => [X(db)]} (transaction 1 has 1 lock: X(db))
 resourceEntries:  {db => {locks: [{1, X(db)}], queue: [LockRequest(T2, X(db))]}}
-    (there is 1 lock on db: an X lock by transaction 1, and 1 request on 
+    (there is 1 lock on db: an X lock by transaction 1, and 1 request on
      queue: a request for X by transaction 2)
 ```
 
