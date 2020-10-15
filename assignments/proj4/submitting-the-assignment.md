@@ -4,7 +4,7 @@
 
 You may **not** modify the signature of any methods or classes that we provide to you, but you're free to add helper methods.
 
-You should make sure that all code you modify belongs to files with `TODO(proj4)` comments in them \(e.g. don't add helper methods to DataBox\). A full list of files that you may modify follows:
+You should make sure that all code you modify belongs to files with `TODO(proj4_part1)` and `TODO(proj4_part2)` comments in them \(e.g. don't add helper methods to DataBox\). A full list of files that you may modify follows:
 
 * `src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java`
 * `src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java`
@@ -23,7 +23,7 @@ Once all of your files are prepared in your repo you can submit to Gradescope th
 
 ### Partners
 
-If you haven't yet already make sure [this form](https://docs.google.com/forms/d/e/1FAIpQLSdCDn90HrLA-awYHCjj0IDkK7aWYem-2u7b2eh7nNuw-oXofA/viewform) has the correct partner information so we know who you're working with. We're no longer allowing partner submissions on Gradescope. If you worked with a partner you'll both need to submit individually. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already make sure [this form](https://docs.google.com/forms/d/e/1FAIpQLSdCDn90HrLA-awYHCjj0IDkK7aWYem-2u7b2eh7nNuw-oXofA/viewform) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own (you're still free to submit identical code if you like though). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ### Grading
 

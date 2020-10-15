@@ -10,20 +10,20 @@ In this part, you will implement the middle layer \(`LockContext`\) and the decl
 
 ### Task 3: LockContext
 
-The `LockContext` class represents a single resource in the hierarchy; this is where all multigranularity operations \(such as enforcing that you have the appropriate intent locks before acquiring or performing lock escalation\) are implemented.
+The [`LockContext`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java) class represents a single resource in the hierarchy; this is where all multigranularity operations \(such as enforcing that you have the appropriate intent locks before acquiring or performing lock escalation\) are implemented.
 
 You will need to implement the following methods of `LockContext`:
 
-* `acquire`: this method performs an acquire via the underlying `LockManager` after ensuring that all multigranularity constraints are met. For example, if the transaction has IS\(database\) and requests X\(table\), the appropriate exception must be thrown \(see comments above method\). If a transaction has a SIX lock, then it is redundant for the transaction to have an IS/S lock on any descendant resource. Therefore, in our implementation, we prohibit acquiring an IS/S lock if an ancestor has SIX, and consider this to be an invalid request. 
-* `release`: this method performs a release via the underlying `LockManager` after ensuring that all multigranularity constraints will still be met after release. For example, if the transaction has X\(table\) and attempts to release IX\(database\), the appropriate exception must be thrown \(see comments above method\). 
-* `promote`: this method performs a lock promotion via the underlying `LockManager` after ensuring that all multigranularity constraints are met. For example, if the transaction has IS\(database\) and requests a promotion from S\(table\) to X\(table\), the appropriate exception must be thrown \(see comments above method\). In the special case of promotion to SIX \(from IS/IX/S\), you should simultaneously release all descendant locks of type S/IS, since we disallow having IS/S locks on descendants when a SIX lock is held. You should also disallow promotion to a SIX lock if an ancestor has SIX, because this would be redundant.  
+* [`acquire`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L83-L93): this method performs an acquire via the underlying `LockManager` after ensuring that all multigranularity constraints are met. For example, if the transaction has IS\(database\) and requests X\(table\), the appropriate exception must be thrown \(see comments above method\). If a transaction has a SIX lock, then it is redundant for the transaction to have an IS/S lock on any descendant resource. Therefore, in our implementation, we prohibit acquiring an IS/S lock if an ancestor has SIX, and consider this to be an invalid request.
+* [`release`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L101-L111): this method performs a release via the underlying `LockManager` after ensuring that all multigranularity constraints will still be met after release. For example, if the transaction has X\(table\) and attempts to release IX\(database\), the appropriate exception must be thrown \(see comments above method\).
+* [`promote`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L119-L138): this method performs a lock promotion via the underlying `LockManager` after ensuring that all multigranularity constraints are met. For example, if the transaction has IS\(database\) and requests a promotion from S\(table\) to X\(table\), the appropriate exception must be thrown \(see comments above method\). In the special case of promotion to SIX \(from IS/IX/S\), you should simultaneously release all descendant locks of type S/IS, since we disallow having IS/S locks on descendants when a SIX lock is held. You should also disallow promotion to a SIX lock if an ancestor has SIX, because this would be redundant.
 
 
-  **Note**: this does still allow for SIX locks to be held under a SIX lock, in the case of promoting an ancestor to SIX while a descendant holds SIX. This is redundant, but fixing it is both messy \(have to swap all descendant SIX locks with IX locks\) and pointless \(you still hold a lock on the descendant anyways\), so we just leave it as is.  
+  **Note**: this does still allow for SIX locks to be held under a SIX lock, in the case of promoting an ancestor to SIX while a descendant holds SIX. This is redundant, but fixing it is both messy \(have to swap all descendant SIX locks with IX locks\) and pointless \(you still hold a lock on the descendant anyways\), so we just leave it as is.
 
-* `escalate`: this method performs lock escalation up to the current level \(see below for more details\). Since interleaving of multiple `LockManager` calls by multiple transactions \(running on different threads\) is allowed, you must make sure to only use one mutating call to the `LockManager` and only request information about the current transaction from the `LockManager` \(since information pertaining to any other transaction may change between the querying and the acquiring\). 
-* `getExplicitLockType`: this method returns the type of the lock explicitly held at the current level. For example, if a transaction has X\(db\), `dbContext.getExplicitLockType(transaction)` should return X, but `tableContext.getExplicitLockType(transaction)` should return NL \(no lock explicitly held\). 
-* `getEffectiveLockType`: this method returns the type of the lock either implicitly or explicitly held at the current level. For example, if a transaction has X\(db\):
+* [`escalate`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L145-L178): this method performs lock escalation up to the current level \(see below for more details\). Since interleaving of multiple `LockManager` calls by multiple transactions \(running on different threads\) is allowed, you must make sure to only use one mutating call to the `LockManager` and only request information about the current transaction from the `LockManager` \(since information pertaining to any other transaction may change between the querying and the acquiring\).
+* [`getExplicitLockType`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L184-L188): this method returns the type of the lock explicitly held at the current level. For example, if a transaction has X\(db\), `dbContext.getExplicitLockType(transaction)` should return X, but `tableContext.getExplicitLockType(transaction)` should return NL \(no lock explicitly held\).
+* [`getEffectiveLockType`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockContext.java#L194-L200): this method returns the type of the lock either implicitly or explicitly held at the current level. For example, if a transaction has X\(db\):
 
   * `dbContext.getEffectiveLockType(transaction)` should return X
   * `tableContext.getEffectiveLockType(transaction)` should _also_ return X \(since we implicitly have an X lock on every table due to explicitly having an X lock on the entire database\).
@@ -99,13 +99,13 @@ At this point, you should have a working system to acquire and release locks on 
 
 #### Acquisition Phase
 
-**Reads and Writes:** The simplest scheme for locking is to simply lock pages as we need them. As all reads and writes to pages are performed via the `Page.PageBuffer` class, it suffices to change only that. Modify the `get` and `put` methods of `Page.PageBuffer` to lock the page \(and acquire locks up the hierarchy as needed\) with the least permissive lock types possible.
+**Reads and Writes:** The simplest scheme for locking is to simply lock pages as we need them. As all reads and writes to pages are performed via the `Page.PageBuffer` class, it suffices to change only that. Modify the [`get`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L207-L208) and [`put`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L223-L224) methods of [`Page.PageBuffer`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L185) to lock the page \(and acquire locks up the hierarchy as needed\) with the least permissive lock types possible.
 
 **Write Optimization:** When we modify a page, we'll almost always end up reading it first \(acquiring IS/S locks\) and then write back our updates to it afterwards \(promoting to IX/X locks\). If we know ahead of time that we're going to modify a page, we can skip the IS/S locks altogether by just acquiring IX/X locks to begin with. Modify the following methods to request the appropriate lock upfront:
 
-* `PageDirectory#getPageWithSpace`
-* `Table#updateRecord`
-* `Table#deleteRecord`
+* [`PageDirectory#getPageWithSpace`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/table/PageDirectory.java#L121-L122)
+* [`Table#updateRecord`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/table/Table.java#L318-L319)
+* [`Table#deleteRecord`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/table/Table.java#L345-L346)
 
 Note: no more tests will pass after doing this, see the next section for why.
 
@@ -115,11 +115,11 @@ At this point, transactions should be acquiring lots of locks needed to do their
 
 Modify the `close` method of `Database.TransactionContextImpl` to release all locks the transaction acquired. You should only use `LockContext#release` and not `LockManager#release` - `LockManager` will not verify multigranularity constraints, but other transactions at the same time assume that these constraints are met, so you do want these constraints to be maintained. Note that you can't just release the locks in any order! Think about in what order you are allowed to release the locks.
 
- You should pass the all the tests in `TestDatabase2PL` and `TestDatabaseDeadlockPrecheck` after implementing the acquisition and release phase.
+ You should pass the all the tests in [`TestDatabaseDeadlockPrecheck`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabaseDeadlockPrecheck.java) and [`TestDatabase2PL`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase2PL.java) after implementing the acquisition and release phase.
 
 ## **Additional Notes**
 
-After this, you should pass all the tests we have provided to you under `database.concurrency.*`.
+After this, you should pass all the tests we have provided to you under `database.concurrency.*`, as well as teh tests in `TestDatabaseDeadlockPrecheck` and `TestDatabase2PL`.
 
 Note that you may **not** modify the signature of any methods or classes that we provide to you, but you're free to add helper methods. Also, you should only modify code in the `concurrency` directory for this section.
 
