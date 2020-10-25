@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Thursday, 9/3/2020 at 11:59PM PDT (GMT-7)**.
+This project is due on **Thursday, 9/3/2020 at 11:59PM PDT \(GMT-7\)**.
 
 ## Pushing changes to GitHub Classroom
 

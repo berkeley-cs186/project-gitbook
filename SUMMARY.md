@@ -34,8 +34,8 @@
   * [Part 2: Multigranularity](assignments/proj4/part-2-lockcontext-and-lockutil.md)
   * [Testing](assignments/proj4/testing.md)
   * [Submitting the Assignment](assignments/proj4/submitting-the-assignment.md)
-* [Project 5: Recovery](assignments/proj5/README.md)
-* [Project 6: NoSQL](assignments/proj6/README.md)
+* [Project 5: Recovery](assignments/proj5.md)
+* [Project 6: NoSQL](assignments/proj6.md)
 
 ## Common
 
