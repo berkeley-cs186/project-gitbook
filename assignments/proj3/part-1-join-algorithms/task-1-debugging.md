@@ -1,6 +1,6 @@
 # Task 1 Debugging
 
-We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400. **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in TestJoinOperator.
+We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400.  **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in TestJoinOperator.
 
 ## Getting the Extra Tests
 
@@ -164,7 +164,7 @@ The above case is likely happening because you're calling `rightRecordIterator.n
            0 0 0 0  
            Right    
            Page #1
-
+           
 You had 1 or more mismatched records. The first mismatch 
 was at record #5. The above shows the state of 
 the join when the mismatch occurred. Key:
@@ -264,6 +264,7 @@ the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
  - A was the record that you actually yielded
+
 ```
 
 In the above case you're probably not handling case 3 properly. In particular, make sure that when you run out of both left records and right records for a given left block and right page respectively that you call `leftIterator.reset()` AND assign `leftRecord` to the first record of the current page. Many students forget to reassign left record.
@@ -283,7 +284,7 @@ In the above case you're probably not handling case 3 properly. In particular, m
            0 0 0 0    0 0 0 0  
            Right      Right    
            Page #1    Page #2  
-
+           
 You had 1 or more mismatched records. The first mismatch 
 was at record #33. The above shows the state of 
 the join when the mismatch occurred. Key:
@@ -345,6 +346,7 @@ You either excluded or included records when you shouldn't have. Key:
  - ? means we expected this record to be included and you excluded it
  - r means you included this record multiple times
  - a blank means we expected this record to be excluded and you excluded it
+
 ```
 
 In the above case you're probably doing something wrong in case 4. In particular make sure that your code resets your right record iterator to be an iterator over the first page of the right relation. Remember that you'll need to reset your `rightIterator` to do this!

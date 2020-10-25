@@ -1,6 +1,6 @@
 # Part 1: Queuing
 
-![Datarace](../../.gitbook/assets/datarace.png)
+![Datarace](../../.gitbook/assets/datarace%20%281%29.png)
 
 In this part you will implement some helpers functions for lock types and the queuing system for locks. The `concurrency` directory contains a partial implementation of a lock manager \(`LockManager.java`\), which you will be completing.
 
@@ -18,13 +18,13 @@ For the purposes of this project, a transaction with:
 * `IX(A)` can request any lock on all children of A.
 * `SIX(A)` can do anything that having `S(A)` or `IX(A)` lets it do, except requesting S, IS, or SIX\*\* locks on children of A, which would be redundant.
 
-\*\* This differs from how its presented in lecture, where SIX\(A\) allows a transaction to request SIX locks on children of A. We disallow this in the project since acquiring the S aspect of the SIX child would be redundant.
+\*\* This differs from how its presented in lecture, where SIX\(A\) allows a transaction to request SIX locks on children of A. We disallow this in the project since the S aspect of the SIX child would be redundant.
 
 You will need to implement the `compatible`, `canBeParentLock`, and `substitutable` methods:
 
 * [`compatible(A, B)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L17) checks if lock type A is compatible with lock type B -- can one transaction have lock A while another transaction has lock B on the same resource? For example, two transactions can have S locks on the same resource, so `compatible(S, S) = true`, but two transactions cannot have X locks on the same resource, so `compatible(X, X) = false`.
 * [`canBeParentLock(A, B)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L49) returns true if having A on a resource lets a transaction acquire a lock of type B on a child. For example, in order to get an S lock on a table, we must have \(at the very least\) an IS lock on the parent of table: the database. So `canBeParentLock(IS, S) = true`.
-* [`substitutable(substitute, required)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L64) checks if one lock type \(`substitute`\) can be used in place of another \(`required`\). This is only the case if a transaction having `substitute` can do everything that a transaction having `required` can do. Another way of looking at this is: let a transaction request the required lock. Can there be any problems if we secretly give it the substitute lock instead? For example, if a transaction requested an X lock, and we quietly gave it an S lock, there would be problems if the transaction tries to write to the resource. Therefore, `substitutable(S, X) =` 
+* [`substitutable(substitute, required)`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockType.java#L64) checks if one lock type \(`substitute`\) can be used in place of another \(`required`\). This is only the case if a transaction having `substitute` can do everything that a transaction having `required` can do. Another way of looking at this is: let a transaction request the required lock. Can there be any problems if we secretly give it the substitute lock instead? For example, if a transaction requested an X lock, and we quietly gave it an S lock, there would be problems if the transaction tries to write to the resource. Therefore, `substitutable(S, X) = false`.
 
 Once you complete this task you should be passing all the tests in [`TestLockType.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockType.java).
 
