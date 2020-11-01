@@ -82,7 +82,7 @@ void acquire(...) {
     }
 }
 
-// Incorrect, doing work outside of the synchornized block
+// Incorrect, doing work outside of the synchronized block
 void acquire(...) {
     ResourceEntry entry = getResourceEntry(name); // fetch resource entry
     // do stuff

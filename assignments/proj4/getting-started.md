@@ -13,6 +13,10 @@ The workload for the project is designed to be completed solo, but this semester
 
 You should watch both Transactions & Concurrency lectures before beginning this project.
 
+## Additional Resources
+
+Debugging walkthrough video for project 4 found [here](https://drive.google.com/drive/folders/1UnpcSU-rG9VAHfsD5WXO8CfFuzEDbwH_?usp=sharing).
+
 ## Fetching the released code
 
 The GitHub Classroom link for this project is in the Project 4 release post on [Piazza](https://piazza.com/class/kducz9b1i3h78i?cid=410). Once your private repo is set up clone the Project 4 skeleton code onto your local machine.
