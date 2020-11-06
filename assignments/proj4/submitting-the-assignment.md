@@ -28,7 +28,7 @@ If you haven't yet already make sure [this form](https://docs.google.com/forms/d
 ## Grading
 
 * Part 1 is worth 40% of your Project 4 grade. 60% of that will come from public tests and 40% will come from hidden tests. We will only be running public tests on your Part 1 submission.
-* Part 2 is worth 60% of your Project 4 grade. 60% of that will come from public tests and 40% will come from hidden tests. We will only be running public tests on your Part 2 submission.
+* Part 2 is worth 60% of your Project 4 grade. 60% of that will come from public tests and 40% will come from hidden tests.
 
 Your Part 2 submission will be used to run all hidden tests \(and public Part 2 tests\). If you do not have a submission for Part 2, you will receive a 0% on all hidden tests for Part 1 and 2. You may go back and make changes to Part 1 even after that part deadline has passed before submitting to Part 2.
 

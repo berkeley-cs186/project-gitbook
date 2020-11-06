@@ -1,6 +1,6 @@
 # Part 2: Multigranularity
 
-![Dataphase](../../.gitbook/assets/dataphase%20%281%29.png)
+![Dataphase](../../.gitbook/assets/dataphase%20%281%29%20%281%29.png)
 
 **A working implementation of Part 1 is required for Part 2. If you have not yet finished** [**Part 1**](part-1-lockmanager.md)**, you should do so before continuing.**
 
@@ -43,11 +43,11 @@ We perform lock escalation through `LockContext#escalate`. A call to this method
 
 For example, if we have the following locks: IX\(database\), SIX\(table\), X\(page 1\), X\(page 2\), X\(page 4\), and call `tableContext.escalate(transaction)`, we should replace the page-level locks with a single lock on the table that encompasses them:
 
-![](../../.gitbook/assets/proj4-escalate1%20%281%29.png)
+![](../../.gitbook/assets/proj4-escalate1%20%281%29%20%281%29.png)
 
 Likewise, if we called `dbContext.escalate(transaction)`, we should replace the page-level locks and table-level locks with a single lock on the database that encompasses them:
 
-![](../../.gitbook/assets/proj4-escalate2%20%281%29.png)
+![](../../.gitbook/assets/proj4-escalate2%20%281%29%20%281%29.png)
 
 Note that escalating to an X lock always "works" in this regard: having a coarse X lock definitely encompasses having a bunch of finer locks. However, this introduces other complications: if the transaction previously held only finer S locks, it would not have the IX locks required to hold an X lock, and escalating to an X reduces the amount of concurrency allowed unnecessarily. We therefore require that `escalate` only escalate to the least permissive lock type \(between either S or X\) that still encompasses the replaced finer locks \(so if we only had IS/S locks, we should escalate to S, not X\).
 

@@ -1,6 +1,6 @@
 # Task 1 Debugging
 
-We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400.  **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in TestJoinOperator.
+We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400. **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in TestJoinOperator.
 
 ## Getting the Extra Tests
 
@@ -46,17 +46,17 @@ If for whatever reason you can't/don't want to use git then do the following:
 These tests are designed to give you visualizations that might hint as to where you're going wrong. **You should try to get the test cases working in order**, that is, start with the 1x1 PNLJ tests, followed by the 2x2 PNLJ tests, and then finally the 2x2 BNLJ tests. When you fail a test it should give you a detailed description of why you failed. Here's some example output from failing `testPNLJ1x1Full`:
 
 ```text
-edu.berkeley.cs186.database.query.QueryPlanException: 
-== MISSING OR EXTRA RECORDS == 
+edu.berkeley.cs186.database.query.QueryPlanException:
+== MISSING OR EXTRA RECORDS ==
          +---------+
  Left  0 | ? ? ? ? |
  Page  0 | x x x x |
  #1    0 | x x x x |
        0 | x x x x |
          +---------+
-           0 0 0 0  
-           Right    
-           Page #1  
+           0 0 0 0
+           Right
+           Page #1
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
@@ -71,8 +71,8 @@ In this example we expect every single record in the left table to be joined wit
 Here's a more complicated case that we see in office hours a lot in testPNLJ2x2Full :
 
 ```text
-edu.berkeley.cs186.database.query.QueryPlanException: 
-== MISMATCH == 
+edu.berkeley.cs186.database.query.QueryPlanException:
+== MISMATCH ==
          +---------+---------+
  Left  0 |         |         |
  Page  0 |         |         |
@@ -84,12 +84,12 @@ edu.berkeley.cs186.database.query.QueryPlanException:
  #1    0 | x x x x |         |
        0 | x x x x | E       |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
 
-You had 1 or more mismatched records. The first mismatch 
-was at record #17. The above shows the state of 
+You had 1 or more mismatched records. The first mismatch
+was at record #17. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
@@ -104,21 +104,21 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 1x1
 
-![](../../../.gitbook/assets/1x1.gif)
+![](../../../.gitbook/assets/1x1%20%281%29.gif)
 
 ### PNLJ 2x2
 
-![](../../../.gitbook/assets/2x2pnlj.gif)
+![](../../../.gitbook/assets/2x2pnlj%20%281%29.gif)
 
 ### BNLJ 2x2 \(B=4\)
 
-![](../../../.gitbook/assets/2x2bnlj.gif)
+![](../../../.gitbook/assets/2x2bnlj%20%281%29.gif)
 
 ## Cases
 
 Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next record that should be considered for the join.
 
-![](../../../.gitbook/assets/cases.png)
+![](../../../.gitbook/assets/cases%20%281%29.png)
 
 Try to think about what should be advanced and what should be reset in each case. As a reminder:
 
@@ -132,16 +132,16 @@ Try to think about what should be advanced and what should be reset in each case
 ### PNLJ 1x1 Full
 
 ```text
-== MISSING OR EXTRA RECORDS == 
+== MISSING OR EXTRA RECORDS ==
          +---------+
  Left  0 | x ? x ? |
  Page  0 | x ? x ? |
  #1    0 | x ? x ? |
        0 | x ? x ? |
          +---------+
-           0 0 0 0  
-           Right    
-           Page #1  
+           0 0 0 0
+           Right
+           Page #1
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
@@ -154,19 +154,19 @@ You either excluded or included records when you shouldn't have. Key:
 The above case is likely happening because you're calling `rightRecordIterator.next()` more often than you should, and losing every other value. Make sure whenever you call `rightRecordIterator.next()` that you compare the result to the current left record and set it as the next record if there's a match.
 
 ```text
-== MISMATCH == 
+== MISMATCH ==
          +---------+
  Left  0 |         |
  Page  0 |         |
  #1    0 | E       |
        0 | A x x x |
          +---------+
-           0 0 0 0  
-           Right    
+           0 0 0 0
+           Right
            Page #1
-           
-You had 1 or more mismatched records. The first mismatch 
-was at record #5. The above shows the state of 
+
+You had 1 or more mismatched records. The first mismatch
+was at record #5. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
@@ -176,17 +176,17 @@ the join when the mismatch occurred. Key:
 The above case is mostly likely caused by failing to advance the left record in case 2. Remember that even if you call `leftRecordIterator.next()`, if you don't set the result to leftRecord then leftRecord won't get updated.
 
 ```text
-edu.berkeley.cs186.database.query.QueryPlanException: 
-== MISSING OR EXTRA RECORDS == 
+edu.berkeley.cs186.database.query.QueryPlanException:
+== MISSING OR EXTRA RECORDS ==
          +---------+
  Left  0 | ? ? ? ? |
  Page  0 | x x x x |
  #1    0 | x x x x |
        0 | x x x x |
          +---------+
-           0 0 0 0  
-           Right    
-           Page #1  
+           0 0 0 0
+           Right
+           Page #1
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
@@ -199,35 +199,35 @@ You either excluded or included records when you shouldn't have. Key:
 The above case likely caused by stopping iteration too early, specifically as soon as !leftRecordIterator.hasNext\(\). Remember that even if there isn't another left record, you still have to compare the current left record against every right record in the rightRecordIterator.
 
 ```text
-edu.berkeley.cs186.database.query.QueryPlanException: 
-== MISMATCH == 
+edu.berkeley.cs186.database.query.QueryPlanException:
+== MISMATCH ==
          +---------+
  Left  0 |         |
  Page  0 |         |
  #1    0 | A       |
        0 | x x x E |
          +---------+
-           0 0 0 0  
-           Right    
-           Page #1  
+           0 0 0 0
+           Right
+           Page #1
 
-You had 1 or more mismatched records. The first mismatch 
-was at record #4. The above shows the state of 
+You had 1 or more mismatched records. The first mismatch
+was at record #4. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
  - A was the record that you actually yielded
 
-== MISSING OR EXTRA RECORDS == 
+== MISSING OR EXTRA RECORDS ==
          +---------+
  Left  0 | x x x ? |
  Page  0 | x x x ? |
  #1    0 | x x x ? |
        0 | x x x ? |
          +---------+
-           0 0 0 0  
-           Right    
-           Page #1  
+           0 0 0 0
+           Right
+           Page #1
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
@@ -242,7 +242,7 @@ In the above case you're probably handling case 2 too early, before you ever com
 ### PNLJ 2x2 Full
 
 ```text
-== MISMATCH == 
+== MISMATCH ==
          +---------+---------+
  Left  0 |         |         |
  Page  0 |         |         |
@@ -254,17 +254,16 @@ In the above case you're probably handling case 2 too early, before you ever com
  #1    0 | x x x x |         |
        0 | x x x x | E       |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
 
-You had 1 or more mismatched records. The first mismatch 
-was at record #17. The above shows the state of 
+You had 1 or more mismatched records. The first mismatch
+was at record #17. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
  - A was the record that you actually yielded
-
 ```
 
 In the above case you're probably not handling case 3 properly. In particular, make sure that when you run out of both left records and right records for a given left block and right page respectively that you call `leftIterator.reset()` AND assign `leftRecord` to the first record of the current page. Many students forget to reassign left record.
@@ -281,12 +280,12 @@ In the above case you're probably not handling case 3 properly. In particular, m
  #1    0 | x x x x | x x x x |
        0 | x x x x | x x x x |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
-           
-You had 1 or more mismatched records. The first mismatch 
-was at record #33. The above shows the state of 
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
+
+You had 1 or more mismatched records. The first mismatch
+was at record #33. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
@@ -296,8 +295,8 @@ the join when the mismatch occurred. Key:
 In the above case make sure that by the end of case 4 you've set rightRecordIterator to be an iterator over right page \#1.
 
 ```text
-edu.berkeley.cs186.database.query.QueryPlanException: 
-== MISMATCH == 
+edu.berkeley.cs186.database.query.QueryPlanException:
+== MISMATCH ==
          +---------+---------+
  Left  0 |         |         |
  Page  0 |         |         |
@@ -309,12 +308,12 @@ edu.berkeley.cs186.database.query.QueryPlanException:
  #1    0 | x x x x | x x x x |
        0 | x x x x | x x x x |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
 
-You had 1 or more mismatched records. The first mismatch 
-was at record #33. The above shows the state of 
+You had 1 or more mismatched records. The first mismatch
+was at record #33. The above shows the state of
 the join when the mismatch occurred. Key:
  - x means your join properly yielded this record at the right time
  - E was the record we expected you to yield
@@ -324,7 +323,7 @@ the join when the mismatch occurred. Key:
 In the above case make sure that by the end of case 4 you've set leftRecordIterator to be an iterator over left page \#2.
 
 ```text
-== MISSING OR EXTRA RECORDS == 
+== MISSING OR EXTRA RECORDS ==
          +---------+---------+
  Left  0 | ? ? ? ? | ? ? ? ? |
  Page  0 | ? ? ? ? | ? ? ? ? |
@@ -336,9 +335,9 @@ In the above case make sure that by the end of case 4 you've set leftRecordItera
  #1    0 | x x x x | x x x x |
        0 | x x x x | x x x x |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
@@ -346,13 +345,12 @@ You either excluded or included records when you shouldn't have. Key:
  - ? means we expected this record to be included and you excluded it
  - r means you included this record multiple times
  - a blank means we expected this record to be excluded and you excluded it
-
 ```
 
 In the above case you're probably doing something wrong in case 4. In particular make sure that your code resets your right record iterator to be an iterator over the first page of the right relation. Remember that you'll need to reset your `rightIterator` to do this!
 
 ```text
-== MISSING OR EXTRA RECORDS == 
+== MISSING OR EXTRA RECORDS ==
          +---------+---------+
  Left  0 | ? ? ? ? | ? ? ? ? |
  Page  0 | ? ? ? ? | ? ? ? ? |
@@ -364,9 +362,9 @@ In the above case you're probably doing something wrong in case 4. In particular
  #1    0 | x x x x | ? ? ? ? |
        0 | x x x x | ? ? ? ? |
          +---------+---------+
-           0 0 0 0    0 0 0 0  
-           Right      Right    
-           Page #1    Page #2  
+           0 0 0 0    0 0 0 0
+           Right      Right
+           Page #1    Page #2
 
 You either excluded or included records when you shouldn't have. Key:
  - x means we expected this record to be included and you included it
