@@ -24,6 +24,14 @@ If you are not familiar with these in Java, you should look through [the officia
 
 Each interface has a method to call the passed in function \(for example, [the `Consumer` interface has the `accept` method](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#accept-T-)\).
 
+#### Disk Space Manager
+
+You will not need to directly use the disk space manager in this project \(the various `LogRecord` subclasses will use it for you as needed\), but it does help to understand how our disk space manager organizes data at a high level.
+
+The disk space manager is responsible for allocating pages, and our disk space manager divides pages into _partitions_. Page 40000000001, for example, is the 1st page \(0-indexed\) in partition 4. Partitions are explicitly allocated and freed \(but can only be freed if there are no pages in them\), and pages are always allocated under a partition.
+
+Partition 0 is reserved for storing the log, which is why in a couple of places, you will see checks comparing the partition number against 0. Every other partition contains either a table or a serialized B+ tree object.
+
 ## Part 1: Forward Processing
 
 ![](../../.gitbook/assets/proj5-db-happy%20%281%29%20%281%29%20%281%29.png)
