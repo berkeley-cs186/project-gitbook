@@ -5,7 +5,7 @@
 This project is worth 8% of your overall grade in the class.
 
 * Part 1 is due **Sunday, 11/22/2020 at 11:59PM PST (GMT-8)** and will be worth 24% of your score. Your score will be determined by public tests only.
-* Part 2 is due **$part2-due-date$** and will be worth the remaining 76% of your score. We'll be running the public tests for Part 2 and all hidden tests for both Part 1 and Part 2 on this submission.
+* Part 2 is due **Wednesday, 12/2/2020 at 11:59PM PST (GMT-8)** and will be worth the remaining 76% of your score. We'll be running the public tests for Part 2 and all hidden tests for both Part 1 and Part 2 on this submission.
 
 The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same as the one you had for previous assignments. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kducz9b1i3h78i?cid=5)!
 
@@ -23,7 +23,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner fill out ****[**this form**](https://forms.gle/HFBF9evuhqriL6Cf9) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Once you've found a partner fill out [**this form**](https://forms.gle/HFBF9evuhqriL6Cf9) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 
