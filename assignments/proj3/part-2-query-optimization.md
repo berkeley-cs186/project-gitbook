@@ -89,5 +89,3 @@ Follow the submission instructions [here](submitting-the-assignment.md) for the 
 * `database.query.TestOptimization`
 * `database.query.TestBasicQuery`
 
-
-
