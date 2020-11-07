@@ -39,7 +39,7 @@
   * [Your Tasks](assignments/proj5/your-tasks.md)
   * [Submitting the Assignment](assignments/proj5/submitting-the-assignment.md)
   * [Further Reading](assignments/proj5/further-reading.md)
-* [Project 6: NoSQL](assignments/proj6.md)
+* [Project 6: NoSQL](assignments/proj6/README.md)
 
 ## Common
 

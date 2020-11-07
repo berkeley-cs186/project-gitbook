@@ -224,9 +224,8 @@ Additionally, the status of transactions should be updated. Remember that checkp
 
 You should only update a transaction's status if the status in the checkpoint is more "advanced" than the status in memory. Some examples:
 
-* if the checkpoint says a transaction is aborting and our in-memory table says its running, we should update the in-memory status to complete because its possible to transition from running to aborting.
+* if the checkpoint says a transaction is complete and our in-memory table says its running, we should update the in-memory status to complete because its possible to transition from running to complete.
 * if the checkpoint says a transaction is running and our in-memory table says its committing, we wouldn't update our in-memory table. There's no way for the status to change from aborting to running in normal operation, and so the checkpoint must be out-of-date.
-* if the checkpoint says a transaction is complete then you should remove it from the transaction table
 
 **Ending Transactions**
 
