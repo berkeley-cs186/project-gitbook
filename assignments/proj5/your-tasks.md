@@ -205,7 +205,7 @@ These three types of log records \(CommitTransaction/AbortTransaction/EndTransac
 
 When one of these records are encountered, the transaction table should be updated as described in the previous section. The status of the transaction should also be set to one of `COMMITTING`, `RECOVERY_ABORTING`, or `COMPLETE`.
 
-If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, and it should also be removed from the transaction table entirely.
+If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, but the entry should **not** be removed from the transaction table yet.
 
 **Checkpoint Records**
 
@@ -224,16 +224,18 @@ Additionally, the status of transactions should be updated. Remember that checkp
 
 You should only update a transaction's status if the status in the checkpoint is more "advanced" than the status in memory. Some examples:
 
-* if the checkpoint says a transaction is complete and our in-memory table says its running, we should update the in-memory status to complete because its possible to transition from running to complete.
+* if the checkpoint says a transaction is aborting and our in-memory table says its running, we should update the in-memory status to aborting because its possible to transition from running to complete.
 * if the checkpoint says a transaction is running and our in-memory table says its committing, we wouldn't update our in-memory table. There's no way for the status to change from aborting to running in normal operation, and so the checkpoint must be out-of-date.
 
 **Ending Transactions**
 
-The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, or `RECOVERY_ABORTING`.
+The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, or `RECOVERY_ABORTING`or `COMPLETE`.
 
 All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\).
 
 All transactions in the `RUNNING` state should be moved into the `RECOVERY_ABORTING` state, and an abort transaction record should be written.
+
+All transactions in the `COMPLETE` state should be removed the transaction table.
 
 Nothing needs to be done for transactions in the `RECOVERY_ABORTING` state.
 
