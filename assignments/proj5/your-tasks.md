@@ -265,7 +265,7 @@ try {
 }
 ```
 
-The buffer manager always returns a pinned page which is why we use a try-finally block to ensure that the page is always unpinned once we're done using it. You may find [this method](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L154-L159) of the Page class useful here.
+The buffer manager always returns a pinned page which is why we use a try-finally block to ensure that the page is always unpinned once we're done using it. You may find [this method](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L161-L166) of the Page class useful here.
 
 Be sure to account for the case where `restartRedo` is called on an empty log!
 
