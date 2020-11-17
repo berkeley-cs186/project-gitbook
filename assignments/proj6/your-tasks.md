@@ -655,5 +655,5 @@ Group the budgets by their value rounded to the nearest multiple of ten million,
 
 ## You're done!
 
-Congrats, you're finished with the last assignment \(assuming you finished this one after proj5\)! There are **no hidden tests** for this assignment, so whatever score you see on the autograder after this will be your score on this assignment. Follow the instructions in the [next section](submitting-the-assignment%20%281%29.md) to submit your work.
+Congrats, you're finished with the last assignment \(assuming you finished this one after proj5\)! There are **no hidden tests** for this assignment, so whatever score you see on the autograder after this will be your score on this assignment. Follow the instructions in the [next section]() to submit your work.
 

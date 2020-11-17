@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Sunday, 12/6/2020 at 11:59PM PST (GMT-8)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
@@ -80,7 +80,7 @@ child process started successfully, parent exiting
 student@a2ba045477a4:/$
 ```
 
-This should bring you into a container with the necessary requirements. Run `cd /proj6` to enter the proj6 directory. All of the files on your host machine should be in present. Changes on your host machine \(for example, using a text editor like VSCode/Sublime\) should be visible from within this container as you work through the project. If everything went smoothly, you should be able to go to the next section [Extract the data set](getting-started.md#extract-the-data-set).
+This should bring you into a container with the necessary requirements. Run `cd /proj6` to enter the proj6 directory. All of the files on your host machine should be in present. Changes on your host machine \(for example, using a text editor like VSCode/Sublime\) should be visible from within this container as you work through the project. If everything went smoothly, you should be able to go to the next section [Extract the data set]().
 
 If you exit the container and wish to access it again, you can run the command `docker start -ai mongo186` to re-enter the container.
 
@@ -94,7 +94,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 Download the data set from the class drive [here](https://drive.google.com/file/d/1logbbpe8ApeVnUb_bX-SHZ1mpIrhRZDF/view).
 
-Unzip the `data.zip` file inside your `fa20-proj6-yourname` directory. You should now have a `data/` directory in your `fa20-proj6-yourname` directory \(the same place as the `proj6.js` file\). 
+Unzip the `data.zip` file inside your `$sem$-proj6-yourname` directory. You should now have a `data/` directory in your `$sem$-proj6-yourname` directory \(the same place as the `proj6.js` file\). 
 
 Afterwards, try running `python3 load.py`. You should see output like the following:
 
@@ -136,13 +136,13 @@ If so, move on to the next section to start the project. If you see `ERROR`inste
 
 ## Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/fa20-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/$sem$-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
 
 ```text
-git clone https://github.com/berkeley-cs186/fa20-proj6 fa20-proj6
-cd fa20-proj6/
+git clone https://github.com/berkeley-cs186/$sem$-proj6 $sem$-proj6
+cd $sem$-proj6/
 git remote remove origin
-git remote add origin https://github.com/berkeley-cs186-student/fa20-proj6-username.git
+git remote add origin https://github.com/berkeley-cs186-student/$sem$-proj6-username.git
 git push -u origin master
 ```
 
@@ -153,6 +153,4 @@ Then, you can proceed as usual.
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Piazza](https://piazza.com/class/$piazza-link$).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
-
-
 
