@@ -43,6 +43,7 @@
   * [Getting Started](assignments/proj6/getting-started.md)
   * [Your Tasks](assignments/proj6/your-tasks.md)
   * [Testing](assignments/proj6/testing.md)
+  * [Submitting the Assignment](assignments/proj6/submitting-the-assignment.md)
 
 ## Common
 
