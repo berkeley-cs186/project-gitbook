@@ -13,7 +13,7 @@ Some files that will be useful to read through are:
 * [`RecoveryManager.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/RecoveryManager.java) provides an overview of each of the methods you'll be implementing and when they're called
 * [`TransactionTableEntry.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/TransactionTableEntry.java) represents an entry in our transaction table and tracks thing like the lastLSN, touched pages, and active savepoints.
 * [`LogManager.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogManager.java) contains the implementation for the log manager, which provides an interface for appending, fetching, and flushing logs
-* [`LogRecord.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java) contains the super class for all of the different types of logs that we support. Every log has a type, an LSN, and a prevLSN. Certain subclasses of LogRecord optionally support extra methods.
+* [`LogRecord.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java) contains the super class for all of the different types of logs that we support. Every log has a type and an LSN. Certain subclasses of LogRecord optionally support extra methods.
 * The [`records/`](https://github.com/berkeley-cs186/fa20-moocbase/tree/master/src/main/java/edu/berkeley/cs186/database/recovery/records) directory contains all the subclasses of LogRecord. It may seem a bit overwhelming at first but we'll introduce them one-by-one as you progress through the project.
 
 #### Functional objects in Java
@@ -205,7 +205,7 @@ These three types of log records \(CommitTransaction/AbortTransaction/EndTransac
 
 When one of these records are encountered, the transaction table should be updated as described in the previous section. The status of the transaction should also be set to one of `COMMITTING`, `RECOVERY_ABORTING`, or `COMPLETE`.
 
-If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, but the entry should **not** be removed from the transaction table yet.
+If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, and the entry should be removed from the transaction table yet.
 
 **Checkpoint Records**
 
