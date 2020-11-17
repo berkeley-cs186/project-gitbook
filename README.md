@@ -4,7 +4,7 @@
 
 MOOCBase is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 
-For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/fa20-moocbase/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one. 
+For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/fa20-moocbase/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one.
 
 ## Code Overview
 

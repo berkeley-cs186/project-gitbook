@@ -27,13 +27,12 @@ MongoDB server version: 4.4.1
 
 > db.ratings.findOne()
 {
-	"_id" : ObjectId("5fb32f37766efe011e6af587"),
-	"userId" : 1,
-	"movieId" : 783,
-	"rating" : 2,
-	"timestamp" : 1260759148
+    "_id" : ObjectId("5fb32f37766efe011e6af587"),
+    "userId" : 1,
+    "movieId" : 783,
+    "rating" : 2,
+    "timestamp" : 1260759148
 }
-
 ```
 
 ### Movies Metadata
@@ -59,22 +58,22 @@ Example document:
 ```typescript
 // Extra fields omitted for brevity
 {
-	"budget" : 30000000,
-	"genres" : [
-		{ "id" : 16, "name" : "Animation" },
-		{ "id" : 35, "name" : "Comedy" },
-		{ "id" : 10751, "name" : "Family" }
-	],
-	"overview" : "Led by Woody, Andy's toys live happily...",
-	"release_date" : 815040000,
-	"revenue" : 373554033,
-	"runtime" : 81,
-	"status" : "Released",
-	"title" : "Toy Story",
-	"vote_average" : 7.7,
-	"vote_count" : 5415,
-	"movieId" : 862,
-	"tagline" : ""
+    "budget" : 30000000,
+    "genres" : [
+        { "id" : 16, "name" : "Animation" },
+        { "id" : 35, "name" : "Comedy" },
+        { "id" : 10751, "name" : "Family" }
+    ],
+    "overview" : "Led by Woody, Andy's toys live happily...",
+    "release_date" : 815040000,
+    "revenue" : 373554033,
+    "runtime" : 81,
+    "status" : "Released",
+    "title" : "Toy Story",
+    "vote_average" : 7.7,
+    "vote_count" : 5415,
+    "movieId" : 862,
+    "tagline" : ""
 }
 ```
 
@@ -91,11 +90,11 @@ Example document:
 
 ```typescript
 {
-	"keywords" : [
-		{ "id" : 3633, "name" : "dracula" },
-		{ "id" : 11931, "name" : "spoof" }
-	],
-	"movieId" : 12110
+    "keywords" : [
+        { "id" : 3633, "name" : "dracula" },
+        { "id" : 11931, "name" : "spoof" }
+    ],
+    "movieId" : 12110
 }
 ```
 
@@ -110,10 +109,10 @@ The `ratings` collection contains roughly 10,000 ratings submitted by specific v
 
 ```typescript
 {
-	"userId" : 1,
-	"movieId" : 9909,
-	"rating" : 2.5,
-	"timestamp" : 1260759144
+    "userId" : 1,
+    "movieId" : 9909,
+    "rating" : 2.5,
+    "timestamp" : 1260759144
 }
 ```
 
@@ -137,24 +136,24 @@ Example document:
 ```typescript
 // Extra fields for cast and crew omitted for brevity
 {
-	"cast" : [
-		{
-			"character" : "Max Goldman",
-			"id" : 6837,
-			"name" : "Walter Matthau"
-		},
-		... // Other cast members
-	],
-	"crew" : [
-		{
-			"department" : "Directing",
-			"id" : 26502,
-			"job" : "Director",
-			"name" : "Howard Deutch",
-		},
-		... // Other crew members
-	],
-	"movieId" : 15602
+    "cast" : [
+        {
+            "character" : "Max Goldman",
+            "id" : 6837,
+            "name" : "Walter Matthau"
+        },
+        ... // Other cast members
+    ],
+    "crew" : [
+        {
+            "department" : "Directing",
+            "id" : 26502,
+            "job" : "Director",
+            "name" : "Howard Deutch",
+        },
+        ... // Other crew members
+    ],
+    "movieId" : 15602
 }
 ```
 
@@ -172,7 +171,6 @@ Inside the file `query/q0.js` you should see the following:
 db.todo.aggregate([
     // TODO: Write your query here
 ]);
-
 ```
 
 Try replacing the `todo` on line 3 so that the line becomes `db.ratings.aggregate([` instead. This tells mongo that we want to pull in documents from the `ratings` collection. Now try running the the following in a terminal: `python3 test.py q0 --view`. This should run the query and give something similar to the following output \(note that the \_id field will likely differ, which is fine\):
@@ -290,7 +288,7 @@ A group "stage" in the pipeline always takes the following form:
  }
 ```
 
-In our above example, we grouped by the `movieId` field. To indicate that we were referring to a field and not the string literal `"movieId"` we prefixed it `$`. After that we had three expressions representing values we wanted to compute in the aggregate. The first two expressions computed the `min` and `max` values of the `rating` field. 
+In our above example, we grouped by the `movieId` field. To indicate that we were referring to a field and not the string literal `"movieId"` we prefixed it `$`. After that we had three expressions representing values we wanted to compute in the aggregate. The first two expressions computed the `min` and `max` values of the `rating` field.
 
 The last column looks a bit peculiar: `count: {$sum: 1}`. This assigns the count field to the accumulated sum of the value `1`. This means we add together `n` copies of the value `1` where `n` is the number of documents in each group, giving the total count of documents in each group.
 
@@ -405,7 +403,6 @@ Normally this is where we would put the expected output, but if you tried it out
             // movies_metadata
         }
     ]
-
 ```
 
 There are two things to note here:
@@ -514,8 +511,8 @@ Note on grading: The questions in Task 1 are worth 1 point each, while the quest
 db.movies_metadata.aggregate([
   // Use elemMatch in the $match stage to find movies  with English 
   // as a spoken language
-	{$match: {spoken_languages: {$elemMatch: {name: "English"}}}},
-	{$project: {title: 1, _id: 0}} // clean up output
+    {$match: {spoken_languages: {$elemMatch: {name: "English"}}}},
+    {$project: {title: 1, _id: 0}} // clean up output
 ])
 ```
 
@@ -544,7 +541,7 @@ db.movies_metadata.aggregate([
 
 * Hint: the building your first query section gives an example of how to get a count
 
-**iv.** You've discovered a critic who always seems to know exactly which movies you would love and which ones you would hate. Their true name is a mystery, but you know their user id: `186`.  Find critic 186's five most recent movie reviews, and create create a document with the following fields:
+**iv.** You've discovered a critic who always seems to know exactly which movies you would love and which ones you would hate. Their true name is a mystery, but you know their user id: `186`. Find critic 186's five most recent movie reviews, and create create a document with the following fields:
 
 ```typescript
 {
@@ -658,5 +655,5 @@ Group the budgets by their value rounded to the nearest multiple of ten million,
 
 ## You're done!
 
-Congrats, you're finished with the last assignment \(assuming you finished this one after proj5\)! There are **no hidden tests** for this assignment, so whatever score you see on the autograder after this will be your score on this assignment. Follow the instructions in the [next section](submitting-the-assignment.md) to submit your work.
+Congrats, you're finished with the last assignment \(assuming you finished this one after proj5\)! There are **no hidden tests** for this assignment, so whatever score you see on the autograder after this will be your score on this assignment. Follow the instructions in the [next section](submitting-the-assignment%20%281%29.md) to submit your work.
 
