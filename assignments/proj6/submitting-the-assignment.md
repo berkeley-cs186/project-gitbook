@@ -6,7 +6,7 @@ You should make sure that all code you modify belongs to the .js files inside th
 
 ### Gradescope
 
-Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for [Project 0](https://cs186.gitbook.io/project/assignments/proj0/submitting#pushing-changes-to-github-classroom).
+Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for [Project 0](../proj0/submitting.md#pushing-changes-to-github-classroom).
 
 ### Grading
 

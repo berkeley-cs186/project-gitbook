@@ -1,5 +1,7 @@
 # Testing
 
+
+
 You can run your answers through mongo directly by running `mongo movies` to open the database and then entering your query directly:
 
 ```text
@@ -9,7 +11,7 @@ db.replace_with_a_collection.aggregate([ ... your query ... ])
 
 This can help you catch any syntax errors in your queries. Alternatively you can run a query directly through the testing script by pasting in your query into the appropriate file \(we'll use `query/q0.js` as an example\) and running `python3 test.py q0 --view`. This will print up to ten of the query's results.
 
-You can request more results with the `--batch_size` flag \(i.e. `python3 test.py q0 --view --batch_size 20` will give the first twenty results\).
+You can request more results with the `--batch_size` flag \(i.e. `python3 test.py q0 --view --batch_size 20` will give the first twenty results\). 
 
 If you find yourself dealing with large, hard to read documents, you can view a formatted version of the first document by using `--format` instead of `--view`. For example, using the provided query from the [Building your first query](your-tasks.md#building-your-first-query) section of the spec:
 
@@ -72,13 +74,13 @@ If you pass the format check, we'll run a diff against your query and the expect
 - {"_id": "about", "count": 535}
 ```
 
-This indicates that:
+This indicates that: 
 
 * your output has an extra document `{"_id": "about", "count": 535}` \(the `-` at the beginning means the expected output _doesn't_ include this line but your output has it\)
 * your output is missing the document `{"_id": "only", "count": 521}` \(the plus at the beginning means the expected output _does_ include those lines but your output is missing it\). 
 * If there is neither a `+` nor `-` at the beginning then it means that the line is in both your output and the expected output \(your output is correct for that line\).
 
-If you care to look at the query outputs directly, ours are located in the `expected_output` directory. Your output should be located in your solution's `your_output` directory once you run the tests.
+If you care to look at the query outputs directly, ours are located in the `expected_output` directory. Your output should be located in your solution's `your_output` directory once you run the tests. 
 
 ## Reformatting
 
