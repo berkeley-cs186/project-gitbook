@@ -50,7 +50,9 @@ Part of the recovery manager's job during forward processing is to maintain the 
 * `abort` is called when a transaction attempts to move into the `ABORTING` state.
 * `end` is called when a transaction attempts to move into the `COMPLETE` state.
 
-In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log. You'll also need to implement:
+In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log \(check the `records/` directory for the types of logs you can create\). During this task you should get into the habit of **updating the lastLSN** in the transaction table whenever you append a log for a transaction's operation. This includes status change records, update records, and CLRs. 
+
+You'll also need to implement:
 
 * In `commit` the commit record needs to be flushed to disk before the commit call returns to ensure durability.
 * In `end` if the transaction ends in an abort, all changes must be rolled back before an EndTransaction record is written. Look at the docstring for `rollbackToLSN` for details on how to rollback, and think about what LSN you can pass into this function to completely rollback a transaction. Note that you will need to update the dirty page table for [certain CLRs](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/ARIESRecoveryManager.java#L161-L164) \(if you got your version of the code before 11/07/20 you may not have this docstring in your local copy\).
@@ -64,7 +66,9 @@ Some helper functions you may find useful for this task:
 * `LogRecord#isUndoable`
 * `LogRecord#undo`
 
-After completing this task you should pass `testAbort` and `testAbortingEnd`. `testSimpleCommit` requires the next task to work properly.
+After completing this task you should pass `testAbort` and `testAbortingEnd`. 
+
+You will need to complete Task 2: Logging before `testSimpleCommit` passes.
 
 ### Task 2: Logging
 
