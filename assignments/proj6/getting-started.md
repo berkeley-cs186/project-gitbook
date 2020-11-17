@@ -80,7 +80,7 @@ child process started successfully, parent exiting
 student@a2ba045477a4:/$
 ```
 
-This should bring you into a container with the necessary requirements. Run `cd /proj6` to enter the proj6 directory. All of the files on your host machine should be in present. Changes on your host machine \(for example, using a text editor like VSCode/Sublime\) should be visible from within this container as you work through the project. If everything went smoothly, you should be able to go to the next section [Extract the data set](getting-started.md#extract-the-data-set).
+This should bring you into a container with the necessary requirements. Run `cd /proj6` to enter the proj6 directory. All of the files on your host machine should be present. Changes on your host machine \(for example, using a text editor like VSCode/Sublime\) should be visible from within this container as you work through the project. If everything went smoothly, you should be able to go to the next section [Extract the data set](getting-started.md#extract-the-data-set).
 
 If you exit the container and wish to access it again, you can run the command `docker start -ai mongo186` to re-enter the container.
 
