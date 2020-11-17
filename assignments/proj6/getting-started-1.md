@@ -14,7 +14,7 @@ Like Project 1 this project **must be completed individually.** Note that while 
 
 ## Prerequisites
 
-There are no hard prerequisite's for this project. The spec will walk you through writing a query in Mongo's syntax. However, you may find watching the NoSQL lectures \(after they're released\) to help contextualize how Mongo differs from the traditional SQL databases we've been working with for the majority of this semester.
+There are no hard prerequisites for this project. The spec will walk you through writing a query in Mongo's syntax. However, you may find watching the NoSQL lectures \(after they're released\) to help contextualize how Mongo differs from the traditional SQL databases we've been working with for the majority of this semester.
 
 ## Fetching the released code
 

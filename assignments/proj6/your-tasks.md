@@ -175,7 +175,7 @@ db.todo.aggregate([
 
 ```
 
-Try replacing the `todo` on line 3 so that the line becomes `db.ratings.aggregate([` instead. This specifies to mongo that we want to pull in documents from the `ratings` collection. Now try running the the following in a terminal: `python3 test.py q0 --view`. This should run the query and give something similar to the following output \(note that the \_id field will likely differ, which is fine\):
+Try replacing the `todo` on line 3 so that the line becomes `db.ratings.aggregate([` instead. This tells mongo that we want to pull in documents from the `ratings` collection. Now try running the the following in a terminal: `python3 test.py q0 --view`. This should run the query and give something similar to the following output \(note that the \_id field will likely differ, which is fine\):
 
 ```typescript
 Showing up to the first 10 results of the query
@@ -290,7 +290,9 @@ A group "stage" in the pipeline always takes the following form:
  }
 ```
 
-In our above example, we grouped by the `movieId` field. To indicate that we were referring to a field we prefixed it `$`. After that we had three expressions representing values we wanted to compute in the aggregate. The first two expressions computed the `min` and `max` values of the `rating` field. The last column looks a bit peculiar: `count: {$sum: 1}`. This assigns the count field to the accumulated sum of the value `1`. This means we add together `n` copies of the value `1` where `n` is the number of documents in each group, giving the total count of documents in each group.
+In our above example, we grouped by the `movieId` field. To indicate that we were referring to a field and not the string literal `"movieId"` we prefixed it `$`. After that we had three expressions representing values we wanted to compute in the aggregate. The first two expressions computed the `min` and `max` values of the `rating` field. 
+
+The last column looks a bit peculiar: `count: {$sum: 1}`. This assigns the count field to the accumulated sum of the value `1`. This means we add together `n` copies of the value `1` where `n` is the number of documents in each group, giving the total count of documents in each group.
 
 #### Sort and Limit
 
@@ -576,7 +578,7 @@ We would like to set a minimum number of votes to make sure the score is accurat
 }
 ```
 
-* Useful operators: Look up what the `$add`, `$multiply`,  `$divide`, and `$avg` operators do.
+* Useful operators: Look up what the [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/), [`$multiply`](https://docs.mongodb.com/manual/reference/operator/aggregation/multiply/), and [`$divide`](https://docs.mongodb.com/manual/reference/operator/aggregation/divide/) operators do \(you may find this question remniscent of Scheme from 61a!\)
 
 **ii.** The TAs consider the prospect of making their own feature film on the beauty and joy of databases, and want to think of a catchy tagline. Run the following to see some examples taglines:
 
@@ -622,7 +624,7 @@ Group the budgets by their value rounded to the nearest multiple of ten million,
 }
 ```
 
-* Useful operators: You may find the following useful: [$ne](https://docs.mongodb.com/manual/reference/operator/aggregation/ne/), [$and](https://docs.mongodb.com/manual/reference/operator/aggregation/and/), [$cond](https://docs.mongodb.com/manual/reference/operator/aggregation/cond/), [$isNumber](https://docs.mongodb.com/manual/reference/operator/aggregation/isNumber/), [$toInt](https://docs.mongodb.com/manual/reference/operator/aggregation/toInt/) and [$round](https://docs.mongodb.com/manual/reference/operator/aggregation/round/).
+* Useful operators: You may find the following useful: [$ne](https://docs.mongodb.com/manual/reference/operator/aggregation/ne/), [$and](https://docs.mongodb.com/manual/reference/operator/aggregation/and/), [$cond](https://docs.mongodb.com/manual/reference/operator/aggregation/cond/), [$isNumber](https://docs.mongodb.com/manual/reference/operator/aggregation/isNumber/), [$toInt](https://docs.mongodb.com/manual/reference/operator/aggregation/toInt/) and [$round](https://docs.mongodb.com/manual/reference/operator/aggregation/round/). Trim will also be useful here for removing prefixes and postfixes.
 * Hint: You can check if a field is present in a document by checking whether the field is equal to `undefined`
 
 ### Task 3: Paparazzi
