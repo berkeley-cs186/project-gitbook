@@ -566,9 +566,9 @@ $$\textrm{WR} = (\frac{v}{v+m})R + (\frac{m}{v+m})C$$
 * $$v$$ is the number of votes for the movie
 * $$m$$ is the minimum votes required to be listed in the chart
 * $$R$$ is the average rating of the movie
-* $$C$$ is the mean vote across the whole report
+* $$C$$ is the mean vote across the whole report. For the purposes of this question this value is approximately 7, which you can hardcode into your query.
 
-We would like to set a minimum number of votes to make sure the score is accurate. For this question we will assume the minimum votes required to be listed is 1838. Return the 20 highest rated movies according to this formula. The output should contain two fields: `original_title` with the original title of the movie and `score` which contains the WR for the associated movie. How many movies can you recognize on this list? Your output documents should have the following fields:
+We would like to set a minimum number of votes to make sure the score is accurate. For this question we will assume the minimum votes required to be listed is 1838. Return the 20 highest rated movies according to this formula. The output should contain two fields: `title` with the title of the movie and `score` which contains the WR for the associated movie rounded to two decimal places. How many movies can you recognize on this list? Sort in descending order of `score`, and break ties in descending order of `vote_count` and ascending order of `title`. Your output documents should have the following fields:
 
 ```typescript
 {
@@ -578,7 +578,8 @@ We would like to set a minimum number of votes to make sure the score is accurat
 }
 ```
 
-* Useful operators: Look up what the [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/), [`$multiply`](https://docs.mongodb.com/manual/reference/operator/aggregation/multiply/), and [`$divide`](https://docs.mongodb.com/manual/reference/operator/aggregation/divide/) operators do \(you may find this question remniscent of Scheme from 61a!\)
+* Useful operators: Look up what the [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/), [`$multiply`](https://docs.mongodb.com/manual/reference/operator/aggregation/multiply/), [`$divide`](https://docs.mongodb.com/manual/reference/operator/aggregation/divide/) , and [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/) operators do \(you may find this question reminiscent of Scheme from 61a!\)
+* **Expected output note**: If you got your copy of the skeleton code before 11/18/20, your expected output may be out of date. You can update your expected out in your copy of the skeleton by copying and pasting the contents of [this file](https://github.com/berkeley-cs186/fa20-proj6/blob/master/expected_output/q2i.dat) into `expected_output/q2i.dat`
 
 **ii.** The TAs consider the prospect of making their own feature film on the beauty and joy of databases, and want to think of a catchy tagline. Run the following to see some examples taglines:
 
@@ -586,7 +587,7 @@ We would like to set a minimum number of votes to make sure the score is accurat
 
 Notice how the second one is "Roll the dice and unleash the excitement!" We want to see the 20 most common words \(length &gt; 3\) across all taglines in descending order. In order to do this, we would need to split our sample tagline into its constituent words \("Roll", "the", "dice", "and", "unleash", "the", "excitement!"\).
 
-To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any trailing punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement"\). Your output documents should have the following fields:
+To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any trailing punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement"\). Order your output by descending order of `count`. Your output documents should have the following fields:
 
 ```typescript
 {
