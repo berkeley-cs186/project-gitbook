@@ -50,7 +50,7 @@ Part of the recovery manager's job during forward processing is to maintain the 
 * `abort` is called when a transaction attempts to move into the `ABORTING` state.
 * `end` is called when a transaction attempts to move into the `COMPLETE` state.
 
-In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log \(check the `records/` directory for the types of logs you can create\). During this task you should get into the habit of **updating the lastLSN** in the transaction table whenever you append a log for a transaction's operation. This includes status change records, update records, and CLRs. 
+In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log \(check the `records/` directory for the types of logs you can create\). During this task you should get into the habit of **updating the lastLSN** in the transaction table whenever you append a log for a transaction's operation. This includes status change records, update records, and CLRs.
 
 You'll also need to implement:
 
@@ -66,7 +66,7 @@ Some helper functions you may find useful for this task:
 * `LogRecord#isUndoable`
 * `LogRecord#undo`
 
-After completing this task you should pass `testAbort` and `testAbortingEnd`. 
+After completing this task you should pass `testAbort` and `testAbortingEnd`.
 
 You will need to complete Task 2: Logging before `testSimpleCommit` passes.
 
