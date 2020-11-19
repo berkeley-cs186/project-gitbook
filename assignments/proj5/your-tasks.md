@@ -209,7 +209,7 @@ These three types of log records \(CommitTransaction/AbortTransaction/EndTransac
 
 When one of these records are encountered, the transaction table should be updated as described in the previous section. The status of the transaction should also be set to one of `COMMITTING`, `RECOVERY_ABORTING`, or `COMPLETE`.
 
-If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, and the entry should be removed from the transaction table yet.
+If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, and **the entry should not be removed from the transaction table yet.** Entries should only be removed from the transaction table _after_ all logs from before the crash have undergone analysis.
 
 **Checkpoint Records**
 
@@ -235,7 +235,7 @@ You should only update a transaction's status if the status in the checkpoint is
 
 The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, or `RECOVERY_ABORTING`or `COMPLETE`.
 
-All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\).
+All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\). 
 
 All transactions in the `RUNNING` state should be moved into the `RECOVERY_ABORTING` state, and an abort transaction record should be written.
 
