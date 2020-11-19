@@ -50,14 +50,12 @@ Part of the recovery manager's job during forward processing is to maintain the 
 * `abort` is called when a transaction attempts to move into the `ABORTING` state.
 * `end` is called when a transaction attempts to move into the `COMPLETE` state.
 
-In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log \(check the `records/` directory for the types of logs you can create\). During this task you should get into the habit of **updating the lastLSN** in the transaction table whenever you append a log for a transaction's operation. This includes status change records, update records, and CLRs.
+In the three methods \(`commit`, `abort`, `end`\) that you need to implement, you will need to keep the transaction table up-to-date, set the status of the transaction accordingly, and write the appropriate log record to the log \(check the `records/` directory for the types of logs you can create\). During this task you should get into the habit of **updating the lastLSN** in the transaction table whenever you append a log for a transaction's operation. This includes status change records, update records, and CLRs. 
 
 You'll also need to implement:
 
 * In `commit` the commit record needs to be flushed to disk before the commit call returns to ensure durability.
 * In `end` if the transaction ends in an abort, all changes must be rolled back before an EndTransaction record is written. Look at the docstring for `rollbackToLSN` for details on how to rollback, and think about what LSN you can pass into this function to completely rollback a transaction. Note that you will need to update the dirty page table for [certain CLRs](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/ARIESRecoveryManager.java#L161-L164) \(if you got your version of the code before 11/07/20 you may not have this docstring in your local copy\).
-  * In the case that a page is dirtied, **make sure you only update the table if its necessary.** If there's already an entry fo
-  * The argument to someRecord.undo\(\) should be the prevLSN for the CLR that will be created by the call
 
 Some helper functions you may find useful for this task:
 
@@ -68,7 +66,7 @@ Some helper functions you may find useful for this task:
 * `LogRecord#isUndoable`
 * `LogRecord#undo`
 
-After completing this task you should pass `testAbort` and `testAbortingEnd`.
+After completing this task you should pass `testAbort` and `testAbortingEnd`. 
 
 You will need to complete Task 2: Logging before `testSimpleCommit` passes.
 
@@ -205,6 +203,7 @@ The dirty page table will need to be updated for certain page-related log record
 * UpdatePage/UndoUpdatePage both may dirty a page in memory, without flushing changes to disk.
 * FreePage/UndoAllocPage all make their changes visible on disk immediately, and can be seen as flushing all changes at the time \(including their own\) to disk.
 * You don't need to do anything for AllocPage/UndoFreePage
+  * If you're curious about how the data from before the page was freed is restored in this case, we can work around this by always writing an update log record that goes from \[old bytes\] -&gt; \[zeroes\] right before freeing the page. After undoing the free page, undoing this update would restore the old bytes \(\[zeroes\] -&gt; \[old\_bytes\]\). This will be taken care of for you.
 
 **Log Records for Transaction Status Changes**
 
@@ -238,7 +237,7 @@ You should only update a transaction's status if the status in the checkpoint is
 
 The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, or `RECOVERY_ABORTING`or `COMPLETE`.
 
-All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\). 
+All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\).
 
 All transactions in the `RUNNING` state should be moved into the `RECOVERY_ABORTING` state, and an abort transaction record should be written.
 
