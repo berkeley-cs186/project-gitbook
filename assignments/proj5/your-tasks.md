@@ -56,6 +56,8 @@ You'll also need to implement:
 
 * In `commit` the commit record needs to be flushed to disk before the commit call returns to ensure durability.
 * In `end` if the transaction ends in an abort, all changes must be rolled back before an EndTransaction record is written. Look at the docstring for `rollbackToLSN` for details on how to rollback, and think about what LSN you can pass into this function to completely rollback a transaction. Note that you will need to update the dirty page table for [certain CLRs](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/ARIESRecoveryManager.java#L161-L164) \(if you got your version of the code before 11/07/20 you may not have this docstring in your local copy\).
+  * In the case that a page is dirtied, **make sure you only update the table if its necessary.** If there's already an entry fo
+  * The argument to someRecord.undo\(\) should be the prevLSN for the CLR that will be created by the call
 
 Some helper functions you may find useful for this task:
 
@@ -201,7 +203,8 @@ These are the records that involve a transaction, and therefore, we need to upda
 The dirty page table will need to be updated for certain page-related log records:
 
 * UpdatePage/UndoUpdatePage both may dirty a page in memory, without flushing changes to disk.
-* AllocPage/FreePage/UndoAllocPage/UndoFreePage all make their changes visible on disk immediately, and can be seen as flushing all changes at the time \(including their own\) to disk.
+* FreePage/UndoAllocPage all make their changes visible on disk immediately, and can be seen as flushing all changes at the time \(including their own\) to disk.
+* You don't need to do anything for AllocPage/UndoFreePage
 
 **Log Records for Transaction Status Changes**
 
