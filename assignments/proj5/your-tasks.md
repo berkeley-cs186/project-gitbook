@@ -36,7 +36,13 @@ Partition 0 is reserved for storing the log, which is why in a couple of places,
 
 ![](../../.gitbook/assets/proj5-db-happy%20%281%29%20%281%29%20%281%29.png)
 
+
+
 When the database is undergoing normal operation - where transactions are running normally, reading and writing data - the job of the recovery manager is to maintain the log, by adding log records and ensuring that the log is properly flushed when necessary, so that we can recover from a crash at any time. A few components of forward processing are already implemented for you. The tests for this part are all located in [`TestForwardProcessing.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestForwardProcessing.java).
+
+#### Skeleton Code Diagram
+
+We made a diagram giving a high level overview and hints for implementing functions in this part of the project. You can view it [here](https://drive.google.com/file/d/1Hw8IE_Iuf-tIwIbQdqlYO7pgIHCOHiBS/view?usp=sharing).
 
 #### Initialization
 
@@ -215,13 +221,13 @@ If the record is an EndTransaction record, the transaction should also be cleane
 
 **Checkpoint Records**
 
-When a BeginCheckpoint record is encountered, the transaction counter needs to be updated \(`updateTransactionCounter`\). This ensures that once the database is running again it doesn't reuse a transaction number from before a crash.
+When a BeginCheckpoint record is encountered, the transaction counter needs to be updated \(`updateTransactionCounter`\) to the value returned by calling [this method](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/records/BeginCheckpointLogRecord.java#L19-L22). This ensures that once the database is running again it doesn't reuse a transaction number from before a crash.
 
 When an EndCheckpoint record is encountered, the tables stored in the record should be combined with the tables currently in memory:
 
 * The recLSN of a page in the checkpoint should always be used, even if we have a record in the dirty page table already, since the checkpoint is always more accurate than anything we can infer from just the log.
 * The lastLSN of a transaction in the checkpoint should only be used if it is not smaller than the lastLSN of the transaction in the transaction memory \(if present\).
-* All pages in the touchedPages table for a transaction should be added to the touchedPages set for the transaction in memory, if the transaction has not finished yet, and an X lock requested for each page.
+* If the transaction has not completed yet, all pages in the touchedPages table for a transaction should be added to the touchedPages set for the transaction in memory, and an X lock requested for each page.
 
 Additionally, the status of transactions should be updated. Remember that checkpoints are fuzzy, meaning that they capture state from any time between the begin and end records. This means some of the transaction status's stored in the record may be out of date, e.g. the checkpoint may say a transaction is running when we already know that its aborting. Transactions will always advance through states in one of two ways:
 
@@ -235,13 +241,13 @@ You should only update a transaction's status if the status in the checkpoint is
 
 **Ending Transactions**
 
-The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, or `RECOVERY_ABORTING`or `COMPLETE`.
+The transaction table at this point should have transactions that are in one of the following states: `RUNNING`, `COMMITTING`, `RECOVERY_ABORTING`or `COMPLETE`.
 
 All transactions in the `COMMITTING` state should be ended \(`cleanup()`, state set to `COMPLETE`, end transaction record written, and removed from the transaction table\).
 
 All transactions in the `RUNNING` state should be moved into the `RECOVERY_ABORTING` state, and an abort transaction record should be written.
 
-All transactions in the `COMPLETE` state should be removed the transaction table.
+All transactions in the `COMPLETE` state should be removed from the transaction table.
 
 Nothing needs to be done for transactions in the `RECOVERY_ABORTING` state.
 
