@@ -584,7 +584,7 @@ We would like to set a minimum number of votes to make sure the score is accurat
 
 Notice how the second one is "Roll the dice and unleash the excitement!" We want to see the 20 most common words \(length &gt; 3\) across all taglines in descending order. In order to do this, we would need to split our sample tagline into its constituent words \("Roll", "the", "dice", "and", "unleash", "the", "excitement!"\).
 
-To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any trailing punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement"\). Order your output by descending order of `count`. Your output documents should have the following fields:
+To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any surrounding punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement", without the exclamation mark\). Order your output by descending order of `count`. Your output documents should have the following fields:
 
 ```typescript
 {
@@ -599,7 +599,8 @@ Can you guess what the most popular words might be?
 * Useful operators:
   * [$split](https://docs.mongodb.com/manual/reference/operator/aggregation/split/) can be used to convert a string to an array. For example splitting the string "a proper copper coffee pot" by " " \(a space\) will create the array \["a", "proper", "copper", "coffee", "pot"\]
   * [$toLower](https://docs.mongodb.com/manual/reference/operator/aggregation/toLower/) converts a string to lowercase
-  * [$trim](https://docs.mongodb.com/manual/reference/operator/aggregation/trim/) can be used to trim off trailing punctuation marks
+  * [$trim](https://docs.mongodb.com/manual/reference/operator/aggregation/trim/) can be used to trim off surrounding punctuation marks
+  * [$strLenCP](https://docs.mongodb.com/manual/reference/operator/aggregation/strLenCP/) can be used to get the length of a string. Make sure to check for length _after_ removing punctuation marks!
 
 **iii.** How much does it cost to make a movie? The TAs were hoping to write a query for this but realized something that will haunt them for the rest of their lives... Mongo's lack of schema requirements means that the budget field of documents metadata isn't always an integer! Even worse, sometimes the field doesn't even exist! It looks like whoever prepared the data set always did one of the following:
 
