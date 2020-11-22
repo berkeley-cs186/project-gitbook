@@ -42,7 +42,9 @@ When the database is undergoing normal operation - where transactions are runnin
 
 #### Skeleton Code Diagram
 
-We made a diagram giving a high level overview and hints for implementing functions in this part of the project. You can view it [here](https://drive.google.com/file/d/1Hw8IE_Iuf-tIwIbQdqlYO7pgIHCOHiBS/view?usp=sharing).
+![](../../.gitbook/assets/forwardprocessing.png)
+
+This a diagram giving a high level overview and hints for implementing functions in this part of the project. You can the pdf version [here](https://drive.google.com/file/d/1Hw8IE_Iuf-tIwIbQdqlYO7pgIHCOHiBS/view?usp=sharing).
 
 #### Initialization
 
