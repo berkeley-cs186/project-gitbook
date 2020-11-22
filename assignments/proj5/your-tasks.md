@@ -219,7 +219,7 @@ These three types of log records \(CommitTransaction/AbortTransaction/EndTransac
 
 When one of these records are encountered, the transaction table should be updated as described in the previous section. The status of the transaction should also be set to one of `COMMITTING`, `RECOVERY_ABORTING`, or `COMPLETE`.
 
-If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, and **the entry should NOT be removed from the transaction table yet.** Entries should only be removed from the transaction table _after_ all logs from before the crash have undergone analysis.
+If the record is an EndTransaction record, the transaction should also be cleaned up before setting the status, but **the entry should NOT be removed from the transaction table yet.** Entries should only be removed from the transaction table _after_ all logs from before the crash have undergone analysis. Delaying the removal from the transaction table until the very end differs slightly from how its covered in the notes, but its important to ensure that we know which transactions have already been completed when reconciling our in-memory transaction table with the ones stored inside end checkpoint log records.
 
 **Checkpoint Records**
 
