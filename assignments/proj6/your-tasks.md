@@ -562,7 +562,7 @@ $$\textrm{WR} = (\frac{v}{v+m})R + (\frac{m}{v+m})C$$
 
 * $$v$$ is the number of votes for the movie
 * $$m$$ is the minimum votes required to be listed in the chart
-* $$R$$ is the average rating of the movie
+* $$R$$ is the average rating of the movie \(this is stored in the field `vote_average`\)
 * $$C$$ is the mean vote across the whole report. For the purposes of this question this value is approximately 7, which you can hardcode into your query.
 
 We would like to set a minimum number of votes to make sure the score is accurate. For this question we will assume the minimum votes required to be listed is 1838. Return the 20 highest rated movies according to this formula. The output should contain two fields: `title` with the title of the movie and `score` which contains the WR for the associated movie rounded to two decimal places. How many movies can you recognize on this list? Sort in descending order of `score`, and break ties in descending order of `vote_count` and ascending order of `title`. Your output documents should have the following fields:
