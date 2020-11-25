@@ -2,13 +2,13 @@
 
 For this assignment you will get acquainted with running Moocbase's command line interface and make a small change to one file to get things working properly.
 
-### Task 1: Running the CLI
+## Task 1: Running the CLI
 
 Most databases provide a command line interface \(CLI\) to send and view the results of queries. To run the CLI in IntelliJ navigate to the file:
 
-`src/main/java/edu/berkeley/cs186/database/cli/CommandLineInterface` 
+`src/main/java/edu/berkeley/cs186/database/cli/CommandLineInterface`
 
-It's okay if you don't understand most of the code here right now, we just want to run it. Locate the arrow next to the class declaration click on it to start the CLI. 
+It's okay if you don't understand most of the code here right now, we just want to run it. Locate the arrow next to the class declaration click on it to start the CLI.
 
 ![Click the arrow \(circled in red above\) to run the CLI](../../.gitbook/assets/image.png)
 
@@ -26,7 +26,7 @@ You should get something similar to the following output:
 
 Hmm, that doesn't look quite right! Follow the instructions in the next task to get the proper output. To exit the CLI just type in `exit` and hit enter.
 
-### Task 2: Welcome to CS186!
+## Task 2: Welcome to CS186!
 
 Open up `src/main/java/edu/berkeley/cs186/database/databox/StringDataBox.java`. It's okay if you do not understand most of the code right now.
 
@@ -40,13 +40,11 @@ The `toString` method currently looks like:
     }
 ```
 
-Follow the instructions in the `TODO(proj0)` comment to fix the return statement. 
+Follow the instructions in the `TODO(proj0)` comment to fix the return statement.
 
 Navigate to`src/test/java/edu/berkeley/cs186/database/databox/TestWelcome.java` and try running the test in the file, which should now be passing. Now you can run through Task 1 again to see what the proper output should be.
 
-### You're done!
+## You're done!
 
 Follow the instructions in the next section "Submitting the Assignment" to turn in your work.
-
-
 
