@@ -186,6 +186,8 @@ Finally, we allow for new transactions to start running once the redo phase has 
 
 ### Task 5: Analysis
 
+**This section is a bit long, so we put together a diagram** [**here**](https://drive.google.com/file/d/11INK5krFzN6QC38fhn8Jes1WcIiVe-_a/view?usp=sharing) **that summarizes what you should do for each type of record. You may find it helpful to refer to this as you work through the cases.**
+
 This section concerns just the `restartAnalysis` method, which performs the analysis pass of restart recovery.
 
 **Master Record**
