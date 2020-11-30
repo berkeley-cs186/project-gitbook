@@ -8,14 +8,14 @@ Things that you might consider testing for include: anything that we specify in 
 
 Here are a few cases mentioned in the spec but not tested for in the public test set:
 
-* The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within a single page. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code fail to flush the entry for exceeding the log tail size.
-* When writing a large update \(large enough that the update must be split in two\), we don't provide a check for the dirty page table. If an entry didn't exist before, you should consider with the redo-only record or the undo-only record's LSN is the one that should be set as the recLSN for the page that was updated.
+* The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within a single page. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code will fail to flush the entry for exceeding the log tail size.
+* When writing a large update \(large enough that the update must be split in two\), we don't provide a check for the dirty page table. If an entry didn't exist before, you should consider if the redo-only record or the undo-only record's LSN is the one that should be set as the recLSN for the page that was updated.
 * For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L30) \(calling cleanup\(\) on a transaction should set that flag\)
 
 And here are two common cases that your code should be prepared to handle:
 
 * Make sure your redo logic still works without error even if there are no entries in the reconstructed dirty page table after analysis.
-* Make sure your undo logic still works without error even if there are no transactions that need to be undone.
+* Make sure your undo logic still works without error even if there are no transactions that need to be undone after analysis.
 
 ## Writing your own tests
 
