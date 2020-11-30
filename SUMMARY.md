@@ -37,6 +37,7 @@
 * [Project 5: Recovery](assignments/proj5/README.md)
   * [Getting Started](assignments/proj5/getting-started.md)
   * [Your Tasks](assignments/proj5/your-tasks.md)
+  * [Testing](assignments/proj5/testing.md)
   * [Submitting the Assignment](assignments/proj5/submitting-the-assignment.md)
   * [Further Reading](assignments/proj5/further-reading.md)
 * [Project 6: NoSQL](assignments/proj6/README.md)
