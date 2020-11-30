@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Sunday, 12/6/2020 at 11:59PM PST \(GMT-8\)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Sunday, 12/6/2020 at 11:59PM PST (GMT-8)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
@@ -29,14 +29,29 @@ We'll be exploring the document-oriented database [MongoDB](https://en.wikipedia
 ```text
 > mongo --version
 MongoDB shell version v4.4.1
-Build Info: ...
+Build Info: ... 
 ```
 
 If you don't already have MongoDB on your machine, follow the instructions for your platform:
 
 #### Windows
 
-Follow the instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/). If everything went successfully you should be able to run `mongo --version` and `mongoimport --version` successfully.
+Follow the instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/). 
+
+Once you have everything installed you'll want to locate the location of the mongo shell and mongoimport binaries. Confirm the location of the binaries at the following spots: 
+
+* The mongo shell binary \(mongo.exe\) should be located `C:\Program Files\MongoDB\Server\4.4\bin\`. Rename the file to just `mongo` \(without the .exe\)
+* The mongoimport binary \(mongoimport.exe\) should be located at `C:\Program Files\MongoDB\Tools\100\bin\`. If you can't find it at that exact location, check other directories under `C:\Program Files\MongoDB\Tools\`. Rename the file to just `mongoimport` \(without the .exe\).
+
+Add the two directories to your PATH. To edit your environment variables on Windows 10, use the following steps:
+
+1. Open up search and type in "Edit the system environment variables"
+2. Open that up and click "Environment Variables..." near the bottom
+3. Click "Path" under user variables \(top half of the screen\) and click edit
+4. Click "New" on the top right and add C:\Program Files\MongoDB\Server\4.4\bin\
+5. Repeat the same process for database tools with the appropriate PATH
+
+If everything went successfully you should be able to run `mongo --version` and `mongoimport --version` successfully.
 
 #### MacOS
 
@@ -52,7 +67,7 @@ If you run into a CompilerSelectionError, run `xcode-select --install` and repea
 
 #### Linux
 
-Follow the instructions [here](https://docs.mongodb.com/manual/administration/install-on-linux/) for your appropriate platform. If something breaks during the installation process and you can't run `mongo` and `mongoimport --version`, follow the instructions in the next section \(Docker\) to get a docker container with mongo and python pre-installed.
+Follow the instructions [here](https://docs.mongodb.com/manual/administration/install-on-linux/) for your appropriate platform. If something breaks during the installation process and you can't run `mongo`  and `mongoimport --version`, follow the instructions in the next section \(Docker\) to get a docker container with mongo and python pre-installed. 
 
 #### Docker
 
@@ -94,24 +109,24 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 Download the data set from the class drive [here](https://drive.google.com/file/d/1logbbpe8ApeVnUb_bX-SHZ1mpIrhRZDF/view).
 
-Unzip the `data.zip` file inside your `fa20-proj6-yourname` directory. You should now have a `data/` directory in your `fa20-proj6-yourname` directory.
+Unzip the `data.zip` file inside your `fa20-proj6-yourname` directory. You should now have a `data/` directory in your `fa20-proj6-yourname` directory. 
 
 Afterwards, try running `python3 load.py`. You should see output like the following:
 
 ```text
 > python3 load.py
-2020-10-18T07:26:34.067-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:34.068-0700    dropping: movies.credits
-2020-10-18T07:26:42.302-0700    45476 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:42.341-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:42.341-0700    dropping: movies.movies_metadata
-2020-10-18T07:26:45.287-0700    45463 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:45.300-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:45.300-0700    dropping: movies.keywords
-2020-10-18T07:26:46.422-0700    46419 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:46.452-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:46.452-0700    dropping: movies.ratings
-2020-10-18T07:26:47.964-0700    99958 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:34.067-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:34.068-0700	dropping: movies.credits
+2020-10-18T07:26:42.302-0700	45476 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:42.341-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:42.341-0700	dropping: movies.movies_metadata
+2020-10-18T07:26:45.287-0700	45463 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:45.300-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:45.300-0700	dropping: movies.keywords
+2020-10-18T07:26:46.422-0700	46419 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:46.452-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:46.452-0700	dropping: movies.ratings
+2020-10-18T07:26:47.964-0700	99958 document(s) imported successfully. 0 document(s) failed to import.
 ```
 
 ## Running the tests
@@ -153,4 +168,6 @@ Then, you can proceed as usual.
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Piazza](https://piazza.com/class/$piazza-link$).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
+
+
 
