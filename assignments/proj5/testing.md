@@ -41,11 +41,11 @@ The function above is run before every single test, and sets the value of the `r
 The following helper methods are provided so that you can access important member variables of the RecoveryManager for testing purposes:
 
 * `getBufferManager` - Returns the buffer manager used by the database. Useful if you want to manually run updates using records \(see `testFlushingRollback` for an example\)
-* `getDiskSpaceManager` - Returns the disk space maanger used by the database. Useful if you want to manually run updates using records \(see testFlushingRollbackFor an example\)
-* `getLogManager` - Returns the recovery manager's log manager. Useful to directly append and flush logs to see how the recovery manager deals with them when rolling back. See testAbortingEnd for an example.
+* `getDiskSpaceManager` - Returns the disk space manager used by the database. Useful if you want to manually run updates using records \(see testFlushingRollbackFor an example\)
+* `getLogManager` - Returns the recovery manager's log manager. Useful to directly append and flush logs to see how the recovery manager deals with them when rolling back. See `testAbortingEnd` for an example.
 * `getLockRequests` - Returns a list of strings describing locks that were requested \(via `ARIESRecoveryManager#acquireTransactionLock`\) while executing the recovery manager. Useful for making sure that the analysis phase acquires X locks as necessary on touched pages.
 * `getDirtyPageTable` - Gets the dirty page table of the recovery manager. Useful to make sure that pages are getting flushed properly and that recLSN's are set correctly or check that its reconstructed properly during analysis.
-* `getTransactionTable` - Gets the transaction table fo the recovery manager. Useful to make sure that entries are created/removed properly or check that its  reconstructed properly during analysis.
+* `getTransactionTable` - Gets the transaction table of the recovery manager. Useful to make sure that entries are created/removed properly or check that its  reconstructed properly during analysis.
 
 ### IO Checks
 
