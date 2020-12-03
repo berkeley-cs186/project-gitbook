@@ -230,7 +230,7 @@ When a BeginCheckpoint record is encountered, the transaction counter needs to b
 When an EndCheckpoint record is encountered, the tables stored in the record should be combined with the tables currently in memory:
 
 * The recLSN of a page in the checkpoint should always be used, even if we have a record in the dirty page table already, since the checkpoint is always more accurate than anything we can infer from just the log.
-* The lastLSN of a transaction in the checkpoint should only be used if it is not smaller than the lastLSN of the transaction in the transaction memory \(if present\).
+* The lastLSN of a transaction in the checkpoint should only be used if it is not smaller than the lastLSN of the transaction in the in-memory transaction table \(if present\).
 * If the transaction has not completed yet, all pages in the touchedPages table for a transaction should be added to the touchedPages set for the transaction in memory, and an X lock requested for each page.
 
 Additionally, the status of transactions should be updated. Remember that checkpoints are fuzzy, meaning that they capture state from any time between the begin and end records. This means some of the transaction status's stored in the record may be out of date, e.g. the checkpoint may say a transaction is running when we already know that its aborting. Transactions will always advance through states in one of two ways:
