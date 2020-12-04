@@ -53,13 +53,11 @@ Calling `getNumIOs` on the buffer manager will return the current number of IOs 
 
 ### Redo checks
 
-You may have noticed calls to `setupRedoChecks` and `finishRedoChecks`. To help with testing, every time redo is called on a LogRecord we make a [call to a provided method](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L156). During regular operation this will just be a no-op function, but during testing we can set this to be whatever we want using [onRedoHandler](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L225-L232). 
+You may have noticed calls to `setupRedoChecks` and `finishRedoChecks`. To help with testing, every time redo is called on a LogRecord we make a [call to a provided method](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L156). During regular operation this will just be a no-op function, but during testing we can set this to be whatever we want using [onRedoHandler](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L225-L232).
 
 To make it more straight forward to do a series of checks, setupRedoChecks accepts a list of functional objects that take a LogRecord as an argument. Every time redo is called, the first LogRecord in the list is removed and is called using the LogRecord that was redone. For example, in [testAbortingEnd](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestForwardProcessing.java#L159-L163) we use this to check that the expected CLR's are emitted and redone in the order that we anticipated. This is useful when:
 
 * when ending an aborted transaction, rolling back changes should involve calling redo on CLRs as they are generated
 * during the undo phase, rolling back changes should involve calling redo on CLRs as they are generated
 * during the redo phase
-
-
 

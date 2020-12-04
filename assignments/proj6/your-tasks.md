@@ -1,6 +1,6 @@
 # Your Tasks
 
-![Datatake](../../.gitbook/assets/datatake%20%281%29.png)
+![Datatake](../../.gitbook/assets/datatake%20%281%29%20%281%29.png)
 
 In this project you'll be working with a subset of the [MovieLens Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset). Unlike the data set you worked on long ago in Project 1, the table here won't be organized in tables of records but rather as collections of documents! Documents are similar to records in the sense that they are used to group together pieces of data, but unlike the records we covered for SQL databases, documents can have fields that _are not_ primitive data types. For example, the following document has three fields, two of which aren't primitive data types:
 
