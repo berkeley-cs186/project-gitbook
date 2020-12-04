@@ -65,6 +65,11 @@ brew services start mongodb-community@4.4
 
 If you run into a CompilerSelectionError, run `xcode-select --install` and repeat the commands above. Check that everything is installed by running `mongo --version` and `mongoimport --version`. If both of these commands work then you should be good to go.
 
+If your version of Mac can't support Mongo 4.4 then we recommend you use the Docker approach to complete this assignment. Otherwise, if it doesn't support Docker either then you can use Mongo 4.2 instead. This will work the same as 4.4 except the following functions recommended in the spec will not be available, so you'll have to modify the advice slightly:
+
+* `{$first: <array expression>}` will have to be replaced with `{ $arrayElemAt: [ <array expression>, 0 ]}`
+*  `$isNumber` will have to be rewritten as an or statement based on the the fields [type](https://docs.mongodb.com/manual/reference/operator/aggregation/type/)
+
 #### Linux
 
 Follow the instructions [here](https://docs.mongodb.com/manual/administration/install-on-linux/) for your appropriate platform. If something breaks during the installation process and you can't run `mongo` and `mongoimport --version`, follow the instructions in the next section \(Docker\) to get a docker container with mongo and python pre-installed.
