@@ -51,7 +51,7 @@ Add the two directories to your PATH. To edit your environment variables on Wind
 4. Click "New" on the top right and add C:\Program Files\MongoDB\Server\4.4\bin\
 5. Repeat the same process for database tools with the appropriate PATH
 
-If everything went successfully you should be able to run `mongo --version` and `mongoimport --version` successfully in Git Bash, or `mongo.exe --version` and `monogimport.exe --version` in other shells.
+If everything went successfully you should be able to run `mongo --version` and `mongoimport --version` successfully in Git Bash, or `mongo.exe --version` and `mongoimport.exe --version` in other shells.
 
 #### MacOS
 
