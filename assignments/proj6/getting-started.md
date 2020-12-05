@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Sunday, 12/6/2020 at 11:59PM PST \(GMT-8\)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Sunday, 12/6/2020 at 11:59PM PST (GMT-8)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
@@ -114,24 +114,24 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 Download the data set from the class drive [here](https://drive.google.com/file/d/1logbbpe8ApeVnUb_bX-SHZ1mpIrhRZDF/view).
 
-Unzip the `data.zip` file inside your `fa20-proj6-yourname` directory. You should now have a `data/` directory in your `fa20-proj6-yourname` directory.
+Unzip the `data.zip` file inside your `fa20-proj6-yourname` directory. You should now have a `data/` directory in your `fa20-proj6-yourname` directory. 
 
 Afterwards, try running `python3 load.py`. You should see output like the following:
 
 ```text
 > python3 load.py
-2020-10-18T07:26:34.067-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:34.068-0700    dropping: movies.credits
-2020-10-18T07:26:42.302-0700    45476 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:42.341-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:42.341-0700    dropping: movies.movies_metadata
-2020-10-18T07:26:45.287-0700    45463 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:45.300-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:45.300-0700    dropping: movies.keywords
-2020-10-18T07:26:46.422-0700    46419 document(s) imported successfully. 0 document(s) failed to import.
-2020-10-18T07:26:46.452-0700    connected to: mongodb://localhost/
-2020-10-18T07:26:46.452-0700    dropping: movies.ratings
-2020-10-18T07:26:47.964-0700    99958 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:34.067-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:34.068-0700	dropping: movies.credits
+2020-10-18T07:26:42.302-0700	45476 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:42.341-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:42.341-0700	dropping: movies.movies_metadata
+2020-10-18T07:26:45.287-0700	45463 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:45.300-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:45.300-0700	dropping: movies.keywords
+2020-10-18T07:26:46.422-0700	46419 document(s) imported successfully. 0 document(s) failed to import.
+2020-10-18T07:26:46.452-0700	connected to: mongodb://localhost/
+2020-10-18T07:26:46.452-0700	dropping: movies.ratings
+2020-10-18T07:26:47.964-0700	99958 document(s) imported successfully. 0 document(s) failed to import.
 ```
 
 ## Running the tests
@@ -173,4 +173,6 @@ Then, you can proceed as usual.
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Piazza](https://piazza.com/class/$piazza-link$).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
+
+
 

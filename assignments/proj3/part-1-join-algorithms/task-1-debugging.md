@@ -108,11 +108,11 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 2x2
 
-![](../../../.gitbook/assets/2x2pnlj.gif)
+![](../../../.gitbook/assets/2x2pnlj%20%281%29.gif)
 
 ### BNLJ 2x2 \(B=4\)
 
-![](../../../.gitbook/assets/2x2bnlj.gif)
+![](../../../.gitbook/assets/2x2bnlj%20%281%29.gif)
 
 ## Cases
 
