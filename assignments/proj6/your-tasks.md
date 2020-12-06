@@ -494,7 +494,7 @@ Congrats, you've built your first query! You can run `python3 test.py q0` to tes
 
 ## Your Tasks
 
-Note on grading: The questions in Task 1 are worth 1 point each, while the questions in Tasks 2 and 3 are worth 2 points each.
+Note on grading: The question 0 and the questions in Task 1 are worth 1 point each, while the questions in Tasks 2 and 3 are worth 2 points each.
 
 ### Task 1: Basics
 
