@@ -614,7 +614,7 @@ Can you guess what the most popular words might be?
   * Set the `budget` field to a string with prefix `$`, for example `"$186"`
   * Set the `budget` field to a string with the the postfix "[USD](https://en.wikipedia.org/wiki/USD)", for example `"186 USD"`
 
-Group the budgets by their value rounded to the nearest multiple of ten million, and return the count for each rounded value. Additionally include an extra field `"unknown"` containing the count of movies where the budget was not known. Order by ascending order of rounded budget. Your output documents should have the following fields:
+Group the budgets by their value rounded to the nearest multiple of ten million, and return the count for each rounded value. Additionally include an extra group `"unknown"` for the count of movies where the budget was not known. Order by ascending order of rounded budget. Your output documents should have the following fields:
 
 ```typescript
 {
