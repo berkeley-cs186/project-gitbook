@@ -8,7 +8,6 @@
 * [Project 1: SQL](assignments/proj1/README.md)
 * [Project 2: B+ Trees](assignments/proj2/README.md)
 * [Project 3: Joins and Query Optimization](assignments/proj3/README.md)
-  * [Part 1: Join Algorithms](assignments/proj3/part-1-join-algorithms/README.md)
 * [Project 4: Concurrency](assignments/proj4/README.md)
 * [Project 5: Recovery](assignments/proj5/README.md)
 * [Project 6: NoSQL](assignments/proj6/README.md)
