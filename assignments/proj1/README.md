@@ -1,3 +1,3 @@
 # Project 1: SQL
 
-This assignment will be released on **Saturday, 8/29/2020**.
+This assignment will be released on **Thursday, 1/21/2021**.
