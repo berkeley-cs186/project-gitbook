@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Monday, 1/25/2021 at 11:59PM PST (GMT-8)**.
+This project is due on **Monday, 1/25/2021 at 11:59PM PST \(GMT-8\)**.
 
 ## Pushing changes to GitHub Classroom
 
@@ -22,7 +22,7 @@ You should make sure that all code you modify belongs to files with `TODO(proj0)
 
 Once you've submitted you should see a score of 1.0/1.0. If so, congratulations! You've finished your first assignment for CS 186.
 
-#### Submitting via upload
+### Submitting via upload
 
 If your GitHub account has access to many repos, the Gradescope UI might timeout while trying to load which repos you have available. If this is the case for you, you can submit your code directly using the Upload submission method. You can zip up your source code with `zip -r submission.zip src/` and submit that directly to the autograder.
 

@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This assignment is due **Monday, 1/25/2021 at 11:59PM PST (GMT-8)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
+This assignment is due **Monday, 1/25/2021 at 11:59PM PST \(GMT-8\)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ For each project, we will provide a GitHub Classroom link. Follow the link to cr
 
 `git clone https://github.com/berkeley-cs186-student/sp21-proj0-oski`
 
-The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kjoxqrf1eq04mr).
+The GitHub Classroom link for this project will be provided in the project release post on [Piazza](https://piazza.com/class/kjoxqrf1eq04mr) later today.
 
 ## Setting up your local development environment
 
