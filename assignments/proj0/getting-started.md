@@ -28,13 +28,13 @@ The GitHub Classroom link for this project is provided in the project release po
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/sp21-proj2-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/sp21-proj0-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
 
 ```text
-git clone https://github.com/berkeley-cs186/sp21-rookiedb sp21-proj2
-cd sp21-proj2/
+git clone https://github.com/berkeley-cs186/sp21-rookiedb sp21-proj0
+cd sp21-proj0/
 git remote remove origin
-git remote add origin https://github.com/berkeley-cs186-student/sp21-proj2-username.git
+git remote add origin https://github.com/berkeley-cs186-student/sp21-proj0-username.git
 git push -u origin master
 ```
 
