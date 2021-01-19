@@ -54,9 +54,9 @@ We recommend setting up a local development environment by installing Java 8 loc
 
 [Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) \(or alternatively, you're free to use [OpenJDK](https://openjdk.java.net/install/)\)
 
-If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11. We won't be able to support any new syntaxes or features introduced in Java 12 or later, which won't be necessary for the projects.
+If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11. We won't be able to support any new syntax or features introduced in Java 12 or later, which won't be necessary for the projects.
 
-To import the project into IntelliJ, make sure that you import as a Maven project \(sel\(the most recent version used by 61B\)ect the `pom.xml` file when importing\).
+To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
 
 ![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%281%29%20%281%29.png)
 
