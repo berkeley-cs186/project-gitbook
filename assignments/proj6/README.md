@@ -1,3 +1,3 @@
 # Project 6: NoSQL
 
-This assignment will be released on **Sunday, 4/25/2021**.
+This assignment will be released on **Saturday, 4/24/2021**.

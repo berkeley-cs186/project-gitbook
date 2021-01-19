@@ -2,9 +2,9 @@
 
 ![The official unofficial mascot of the projects](.gitbook/assets/derpydb-small%20%281%29%20%281%29%20%281%29%20%281%29.jpg)
 
-MOOCBase is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
+RookieDB is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 
-For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/fa20-moocbase/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one. 
+For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/sp21-rookiedb/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one.
 
 ## Code Overview
 
@@ -16,7 +16,7 @@ The `cli` directory contains all the logic for the database's command line inter
 
 #### cli/parser
 
-The subdirectory `cli/parser` contains a lot of scary looking code! Don't be intimidated, this is all automatically generated automatically from the file `MoocParser.jjt` in the root directory of the repo. The code here handles the logic to convert from user inputted queries \(strings\) into a tree of nodes representing the query \(parse tree\).
+The subdirectory `cli/parser` contains a lot of scary looking code! Don't be intimidated, this is all automatically generated automatically from the file `RookieParser.jjt` in the root directory of the repo. The code here handles the logic to convert from user inputted queries \(strings\) into a tree of nodes representing the query \(parse tree\).
 
 #### cli/visitor
 
@@ -161,5 +161,5 @@ try (Transaction t2 = db.beginTransaction()) {
 db.close();
 ```
 
-More complex queries can be found in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/fa20-moocbase/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java).
+More complex queries can be found in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java).
 
