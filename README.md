@@ -130,21 +130,16 @@ For example:
 Database db = new Database("database-dir");
 
 try (Transaction t1 = db.beginTransaction()) {
-    Schema s = new Schema(
-        Arrays.asList("id", "firstName", "lastName"),
-        Arrays.asList(Type.intType(), Type.stringType(10), Type.stringType(10))
-    );
+    Schema s = new Schema()
+            .add("id", Type.intType())
+            .add("firstName", Type.stringType(10))
+            .add("lastName", Type.stringType(10));
+
     t1.createTable(s, "table1");
-    t1.insert("table1", Arrays.asList(
-        new IntDataBox(1),
-        new StringDataBox("John", 10),
-        new StringDataBox("Doe", 10)
-    ));
-    t1.insert("table1", Arrays.asList(
-        new IntDataBox(2),
-        new StringDataBox("Jane", 10),
-        new StringDataBox("Doe", 10)
-    ));
+
+    t1.insert("table1", 1, "Jane", "Doe");
+    t1.insert("table1", 2, "John", "Doe");
+
     t1.commit();
 }
 
