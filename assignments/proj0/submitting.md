@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Monday, 1/25/2021 at 11:59PM PST \(GMT-8\)**.
+This project is due on **Monday, 1/25/2021 at 11:59PM PST (GMT-8)**.
 
 ## Pushing changes to GitHub Classroom
 
@@ -18,13 +18,13 @@ Note that you are only allowed to modify certain files for each assignment, and 
 
 You should make sure that all code you modify belongs to files with `TODO(proj0)` comments in them. A full list of files that you may modify for this project are as follows:
 
-* `src/main/java/edu/berkeley/cs186/database/databox/StringDataBox.java`
+* `databox/StringDataBox.java`
 
 Once you've submitted you should see a score of 1.0/1.0. If so, congratulations! You've finished your first assignment for CS 186.
 
-### Submitting via upload
+### Submitting via upload <a id="submitting-via-upload"></a>
 
-If your GitHub account has access to many repos, the Gradescope UI might timeout while trying to load which repos you have available. If this is the case for you, you can submit your code directly using the Upload submission method. You can zip up your source code with `zip -r submission.zip src/` and submit that directly to the autograder.
+If your GitHub account has access to many repos, the Gradescope UI might time out while trying to load which repos you have available. If this is the case for you, you can submit your code directly using via upload. You can zip up your source code with `zip -r submission.zip src/` and submit that directly to the autograder.
 
 ## Grading
 

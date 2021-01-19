@@ -8,13 +8,13 @@ Most databases provide a command line interface \(CLI\) to send and view the res
 
 `src/main/java/edu/berkeley/cs186/database/cli/CommandLineInterface`
 
-It's okay if you don't understand most of the code here right now, we just want to run it. Locate the arrow next to the class declaration click on it to start the CLI. If you can't find this arrow double check that you followed the instructions in [Getting Started](getting-started.md#setting-up-your-local-development-environment) section correctly.
+It's okay if you don't understand most of the code here right now, we just want to run it. Locate the arrow next to the class declaration click on it to start the CLI.
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![Click the arrow \(circled in red above\) to run the CLI](../../.gitbook/assets/image.png)
 
 This should open a new panel in IntelliJ resembling the following image:
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 Click on this panel and try typing in the following query and hitting enter:
 

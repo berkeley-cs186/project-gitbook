@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This assignment is due **Monday, 1/25/2021 at 11:59PM PST \(GMT-8\)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
+This assignment is due **Monday, 1/25/2021 at 11:59PM PST (GMT-8)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
 
 ## Prerequisites
 
@@ -24,19 +24,39 @@ For each project, we will provide a GitHub Classroom link. Follow the link to cr
 
 `git clone https://github.com/berkeley-cs186-student/sp21-proj0-oski`
 
-The GitHub Classroom link for this project will be provided in the project release post on [Piazza](https://piazza.com/class/kjoxqrf1eq04mr) later today.
+The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kjoxqrf1eq04mr).
+
+### Debugging Issues with GitHub Classroom
+
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/sp21-proj2-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
+
+```text
+git clone https://github.com/berkeley-cs186/sp21-rookiedb sp21-proj2
+cd sp21-proj2/
+git remote remove origin
+git remote add origin https://github.com/berkeley-cs186-student/sp21-proj2-username.git
+git push -u origin master
+```
+
+Then, you can proceed as usual.
+
+#### 404 Not Found
+
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Piazza](https://piazza.com/class/kjoxqrf1eq04mr).
+
+If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
 
 ## Setting up your local development environment
 
 You are free to use any text editor or IDE to complete the assignments, but **we will build and test your code in a Docker container with Maven**.
 
-We recommend setting up a local development environment by installing Java 8 or later locally and using an IDE such as IntelliJ.
+We recommend setting up a local development environment by installing Java 8 locally \(the version our Docker container runs\) and using an IDE such as IntelliJ.
 
-[Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+[Java 8 downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) \(or alternatively, you're free to use [OpenJDK](https://openjdk.java.net/install/)\)
 
-If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11 \(the most recent version used by 61B\). We won't be able to support any new syntaxes or features introduced in Java 12 or later, but those should not be necessary to complete the assignments.
+If you have a newer version of Java installed that should be fine, we'll do our best to support grading for those versions up to Java 11. We won't be able to support any new syntaxes or features introduced in Java 12 or later, which won't be necessary for the projects.
 
-To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
+To import the project into IntelliJ, make sure that you import as a Maven project \(sel\(the most recent version used by 61B\)ect the `pom.xml` file when importing\).
 
 ![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%281%29%20%281%29.png)
 
