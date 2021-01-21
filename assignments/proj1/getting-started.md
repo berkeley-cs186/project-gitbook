@@ -70,9 +70,9 @@ For other Linux distributions you'll need to find `sqlite3` on your appropriate 
 
 You'll need a copy of Python 3.5 or higher to run the tests for this project locally. You can check if you already have an existing copy by running `python3 --version` in a terminal. If you don't already have a working copy download and install one for your appropriate platform from [here](https://www.python.org/downloads/).
 
-## Extract the data set
+## Download and extract the data set
 
-Unzip the `lahman.db.zip` file that came with the skeleton code. You should now have a `lahman.db` file in your `sp21-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
+Download the data set for this project from the course's Google Drive [here](https://drive.google.com/file/d/1WLMFAiNzrA0Qv3p80epO71uN8J6fTXYG/view?usp=sharing). You should get a file called `lahman.db.zip`. Unzip the `lahman.db.zip` file inside your `sp21-proj1-yourname` directory. You should now have a `lahman.db` file in your `sp21-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 ## Running the tests
 
