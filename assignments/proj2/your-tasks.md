@@ -84,7 +84,7 @@ You will need to implement the following methods in `BPlusTree`:
 * `scanAll`
 * `scanGreaterEqual`
 
-In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L396) inner class in `BPlusTree.java`to complete these two methods.
+In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/912d6248a59d1f27117796d9e4c5d7e6ee194b91/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L413) inner class in `BPlusTree.java`to complete these two methods.
 
 After completing this Task you should be passing `TestBPlusTree::testRandomPuts`
 
