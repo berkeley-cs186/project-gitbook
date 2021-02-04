@@ -6,7 +6,7 @@ This project is due **Thursday, 2/18/2021 at 11:59PM PST (GMT-8)**. It is worth 
 
 ## Prerequisites
 
-You should watch the B+ Trees lecture before beginning this project. Later parts will require material from the Indices and B+ Trees Refinements lecture.
+You should watch the B+ Trees lectures before working on this project.
 
 ## Academic Integrity Policy
 
