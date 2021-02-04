@@ -18,7 +18,7 @@ Once all of your files are prepared in your repo you can submit to Gradescope th
 
 ### Partners
 
-If you haven't yet already be sure to fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. When submitting to Gradescope remember to add your partner to the submission so they can get credit. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already be sure to fill out [this form](https://forms.gle/REQPugJuLDEK8hfr7) so we know who you're working with. Every student is responsible for submitting to gradescope individually -- if you submit but your partner doesn't then your partner will not got credit. If you worked off of a shared repo both members of the group are free to submit that repo. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ### Grade breakdown
 
