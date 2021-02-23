@@ -6,7 +6,7 @@ Hash codes can be negative. Make sure you handle that case. The hash codes can a
 
 ## Reached the max number of passes cap
 
-This means that you're doing recursive partitioning infinitely. The most likely cause of this is partitioning using the the same hash function every single time. Make sure to use the `hashFunc` object we provide, which should be a different hash function for each pass.
+This means that you're doing recursive partitioning infinitely. The most likely cause of this is partitioning using the the same hash function every single time. Make sure to update your hash func calls so that the hash function is updated each time.
 
 If you're certain that you're doing both of those things, make sure your condition for recursive partitioning is correct. An off by one \(for example `<=` vs `<` \) is enough to make it so you never reach the build and probe phase.
 

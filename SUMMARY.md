@@ -22,6 +22,8 @@
   * [Getting Started](assignments/proj3/getting-started.md)
   * [Part 0: Skeleton Code](assignments/proj3/skeleton-code.md)
   * [Part 1: Join Algorithms](assignments/proj3/part-1-join-algorithms.md)
+    * [Task 1 Debugging](assignments/proj3/part-1-join-algorithms/task-1-debugging.md)
+    * [Task 2 Common Errors](assignments/proj3/part-1-join-algorithms/task-2-common-errors.md)
   * [Part 2: Query Optimization](assignments/proj3/part-2-query-optimization.md)
   * [Testing](assignments/proj3/testing.md)
   * [Submitting the Assignment](assignments/proj3/submitting-the-assignment.md)

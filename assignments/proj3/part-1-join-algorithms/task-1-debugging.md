@@ -1,46 +1,6 @@
 # Task 1 Debugging
 
 We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400. **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in TestJoinOperator.
-
-## Getting the Extra Tests
-
-### Through Github
-
-In your project repo run the following:
-
-```text
-git remote add staff https://github.com/berkeley-cs186/sp21-moocbase
-git pull staff master
-```
-
-If you see output resembling the following you're good to go:
-
-```text
-From https://github.com/berkeley-cs186/sp21-moocbase
- * branch            master     -> FETCH_HEAD
-Merge made by the 'recursive' strategy.
- .../edu/berkeley/cs186/database/table/Record.java  |   12 +-
- .../cs186/database/query/ExtraNLJTests.java        | 2045 ++++++++++++++++++++
- 2 files changed, 2056 insertions(+), 1 deletion(-)
- create mode 100644 src/test/java/edu/berkeley/cs186/database/query/ExtraNLJTests.java
-```
-
-This is also fine:
-
-```text
-From https://github.com/berkeley-cs186/sp21-moocbase
- * branch            master     -> FETCH_HEAD
-Already up to date.
-```
-
-### Through the power of copy and paste
-
-If for whatever reason you can't/don't want to use git then do the following:
-
-1. Create a new file `ExtraNLJTests.java` in the `src/test/java/edu/berkeley/cs186/database/query/` directory.
-2. Copy paste the contents of [this page](https://raw.githubusercontent.com/berkeley-cs186/sp21-moocbase/master/src/test/java/edu/berkeley/cs186/database/query/ExtraNLJTests.java) into `ExtraNLJTests.java`
-3. Copy paste the contents of [this page](https://raw.githubusercontent.com/berkeley-cs186/sp21-moocbase/master/src/main/java/edu/berkeley/cs186/database/table/Record.java) into`src/main/java/edu/berkeley/cs186/database/table/Record.java`
-
 ## Overview
 
 These tests are designed to give you visualizations that might hint as to where you're going wrong. **You should try to get the test cases working in order**, that is, start with the 1x1 PNLJ tests, followed by the 2x2 PNLJ tests, and then finally the 2x2 BNLJ tests. When you fail a test it should give you a detailed description of why you failed. Here's some example output from failing `testPNLJ1x1Full`:
