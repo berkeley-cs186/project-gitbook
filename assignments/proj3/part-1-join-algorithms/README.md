@@ -49,7 +49,7 @@ We've provided an implementation of Simple Hash Join which can be found in `Simp
 
 #### Grace Hash Join \(GHJ\)
 
-Everything you will need to implement will be done in `GraceHashJoin.java`. You will need to implement the functions `partition`, `buildAndProbe`, `createPartitions`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
+Everything you will need to implement will be done in `GraceHashJoin.java`. You will need to implement the functions `partition`, `buildAndProbe`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
 
 The file `HashPartition.java` in the `memory` directory will be useful when working with partitions. Read through the file and get a good idea what methods you can use.
 
@@ -63,10 +63,10 @@ Recall that a "run" in the context of external mergesort is just a sequence of s
 
 You will need to implement the `sortRun`, `mergeSortedRuns`, `mergePass`, and `sort` methods of `SortOperator`.
 
-* `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\).
-* `mergeSortedRuns(runs)` should return a new run given a list of sorted runs.
+* `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\). You may find the `makeRun` function useful here.
+* `mergeSortedRuns(runs)` should return a new sorted run given a list of sorted runs.
 * `mergePass(runs)` should perform a single merge pass of external mergesort, given a list of all the sorted runs from the previous pass.
-* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data. You may find [these two helper methods](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/TransactionContext.java#L144-L155) in tandem with `createRunFromIterator` useful to create your initial set of runs.
+* `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data.
 
 Each of these methods may be tested independently, so you **must** implement each one as described. You may add additional helper methods as you see fit.
 
@@ -86,7 +86,7 @@ Once you have implemented `SortMergeIterator`, all the remaining tests in `TestJ
 
 ## Submission
 
-Follow the submission instructions [here](../submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
+Follow the submission instructions [here](../../submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
 
 * `database.query.TestJoinOperator`
 * `database.query.TestGraceHashJoin`

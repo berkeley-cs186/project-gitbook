@@ -76,7 +76,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ## Cases
 
-Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next record that should be considered for the join.
+Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next pair records that should be considered for the join.
 
 ![](../../../.gitbook/assets/cases%20%281%29.png)
 
