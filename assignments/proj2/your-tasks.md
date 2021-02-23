@@ -88,7 +88,7 @@ In order to implement these, you will have to complete the [`BPlusTreeIterator`]
 
 After completing this Task you should be passing `TestBPlusTree::testRandomPuts`
 
-Your implementation **does not** have to account for the tree being modified during a scan. For the time being you can think of this as there being a lock that prevents scanning and mutation from overlapping, and that the behavior of iterators created before a modification is undefined (you can handle any problems with these iterators however you like, or not at all).
+Your implementation **does not** have to account for the tree being modified during a scan. For the time being you can think of this as there being a lock that prevents scanning and mutation from overlapping, and that the behavior of iterators created before a modification is undefined \(you can handle any problems with these iterators however you like, or not at all\).
 
 ### Task 4: Bulk Load
 

@@ -58,7 +58,7 @@ If you have a newer version of Java installed that should be fine, we'll do our 
 
 To import the project into IntelliJ, make sure that you import as a Maven project \(select the `pom.xml` file when importing\).
 
-![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%281%29%20%281%29.png)
+![After hitting Import Project navigate to the pom.xml file and open it.](../../.gitbook/assets/image%20%284%29%20%283%29.png)
 
 If launching IntelliJ takes you to an existing workspace instead of showing you the popup above you can open the project by navigating to `File -> New -> Project From Existing Sources` and then select the `pom.xml` file.
 
