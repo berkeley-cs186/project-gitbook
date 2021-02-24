@@ -52,7 +52,7 @@ Once you have implemented `BNLJOperator`, all the tests in `TestNestedLoopJoin` 
 
 #### Simple Hash Join \(SHJ\)
 
-We've provided an implementation of Simple Hash Join which can be found in `SimpleHashJoin.java`. Simple Hash Join performs a single pass of partitioning on only the left records before attempting to join. Read the code for SHJ carefully as it should give you a good idea of how to implement Grace Hash Join.
+We've provided an implementation of Simple Hash Join which can be found in `SHJOperator.java`. Simple Hash Join performs a single pass of partitioning on only the left records before attempting to join. Read the code for SHJ carefully as it should give you a good idea of how to implement Grace Hash Join.
 
 #### Grace Hash Join \(GHJ\)
 
