@@ -81,7 +81,7 @@ After this, you should pass all the tests we have provided to you in `database.q
 
 Follow the submission instructions [here](submitting-the-assignment.md) for the Project 3 Part 2 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
 
-* `database.query.TestJoinOperator`
+* `database.query.TestNestedLoopJoin`
 * `database.query.TestGraceHashJoin`
 * `database.query.TestSortOperator`
 * `database.query.TestSingleAccess`

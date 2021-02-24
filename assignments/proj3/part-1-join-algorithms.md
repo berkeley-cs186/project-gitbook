@@ -25,7 +25,7 @@ SNLJ has already been implemented for you in `SNLJOperator`. You should take a l
 
 #### Page Nested Loop Join \(PNLJ\)
 
-PNLJ has already been implemented for you as a special case of BNLJ with B=3. Therefore, it will not function properly until BNLJ has been properly implemented. The test cases for both PNLJ and BNLJ in `TestJoinOperator` depend on a properly implemented BNLJ.
+PNLJ has already been implemented for you as a special case of BNLJ with B=3. Therefore, it will not function properly until BNLJ has been properly implemented. The test cases for both PNLJ and BNLJ in `TestNestedLoopJoin` depend on a properly implemented BNLJ.
 
 #### Block Nested Loop Join \(BNLJ\)
 
