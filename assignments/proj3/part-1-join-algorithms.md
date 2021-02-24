@@ -44,7 +44,7 @@ We've provided the following animation to give you a feel for how the blocks, pa
 
 ![](../../.gitbook/assets/bnlj-slower.gif)
 
-Animations of SNLJ and PNLJ can be found [here](https://github.com/berkeley-cs186/project-gitbook-staging/tree/a8564298bc0945fbf5939bf5ed5f1528fd3e790a/common/misc/nested-loop-join-animations.md). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
+Animations of SNLJ and PNLJ can be found [here](../../common/misc/nested-loop-join-animations.md). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
 
 Once you have implemented `BNLJOperator`, all the tests in `TestNestedLoopJoin` should pass.
 
@@ -93,7 +93,7 @@ Once you have implemented `SortMergeIterator`, all the tests in `TestSortMergeJo
 
 ## Submission
 
-Follow the submission instructions [here](https://github.com/berkeley-cs186/project-gitbook-staging/tree/a8564298bc0945fbf5939bf5ed5f1528fd3e790a/docs/assignments/submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
+Follow the submission instructions [here](submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
 
 * `database.query.TestNestedLoopJoin`
 * `database.query.TestGraceHashJoin`
