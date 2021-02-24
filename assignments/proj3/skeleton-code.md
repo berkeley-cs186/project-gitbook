@@ -65,10 +65,10 @@ The remaining operators don't fall into a specific category, but rather perform 
 
 ### Other Operators
 
-These operators are either out of scope or not very relevant to the code you'll be writing in this project.
+These operators are **out of scope** and directly relevant to the code you'll be writing in this project.
 
 * [`MaterializeOperator.java`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/MaterializeOperator.java) - Materializes the source operator into a temporary table immediately, and then acts as a sequential scan over the temporary table. Mainly used in testing to control when IOs take place
-* [`GroupByOperator.java`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) - Out of scope for this project. This operator accepts a column name and yields the records of the source operator but with the records grouped by their value and each separated by a [`MarkerRecord`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/table/MarkerRecord.java). For example, if the source operator had singleton records `[0,1,2,1,2,0,1]` the group by operator might yield `[0,0,M,1,1,1,M,2,2]` where `M` is a marker record.
+* [`GroupByOperator.java`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) - Out of scope for this project. This operator accepts a column name and yields the records of the source operator but with the records grouped by their value and each separated by a marker record. For example, if the source operator had singleton records `[0,1,2,1,2,0,1]` the group by operator might yield `[0,0,M,1,1,1,M,2,2]` where `M` is a marker record.
 
 ## query/disk
 

@@ -9,7 +9,7 @@ You should make sure that all code you modify belongs to files with `TODO(proj3)
 * `src/main/java/edu/berkeley/cs186/database/query/join/BNLJOperator.java`
 * `src/main/java/edu/berkeley/cs186/database/query/join/SortOperator.java`
 * `src/main/java/edu/berkeley/cs186/database/query/join/SortMergeOperator.java`
-* `src/main/java/edu/berkeley/cs186/database/query/join/GraceHashJoin.java`
+* `src/main/java/edu/berkeley/cs186/database/query/join/GHJOperator.java`
 * `src/main/java/edu/berkeley/cs186/database/query/QueryPlan.java` \(Part 2 only\)
 
 Make sure that your code does _not_ use any static \(non-final\) variables - this may cause odd behavior when running with maven vs. in your IDE \(tests run through the IDE often run with a new instance of Java for each test, so the static variables get reset, but multiple tests per Java instance may be run when using maven, where static variables _do not_ get reset\).

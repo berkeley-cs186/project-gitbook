@@ -56,11 +56,11 @@ We've provided an implementation of Simple Hash Join which can be found in `Simp
 
 #### Grace Hash Join \(GHJ\)
 
-Everything you will need to implement will be done in `GraceHashJoin.java`. You will need to implement the functions `partition`, `buildAndProbe`, `createPartitions`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
+Everything you will need to implement will be done in `GHJOperator.java`. You will need to implement the functions `partition`, `buildAndProbe`, `createPartitions`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
 
 The file `Partition.java` in the `query/disk` directory will be useful when working with partitions. Read through the file and get a good idea what methods you can use.
 
-Once you have implemented all the methods in `GraceHashJoin.java`, all tests in `TestGraceHashJoin.java` will pass. There will be **no hidden tests** for Grace Hash Join. Your grade for Grace Hash Join will come solely from the released public tests.
+Once you have implemented all the methods in `GHJOperator.java`, all tests in `TestGraceHashJoin.java` will pass. There will be **no hidden tests** for Grace Hash Join. Your grade for Grace Hash Join will come solely from the released public tests.
 
 ### Task 3: External Sort
 

@@ -2,7 +2,7 @@
 
 ![Datatape](../../../.gitbook/assets/datatape.png)
 
-In this part, you will implement some join algorithms: block nested loop join, sort merge, and grace hash join. You can complete Task 1, Task 2 and Task 3 in **any order you want**. Task 4 is dependent on the completion of Task 3.
+In this part, you will implement some join algorithms: block nested loop join, sort merge, and grace hash join. You can complete Task 1, Task 2 and Task 3 in **any order you want**. Task 4 is dependent on the completion of Task 3. All of the files you'll be implementing for this project are located in `query/join`.
 
 Aside from when the comments tell you that you can do something in memory, everything else should be **streamed**. You should not hold more pages in memory at once than the given algorithm says you are allowed to. Doing otherwise may result in no credit.
 
@@ -49,11 +49,11 @@ We've provided an implementation of Simple Hash Join which can be found in `Simp
 
 #### Grace Hash Join \(GHJ\)
 
-Everything you will need to implement will be done in `GraceHashJoin.java`. You will need to implement the functions `partition`, `buildAndProbe`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
+Everything you will need to implement will be done in `GHJOperator.java`. You will need to implement the functions `partition`, `buildAndProbe`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
 
 The file `HashPartition.java` in the `memory` directory will be useful when working with partitions. Read through the file and get a good idea what methods you can use.
 
-Once you have implemented all the methods in `GraceHashJoin.java`, all tests in `TestGraceHashJoin.java` will pass. There will be **no hidden tests** for Grace Hash Join. Your grade for Grace Hash Join will come solely from the released public tests.
+Once you have implemented all the methods in `GHJOperator.java`, all tests in `TestGraceHashJoin.java` will pass. There will be **no hidden tests** for Grace Hash Join. Your grade for Grace Hash Join will come solely from the released public tests.
 
 ### Task 3: External Sort
 
