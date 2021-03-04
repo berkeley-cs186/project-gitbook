@@ -17,5 +17,3 @@ public void testEmptyBNLJ() {
 
 Many test classes have some setup code done for you already: take a look at other tests in the file for an idea of how to write the test code. For example, the SNLJ tests in TestNestedLoopJoin can be used as a template for your own BNLJ, Sort, and SMJ tests.
 
-
-

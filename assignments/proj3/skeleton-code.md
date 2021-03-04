@@ -124,7 +124,7 @@ System.out.println(finalOperator.toString());
 
 ```text
 -> SNLJ on S.sid=E.sid (cost=6)
-		-> Seq Scan on S (cost=3)
-		-> Seq Scan on E (cost=3)
+        -> Seq Scan on S (cost=3)
+        -> Seq Scan on E (cost=3)
 ```
 

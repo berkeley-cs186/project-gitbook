@@ -1,6 +1,7 @@
 # Task 1 Debugging
 
 We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400. **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in `TestNestedLoopJoin`.
+
 ## Overview
 
 These tests are designed to give you visualizations that might hint as to where you're going wrong. **You should try to get the test cases working in order**, that is, start with the 1x1 PNLJ tests, followed by the 2x2 PNLJ tests, and then finally the 2x2 BNLJ tests. When you fail a test it should give you a detailed description of why you failed. Here's some example output from failing `testPNLJ1x1Full`:
@@ -64,21 +65,21 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 1x1
 
-![](../../../.gitbook/assets/1x1%20%281%29.gif)
+![](../../../.gitbook/assets/1x1%20%282%29%20%284%29.gif)
 
 ### PNLJ 2x2
 
-![](../../../.gitbook/assets/2x2pnlj%20%281%29.gif)
+![](../../../.gitbook/assets/2x2pnlj%20%282%29%20%285%29.gif)
 
 ### BNLJ 2x2 \(B=4\)
 
-![](../../../.gitbook/assets/2x2bnlj%20%281%29.gif)
+![](../../../.gitbook/assets/2x2bnlj%20%282%29%20%284%29.gif)
 
 ## Cases
 
 Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next pair records that should be considered for the join.
 
-![](../../../.gitbook/assets/cases%20%281%29.png)
+![](../../../.gitbook/assets/cases%20%281%29%20%281%29%20%282%29.png)
 
 Try to think about what should be advanced and what should be reset in each case. As a reminder:
 

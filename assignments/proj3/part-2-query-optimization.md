@@ -73,7 +73,7 @@ Your final task is to write the outermost driver method of the optimizer, `Query
 
 You will need to add the remaining group by and projection operators that are a part of the query, but have not yet been added to the query plan \(see the private helper methods implemented for you in the `QueryPlan` class\).
 
-**Note:** The tables in `QueryPlan` are defined as 1 `startTableName` and some `joinTableNames`. The `startTableName` doesn't have to be the table to start joining with, it's just to line up the indices in `joinTableNames`, `joinLeftColumnNames`, and `joinRightColumnNames`, because joining n tables requires n-1 joins. So be sure to include the `startTableName` and all of the `joinTableNames` in your `QueryPlan#execute`.
+**Note:** The tables in `QueryPlan` are kept in the variable `tableNames`. 
 
 After this, you should pass all the tests we have provided to you in `database.query.*`.
 
@@ -87,3 +87,4 @@ Follow the submission instructions [here](submitting-the-assignment.md) for the 
 * `database.query.TestSingleAccess`
 * `database.query.TestOptimizationJoins`
 * `database.query.TestBasicQuery`
+

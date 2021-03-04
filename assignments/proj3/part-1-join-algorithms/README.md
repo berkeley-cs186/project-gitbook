@@ -2,11 +2,18 @@
 
 ![Datatape](../../../.gitbook/assets/datatape.png)
 
-In this part, you will implement some join algorithms: block nested loop join, sort merge, and grace hash join. You can complete Task 1, Task 2 and Task 3 in **any order you want**. Task 4 is dependent on the completion of Task 3. All of the files you'll be implementing for this project are located in `query/join`.
+In this part, you will implement some join algorithms: block nested loop join, sort merge, and grace hash join. You can complete Task 1, Task 2 and Task 3 in **any order you want**. Task 4 is dependent on the completion of Task 3.
 
 Aside from when the comments tell you that you can do something in memory, everything else should be **streamed**. You should not hold more pages in memory at once than the given algorithm says you are allowed to. Doing otherwise may result in no credit.
 
-**Small note on terminology**: in lecture, we sometimes use both block and page describe the unit of transfer between memory and disk. In the context of join algorithms, however, page refers to the unit of transfer between memory and disk, and block refers to a set of one or more pages. All uses of the word `block` in this part refer to this second definition \(a set of pages\).
+**Note on terminology**: in lecture, we sometimes use both block and page describe the unit of transfer between memory and disk. In the context of join algorithms, however, page refers to the unit of transfer between memory and disk, and block refers to a set of one or more pages. All uses of the word `block` in this part refer to this second definition \(a set of pages\).
+
+**Convenient assumptions**:
+
+* For all iterators that will be implemented in this project you can assume `hasNext()` will always be called before `next()`.
+* Any Record object provided through an argument or as an element of a list or iterator will never be `null`.
+* For testing purposes, we will **not** be testing behavior on invalid inputs \(`null` objects, negative buffer sizes or buffers too small to perform a join, invalid queries, etc...\). You can handle these inputs however you want, or not at all.
+* Your join operators, sort operator, and query plans do not need to account for underlying relations being mutated during their execution.
 
 ## Your Tasks
 
@@ -18,7 +25,7 @@ SNLJ has already been implemented for you in `SNLJOperator`. You should take a l
 
 #### Page Nested Loop Join \(PNLJ\)
 
-PNLJ has already been implemented for you as a special case of BNLJ with B=3. Therefore, it will not function properly until BNLJ has been properly implemented. The test cases for both PNLJ and BNLJ in `TestJoinOperator` depend on a properly implemented BNLJ.
+PNLJ has already been implemented for you as a special case of BNLJ with B=3. Therefore, it will not function properly until BNLJ has been properly implemented. The test cases for both PNLJ and BNLJ in `TestNestedLoopJoin` depend on a properly implemented BNLJ.
 
 #### Block Nested Loop Join \(BNLJ\)
 
@@ -39,7 +46,7 @@ We've provided the following animation to give you a feel for how the blocks, pa
 
 Animations of SNLJ and PNLJ can be found [here](../../../common/misc/nested-loop-join-animations.md). Loaded left records are highlighted in blue, while loaded orange records are highlighted in orange. The dark purple square represents which pair of records are being considered for the join, while light purple shows which pairs have already been considered.
 
-Once you have implemented `BNLJOperator`, all the PNLJ and BNLJ tests in `TestJoinOperator` should pass.
+Once you have implemented `BNLJOperator`, all the tests in `TestNestedLoopJoin` should pass.
 
 ### Task 2: Hash Joins
 
@@ -51,7 +58,7 @@ We've provided an implementation of Simple Hash Join which can be found in `SHJO
 
 Everything you will need to implement will be done in `GHJOperator.java`. You will need to implement the functions `partition`, `buildAndProbe`, and `run`. Additionally, you will have to provide some inputs in `getBreakSHJInputs` and `getBreakGHJInputs` which will be used to test that Simple Hash Join fails but Grace Hash Join passes \(tested in `testBreakSHJButPassGHJ`\) and that GHJ breaks \(tested in `testGHJBreak`\) respectively.
 
-The file `HashPartition.java` in the `memory` directory will be useful when working with partitions. Read through the file and get a good idea what methods you can use.
+The file `Partition.java` in the `query/disk` directory will be useful when working with partitions. Read through the file and get a good idea what methods you can use.
 
 Once you have implemented all the methods in `GHJOperator.java`, all tests in `TestGraceHashJoin.java` will pass. There will be **no hidden tests** for Grace Hash Join. Your grade for Grace Hash Join will come solely from the released public tests.
 
@@ -59,12 +66,12 @@ Once you have implemented all the methods in `GHJOperator.java`, all tests in `T
 
 The first step in Sort Merge Join is to sort both input relations. Therefore, before you can work on implementing Sort Merge Join, you must first implement an external sorting algorithm.
 
-Recall that a "run" in the context of external mergesort is just a sequence of sorted records. This is represented in `SortOperator` by the `Run` inner class. As runs in external mergesort can span many pages \(and eventually span the entirety of the table\), the `Run` class does not keep all its data in memory. Rather, it creates a temporary table and writes all of its data to the temporary table \(which is materialized to disk at the buffer manager's discretion\).
+Recall that a "run" in the context of external mergesort is just a sequence of sorted records. This is represented in `SortOperator` by the `Run` class \(located in `query/disk/Run.java`\). As runs in external mergesort can span many pages \(and eventually span the entirety of the table\), the `Run` class does not keep all its data in memory. Rather, it creates a temporary table and writes all of its data to the temporary table \(which is materialized to disk at the buffer manager's discretion\).
 
 You will need to implement the `sortRun`, `mergeSortedRuns`, `mergePass`, and `sort` methods of `SortOperator`.
 
-* `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\). You may find the `makeRun` function useful here.
-* `mergeSortedRuns(runs)` should return a new sorted run given a list of sorted runs.
+* `sortRun(run)` should sort the passed in data using an in-memory sort \(Pass 0 of external mergesort\).
+* `mergeSortedRuns(runs)` should return a new run given a list of sorted runs.
 * `mergePass(runs)` should perform a single merge pass of external mergesort, given a list of all the sorted runs from the previous pass.
 * `sort()` should run external mergesort from start to finish, and return the name of the temporary table with the sorted data.
 
@@ -82,15 +89,14 @@ You will need to implement the `SortMergeIterator` inner class of `SortMergeOper
 
 Your implementation in `SortMergeOperator` and your implementation of `SortOperator` may be tested independently. You **must not** use any method of `SortOperator` in `SortMergeOperator`, aside from the public methods given in the skeleton \(in other words: don't add a new public method to `SortOperator` and call it from `SortMergeOperator`\).
 
-Once you have implemented `SortMergeIterator`, all the remaining tests in `TestJoinOperator` should pass.
+Once you have implemented `SortMergeIterator`, all the tests in `TestSortMergeJoin` should pass.
 
 ## Submission
 
-Follow the submission instructions [here](../../submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
+Follow the submission instructions [here](../submitting-the-assignment.md) for the Project 3 Part 1 assignment on Gradescope. If you completed everything you should be passing all the tests in the following files:
 
-* `database.query.TestJoinOperator`
+* `database.query.TestNestedLoopJoin`
 * `database.query.TestGraceHashJoin`
 * `database.query.TestSortOperator`
-
-
+* `database.query.TestSortMergeJoin`
 

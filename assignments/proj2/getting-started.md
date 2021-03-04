@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Thursday, 2/18/2021 at 11:59PM PST (GMT-8)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kjoxqrf1eq04mr?cid=5)!
+This project is due **Thursday, 2/18/2021 at 11:59PM PST \(GMT-8\)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kjoxqrf1eq04mr?cid=5)!
 
 ## Prerequisites
 
