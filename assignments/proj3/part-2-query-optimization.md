@@ -6,7 +6,7 @@ In this part, you will implement a piece of a relational query optimizer: Plan s
 
 ## Overview: Plan Space Search
 
-You will now search the plan space of some cost estimates. For our database, this is similar to System R: the set of all left-de**Note:** The tables in `QueryPlan` are kept in the variable `tableNames`.ep trees, avoiding Cartesian products where possible. Unlike System R, we do not consider interesting orders, and further, we completely disallow Cartesian products in all queries. To search the plan space, we will utilize the dynamic programming algorithm used in the Selinger optimizer.
+You will now search the plan space of some cost estimates. For our database, this is similar to System R: the set of all left-deep trees, avoiding Cartesian products where possible. Unlike System R, we do not consider interesting orders, and further, we completely disallow Cartesian products in all queries. To search the plan space, we will utilize the dynamic programming algorithm used in the Selinger optimizer.
 
 Before you begin, you should have a good idea of how the `QueryPlan` class is used \(see the [Skeleton Code](skeleton-code.md) section\) and how query operators fit together. For example, to implement a simple query with a single selection predicate:
 

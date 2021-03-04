@@ -19,6 +19,14 @@ Aside from when the comments tell you that you can do something in memory, every
 
 ### Task 1: Nested Loop Joins
 
+**Update \(03/04/2021\)**: If you received your copy of the skeleton code before March 1st, then the following docstring for fetchNextRightPage is incorrect:
+
+"rightPageIterator should be set to a backtracking iterator over up to one page of records from the left source, and leftRecord should be set to the first record in this block."
+
+and should instead be:
+
+"rightPageIterator should be set to a backtracking iterator over up to one page of records from **the right source.**" Note that leftRecord should not be set to the first record in the right page.
+
 #### Simple Nested Loop Join \(SNLJ\)
 
 SNLJ has already been implemented for you in `SNLJOperator`. You should take a look at it to get a sense for how the pseudocode in lecture and section translate to code, but you should **not** copy it when writing your own join operators. Although each join algorithm should return the same data, the order differs between each join algorithm, as does the structure of the code. In particular, SNLJ does not need to explicitly manage pages of data \(it only ever needs the next record of each table, and therefore can just use an iterator over all records in a table\), whereas all the algorithms you will be implementing in this part must explicitly manage when pages of data are fetched from disk.
