@@ -65,21 +65,21 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 1x1
 
-![](../../../.gitbook/assets/1x1%20%282%29%20%284%29.gif)
+![](../../../.gitbook/assets/1x1%20%284%29.gif)
 
 ### PNLJ 2x2
 
-![](../../../.gitbook/assets/2x2pnlj%20%282%29%20%285%29.gif)
+![](https://github.com/berkeley-cs186/project-gitbook-staging/tree/a3048a49de4e713594fcf14d96d3fadabcd019c3/docs/.gitbook/assets/2x2pnlj%20%281%29.gif)
 
 ### BNLJ 2x2 \(B=4\)
 
-![](../../../.gitbook/assets/2x2bnlj%20%282%29%20%284%29.gif)
+![](../../../.gitbook/assets/2x2bnlj%20%283%29.gif)
 
 ## Cases
 
 Here's examples of the cases mentioned in the spec look like in the PNLJ 2x2 cases \(block size of 1\). The dark purple square is the most recently considered record. The red arrow points to the next pair records that should be considered for the join.
 
-![](../../../.gitbook/assets/cases%20%281%29%20%281%29%20%282%29.png)
+![](../../../.gitbook/assets/cases%20%281%29.png)
 
 Try to think about what should be advanced and what should be reset in each case. As a reminder:
 

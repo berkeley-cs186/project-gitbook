@@ -14,7 +14,7 @@ It's okay if you don't understand most of the code here right now, we just want 
 
 This should open a new panel in IntelliJ resembling the following image:
 
-![](../../.gitbook/assets/image%20%2811%29%20%281%29.png)
+![](../../.gitbook/assets/image%20%2810%29%20%281%29.png)
 
 Click on this panel and try typing in the following query and hitting enter:
 
