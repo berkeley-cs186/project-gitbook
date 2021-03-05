@@ -69,7 +69,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 2x2
 
-![](https://github.com/berkeley-cs186/project-gitbook-staging/tree/a3048a49de4e713594fcf14d96d3fadabcd019c3/docs/.gitbook/assets/2x2pnlj%20%281%29.gif)
+![](../../../.gitbook/assets/2x2pnlj%20%281%29%20%281%29.gif)
 
 ### BNLJ 2x2 \(B=4\)
 
