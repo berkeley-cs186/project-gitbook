@@ -1,5 +1,7 @@
 # Task 1 Debugging
 
+**Update \(03/05/2021\):** If you received your copy of the skeleton code before March 6th, then the [following line](https://github.com/berkeley-cs186/sp21-rookiedb/commit/0f9805a8c7e3417f9dcd4eba873c9b6d51af7b03) in ExtraNLJTests should be changed. This doesn't effect the way the tests run, but will make print debugging less confusing.
+
 We put together some extra tests with detailed error outputs that should give you some hints as to what might be go wrong with your BNLJ implementation. They're meant to be easier to reason about than the main BNLJ tests since each page only has 4 records instead of 400. **These tests are ungraded**. They're just meant to help you track down bugs in the nested loop join tests in `TestNestedLoopJoin`.
 
 ## Overview
