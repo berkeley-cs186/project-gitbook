@@ -26,7 +26,7 @@ iter.next();     // returns 2
 iter.markPrev(); // marks the previously returned value, 2
 iter.next();     // returns 3
 iter.hasNext();  // returns false
-iter.reset();    // reset to the marked value (line 5)
+iter.reset();    // reset to the marked value (line 3)
 iter.hasNext();  // returns true
 iter.next();     // returns 2
 iter.markNext(); // mark the value to be returned next, 3
