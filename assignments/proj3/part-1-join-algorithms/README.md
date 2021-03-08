@@ -43,10 +43,10 @@ There are also two suggested helper methods: `fetchNextLeftBlock`, which should 
 
 The `fetchNextRecord` method should, as its name suggests, fetches the next record of the join output. When implementing this method there are 4 important cases you should consider:
 
-* Case 1: The right iterator has a value to yield
-* Case 2: The right iterator doesn't have a value to yield but the left iterator does
-* Case 3: Neither the right nor left iterators have values to yield, but there's more right pages
-* Case 4: Neither right nor left iterators have values nor are there more right pages, but there are still left blocks
+* Case 1: The right page iterator has a value to yield
+* Case 2: The right page iterator doesn't have a value to yield but the left block iterator does
+* Case 3: Neither the right page nor left block iterators have values to yield, but there's more right pages
+* Case 4: Neither right page nor left block iterators have values nor are there more right pages, but there are still left blocks
 
 We've provided the following animation to give you a feel for how the blocks, pages, and records are traversed during the nested looping process. Identifying where each of these cases take place in the diagram may help guide on what to do in each case.
 
