@@ -69,6 +69,10 @@ where the single predicate cannot be evaluated until after `t1`, `t2`, _and_ `t3
 
 ### Task 7: Optimal Plan Selection
 
+**Update** \(03/10/2021\): The comment for execute\(\) says to "add group by and select operators". This should be changed to "add group by and **project** operators", since selects should have already been added during pass 1.
+
+**Update** \(03/11/2021\): testJoinOrderB has been updated to accept answers for arbitrary tie breaks when determining join orders. You can get these changes by replacing the assert statements at the end of the test with the ones [here](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/query/TestOptimizationJoins.java#L307-L314).
+
 Your final task is to write the outermost driver method of the optimizer, `QueryPlan#execute`, which should utilize the two helper methods you have implemented to find the best query plan.
 
 You will need to add the remaining group by and projection operators that are a part of the query, but have not yet been added to the query plan \(see the private helper methods implemented for you in the `QueryPlan` class\).
