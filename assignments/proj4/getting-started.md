@@ -23,7 +23,7 @@ The GitHub Classroom link for this project is in the Project 4 release post on [
 
 ### Setting up your local development environment
 
-If you're using IntelliJ you can follow the instructions [in Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Your Tasks](../proj2/your-tasks.md) and begin working on the assignment.
+If you're using IntelliJ you can follow the instructions [in Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Part 0](skeleton-code.md) and begin working on the assignment.
 
 ## Adding a partner
 
