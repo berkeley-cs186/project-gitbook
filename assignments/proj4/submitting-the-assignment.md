@@ -27,7 +27,7 @@ If your GitHub account has access to many repos, the Gradescope UI might time ou
 
 ## Partners
 
-If you haven't yet already make sure [this form](https://docs.google.com/forms/d/e/1FAIpQLSdCDn90HrLA-awYHCjj0IDkK7aWYem-2u7b2eh7nNuw-oXofA/viewform) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own \(you're still free to submit identical code if you like though\). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already make sure [this form](https://docs.google.com/forms/d/e/1FAIpQLSeqB2F-aXGiORqNlOFuZjtknE_ydTI9yqznaYdI3V2ZCj2WKw/viewform?usp=sf_link) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own \(you're still free to submit identical code if you like though\). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ## Grading
 
