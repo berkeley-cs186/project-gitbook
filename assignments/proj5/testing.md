@@ -9,7 +9,6 @@ Things that you might consider testing for include: anything that we specify in 
 Here are a few cases mentioned in the spec but not tested for in the public test set:
 
 * The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within a single page. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code will fail to flush the entry for exceeding the log tail size.
-* When writing a large update \(large enough that the update must be split in two\), we don't provide a check for the dirty page table. If an entry didn't exist before, you should consider if the redo-only record or the undo-only record's LSN is the one that should be set as the recLSN for the page that was updated.
 * For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/fa20-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L30) \(calling cleanup\(\) on a transaction should set that flag\)
 
 And here are two common cases that your code should be prepared to handle:
@@ -19,13 +18,13 @@ And here are two common cases that your code should be prepared to handle:
 
 ## Writing your own tests
 
-You can use or modify any of the functions we provided in the public test set to write your own tests. Both `TestForwardProcessing.java` and `TestRestartRecovery.java` are structured identically in terms of how objects used in testing are created and used.
+You can use or modify any of the functions we provided in the public test set to write your own tests.
 
 ### Setup
 
 ```java
     @Before
-    public void setup() throws Exception {
+    public void setup() throws IOException {
         testDir = tempFolder.newFolder("test-dir").getAbsolutePath();
         recoveryManager = loadRecoveryManager(testDir);
         DummyTransaction.cleanupTransactions();
@@ -38,18 +37,13 @@ The function above is run before every single test, and sets the value of the `r
 
 ### Getting useful objects
 
-The following helper methods are provided so that you can access important member variables of the RecoveryManager for testing purposes:
+The following variables of the RecoveryManager can be used for testing purposes:
 
-* `getBufferManager` - Returns the buffer manager used by the database. Useful if you want to manually run updates using records \(see `testFlushingRollback` for an example\)
-* `getDiskSpaceManager` - Returns the disk space manager used by the database. Useful if you want to manually run updates using records \(see testFlushingRollbackFor an example\)
-* `getLogManager` - Returns the recovery manager's log manager. Useful to directly append and flush logs to see how the recovery manager deals with them when rolling back. See `testAbortingEnd` for an example.
-* `getLockRequests` - Returns a list of strings describing locks that were requested \(via `ARIESRecoveryManager#acquireTransactionLock`\) while executing the recovery manager. Useful for making sure that the analysis phase acquires X locks as necessary on touched pages.
-* `getDirtyPageTable` - Gets the dirty page table of the recovery manager. Useful to make sure that pages are getting flushed properly and that recLSN's are set correctly or check that its reconstructed properly during analysis.
-* `getTransactionTable` - Gets the transaction table of the recovery manager. Useful to make sure that entries are created/removed properly or check that its  reconstructed properly during analysis.
-
-### IO Checks
-
-Calling `getNumIOs` on the buffer manager will return the current number of IOs that have been incurred. By storing this value, performing some action, and the original value to the new value of getNumIOs you can check to see how many IOs were incurred between two points. This is useful in methods where we expect logs to be flushed \(which would incur IOs\). See `testFlushingRollback` for an example.
+* `bufferManager` - Useful if you want to manually run updates using records \(argument to LogRecord.redo\)
+* `diskSpaceManager` - Useful if you want to manually run updates using records \(argument to LogRecord.redo\)
+* `logManager` - Useful to directly append and flush logs to see how the recovery manager deals with them when rolling back. See `testAbortingEnd` for an example.
+* `dirtyPageTable` - Useful to make sure that pages are getting flushed properly and that recLSN's are set correctly or check that its reconstructed properly during analysis.
+* `transactionTable` - Useful to make sure that entries are created/removed properly or check that its  reconstructed properly during analysis.
 
 ### Redo checks
 

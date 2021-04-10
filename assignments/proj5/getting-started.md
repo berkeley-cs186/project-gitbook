@@ -4,15 +4,13 @@
 
 This project is due **Friday, 4/23/2021 at 11:59PM PDT (GMT-7)**. It is worth 8% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kjoxqrf1eq04mr?cid=5)!
 
-The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same as the one you had for previous assignments. Feel free to search for a partner on [this Piazza thread](https://piazza.com/class/kjoxqrf1eq04mr?cid=5)!
-
 ## Prerequisites
 
-You should watch all the recovery lectures \(lectures 16, 17, and 18\) before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/resources/static/notes/n12-Recovery.pdf).
+You should watch all the recovery lectures before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/resources/static/notes/n12-Recovery.pdf).
 
 ## Fetching the released code
 
-Complete [this form](https://forms.gle/) to get a Github Classroom link. Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
+Complete [this form](https://docs.google.com/forms/d/e/1FAIpQLSdOQsgqO6cNzxB4A7q7O2V4hv4q0Ncl_OGVzQcX3lFWTH-nQQ/viewform?usp=sf_link) to get a Github Classroom link. Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -20,7 +18,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner fill out [**this form**](https://forms.gle/) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Once you've found a partner fill out [**this form**](https://docs.google.com/forms/d/e/1FAIpQLSdOQsgqO6cNzxB4A7q7O2V4hv4q0Ncl_OGVzQcX3lFWTH-nQQ/viewform?usp=sf_link) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 

@@ -14,16 +14,16 @@ Make sure that your code does _not_ use any static \(non-final\) variables - thi
 
 Once all of your files are prepared in your repo you can submit to Gradescope through GitHub the same way you did for [Project 0](../proj0/submitting.md#pushing-changes-to-github-classroom).
 
-## Partners
-
-If you haven't yet already make sure [this form](https://forms.gle/) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own \(you're still free to submit identical code if you like though\). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
-
 ## Submitting via upload <a id="submitting-via-upload"></a>
 
 If your GitHub account has access to many repos, the Gradescope UI might time out while trying to load which repos you have available. If this is the case for you, you can submit your code directly using via upload. You can zip up your source code with `zip -r submission.zip src/` and submit that directly to the autograder.
 
+## Partners
+
+If you haven't yet already be sure to fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdOQsgqO6cNzxB4A7q7O2V4hv4q0Ncl_OGVzQcX3lFWTH-nQQ/viewform?usp=sf_link) so we know who you're working with. Every student is responsible for submitting to gradescope individually -- if you submit but your partner doesn't then your partner will not got credit. If you worked off of a shared repo both members of the group are free to submit that repo. Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+
 ## Grading
 
-* $public-weight$ of your grade will be made up of tests released to you \(the tests that we provided in `database.recovery.TestRecoveryManager`\).
+* 60% of your grade will be made up of tests released to you \(the tests that we provided in `database.recovery.TestRecoveryManager`\).
 
-* $hidden-weight$ of your grade will be made up of hidden, unreleased tests that we will run on your submission after the deadline.
+* 40% of your grade will be made up of hidden, unreleased tests that we will run on your submission after the deadline.

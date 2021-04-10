@@ -74,7 +74,8 @@ You will need to complete Task 2: Logging before `testSimpleCommit` passes.
 During normal operation several methods are called when certain events happen:
 
 * `logAllocPart`, `logFreePart`, `logAllocPage`, `logFreePage`: these are called by the disk space manager whenever someone tries to create or delete a partition or page, and should append the appropriate log record, and have been implemented for you.
-* `logPageWrite` is called by the buffer manager whenever someone tries to write to part of a page, and will be implemented by you. Your implementation
+* `logPageWrite` is called by the buffer manager whenever someone tries to write to part of a page, and will be implemented by you. Your implementation should create and append an appropriate log record and update the transaction table and dirty page table accordingly.
+
 All of these methods should keep the tables maintained by the recovery manager up-to-date \(the dirty page table and transaction table\).
 
 After completing this task the following tests should be passing: `testEnd`, `testSimpleCommit`, `testSimpleLogPageWrite`, `testTwoPartLogPageWrite`.
