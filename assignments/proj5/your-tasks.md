@@ -185,7 +185,7 @@ These are the records that involve a transaction, and therefore, we need to upda
 The dirty page table will need to be updated for certain page-related log records:
 
 * UpdatePage/UndoUpdatePage both may dirty a page in memory, without flushing changes to disk.
-* FreePage/UndoAllocPage both make their changes visible on disk immediately, and can be seen as flushing all changes at the time \(including their own\) to disk
+* FreePage/UndoAllocPage both make their changes visible on disk immediately, and can be seen as flushing the freed page to disk (remove page from DPT)
 * You don't need to do anything for AllocPage/UndoFreePage
   * If you're curious about how the data from before the page was freed is restored in this case, we work around this by always writing an update log records that go from \[old bytes\] -&gt; \[zeroes\] right before freeing the page. After undoing the free page, undoing these updates would restore the old bytes \(\[zeroes\] -&gt; \[old\_bytes\]\).
 
