@@ -12,8 +12,8 @@ To find cases that you've accounted for in your implementation but are not being
 
 Here are a few cases mentioned in the spec but not tested for in the public test set:
 
-* The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within a single page. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code will fail to flush the entry for exceeding the log tail size.
-* For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L30) \(calling cleanup\(\) on a transaction should set that flag\)
+* The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within 1 to 2 pages. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code will fail to flush the entry for exceeding the log tail size.
+* For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L30) \(calling cleanup\(\) on a transaction should set that flag\).
 
 And here are two common cases that your code should be prepared to handle:
 
