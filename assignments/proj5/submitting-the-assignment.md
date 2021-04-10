@@ -16,7 +16,7 @@ Once all of your files are prepared in your repo you can submit to Gradescope th
 
 ## Partners
 
-If you haven't yet already make sure [this form](https://forms.gle/HFBF9evuhqriL6Cf9) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own \(you're still free to submit identical code if you like though\). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
+If you haven't yet already make sure [this form](https://forms.gle/) has the correct partner information so we know who you're working with. **We're no longer allowing partner submissions on Gradescope**. If you worked with a partner you'll both need to submit on your own \(you're still free to submit identical code if you like though\). Slip days will be deducted individually. For example: You submit on time, but your partner submits a day late. Your partner will have to use a slip day or will receive a late penalty on the project \(but you will not\).
 
 ## Submitting via upload <a id="submitting-via-upload"></a>
 

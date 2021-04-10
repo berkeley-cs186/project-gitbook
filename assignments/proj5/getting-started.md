@@ -12,7 +12,7 @@ You should watch all the recovery lectures \(lectures 16, 17, and 18\) before st
 
 ## Fetching the released code
 
-Complete [this form](https://forms.gle/HFBF9evuhqriL6Cf9) to get a Github Classroom link. Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
+Complete [this form](https://forms.gle/) to get a Github Classroom link. Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -20,7 +20,7 @@ If you're using IntelliJ you can follow the instructions [in Project 0](../proj0
 
 ## Adding a partner
 
-Once you've found a partner fill out [**this form**](https://forms.gle/HFBF9evuhqriL6Cf9) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Once you've found a partner fill out [**this form**](https://forms.gle/) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 
