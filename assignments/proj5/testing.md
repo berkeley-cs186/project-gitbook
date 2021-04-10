@@ -4,6 +4,10 @@ We strongly encourage testing your code yourself, especially after each part \(r
 
 Things that you might consider testing for include: anything that we specify in the comments or in this document that a method should do that you don't see a test already testing for, and any edge cases that you can think of. Think of what valid inputs might break your code and cause it not to perform as intended, and add a test to make sure things are working.
 
+## Running tests with coverage
+
+To find cases that you've accounted for in your implementation but are not being covered in your tests, you can run all of the Project 5 tests [with coverage](https://www.jetbrains.com/help/idea/code-coverage.html). Afterwards, you can navigate to your ARIESRecoveryManager file to see what parts of your code are not yet tested for.
+
 ## Cases not covered in the public tests
 
 Here are a few cases mentioned in the spec but not tested for in the public test set:
