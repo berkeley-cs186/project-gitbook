@@ -57,3 +57,4 @@ To make it more straight forward to do a series of checks, setupRedoChecks accep
 
 * when ending an aborted transaction, rolling back changes should involve calling redo on CLRs as they are generated
 * during the undo phase, rolling back changes should involve calling redo on CLRs as they are generated
+

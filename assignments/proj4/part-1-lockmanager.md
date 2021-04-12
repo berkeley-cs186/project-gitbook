@@ -1,6 +1,6 @@
 # Part 1: Queuing
 
-![Datarace](../../.gitbook/assets/datarace%20%281%29%20%281%29%20%282%29%20%282%29.png)
+![Datarace](../../.gitbook/assets/datarace%20%281%29%20%281%29%20%282%29%20%282%29%20%283%29%20%283%29.png)
 
 In this part you will implement some helpers functions for lock types and the queuing system for locks. The `concurrency` directory contains a partial implementation of a lock manager \(`LockManager.java`\), which you will be completing.
 

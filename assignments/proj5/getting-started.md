@@ -14,7 +14,7 @@ Complete [this form](https://docs.google.com/forms/d/e/1FAIpQLSdOQsgqO6cNzxB4A7q
 
 ### Setting up your local development environment
 
-If you're using IntelliJ you can follow the instructions [in Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Your Tasks](../proj5/your-tasks.md) and begin working on the assignment.
+If you're using IntelliJ you can follow the instructions [in Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) in to set up your local environment again. Once you have your environment set up you can head to the next section [Your Tasks](your-tasks.md) and begin working on the assignment.
 
 ## Adding a partner
 

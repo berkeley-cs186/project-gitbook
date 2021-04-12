@@ -75,7 +75,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### BNLJ 2x2 \(B=4\)
 
-![](../../../.gitbook/assets/2x2bnlj%20%284%29%20%283%29.gif)
+![](../../../.gitbook/assets/2x2bnlj%20%284%29%20%284%29%20%283%29.gif)
 
 ## Cases
 

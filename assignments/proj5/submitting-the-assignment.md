@@ -25,5 +25,5 @@ If you haven't yet already be sure to fill out [this form](https://docs.google.c
 ## Grading
 
 * 60% of your grade will be made up of tests released to you \(the tests that we provided in `database.recovery.TestRecoveryManager`\).
-
 * 40% of your grade will be made up of hidden, unreleased tests that we will run on your submission after the deadline.
+

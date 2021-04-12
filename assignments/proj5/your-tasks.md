@@ -1,6 +1,8 @@
+# Your Tasks
+
 In this project you will implement write-ahead logging and support for savepoints, rollbacks, and ACID compliant restart recovery. If you haven't already, we recommend reading through the [recovery notes](https://cs186berkeley.net/resources/static/notes/n12-Recovery.pdf) and referencing them as needed while you work through this project. The tests for this project are all located in [`TestRecoveryManager.java`](https://github.com/berkeley-cs186/sp21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java).
 
-# Understanding the Skeleton Code
+## Understanding the Skeleton Code
 
 This project will be centered around `ARIESRecoveryManager.java`, which implements the `RecoveryManager` interface.
 
@@ -30,18 +32,17 @@ If you are not familiar with these in Java, you should look through [the officia
 
 Each interface has a method to call the passed in function \(for example, [the `Consumer` interface has the `accept` method](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#accept-T-)\).
 
-# Forward Processing
+## Forward Processing
 
-![](../../.gitbook/assets/proj5-db-happy%20%281%29%20%283%29%20%284%29%20%285%29%20%284%29.png)
+![](../../.gitbook/assets/proj5-db-happy%20%281%29%20%283%29%20%284%29%20%285%29%20%285%29%20%281%29.png)
 
 When the database is undergoing normal operation - where transactions are running normally, reading and writing data - the job of the recovery manager is to maintain the log by adding log records and ensuring that the log is properly flushed when necessary so that we can recover from a crash at any time. A few components of forward processing are already implemented for you.
-
 
 #### Initialization
 
 At the time the database is first created, before any transactions run, the recovery manager needs to first set the log up, which is done in the `initialize` method in `ARIESRecoveryManager.java`. We store the _master record_ as the very first log record in the log, at LSN 0 \(recall that the master record stores the LSN of the begin checkpoint record of the most recent successful checkpoint\).To simplify things when implementing the analysis phase of restart recovery, we also immediately perform a checkpoint, writing a begin and end checkpoint record in succession, and updating the master record. This has been implemented for you.
 
-## Task 1: Transaction Status
+### Task 1: Transaction Status
 
 Part of the recovery manager's job during forward processing is to maintain the status of running transactions, and log changes in transaction status. The recovery manager is notified of changes in transaction status through three methods:
 
@@ -69,7 +70,7 @@ After completing this task you should pass `testAbort` and `testAbortingEnd`.
 
 You will need to complete Task 2: Logging before `testSimpleCommit` passes.
 
-## Task 2: Logging
+### Task 2: Logging
 
 During normal operation several methods are called when certain events happen:
 
@@ -78,9 +79,9 @@ During normal operation several methods are called when certain events happen:
 
 All of these methods should keep the tables maintained by the recovery manager up-to-date \(the dirty page table and transaction table\).
 
-After completing this task the following tests should be passing: `testEnd`, `testSimpleCommit`, `testSimpleLogPageWrite`, `testTwoPartLogPageWrite`.
+After completing this task the following tests should be passing: `testEnd`, `testSimpleCommit`, `testSimpleLogPageWrite`. 
 
-## Task 3: Savepoints
+### Task 3: Savepoints
 
 Recall from lecture that SQL has [savepoints](https://www.postgresql.org/docs/9.6/sql-savepoint.html) to allow for _partial rollback_: `SAVEPOINT pomelo` creates a savepoint named `pomelo` for the current running transaction, allowing a user to rollback all changes made after the savepoint by using `ROLLBACK TO SAVEPOINT pomelo`. The savepoint can be deleted with `RELEASE SAVEPOINT pomelo`.
 
@@ -94,9 +95,9 @@ Write-ahead logging lets us implement savepoints. The recovery manager has three
 
 The skeleton code has provided most of the implementation of savepoints for you - all that is left is to implement the logic for undoing changes in `rollbackToSavepoint`. This is extremely similar to the undo logic in `end()`, so if you already implemented the `rollbackToLSN` method to complete Task 1 you should be able to reuse that helper here.
 
-After completing this task `testSimpleSavepoint`, `testFlushingRollback`, and `testNestedRollback` should be passing.
+After completing this task `testSimpleSavepoint` and `testNestedRollback` should be passing.
 
-## Task 4: Checkpoints
+### Task 4: Checkpoints
 
 Recall from lecture that in ARIES, we periodically perform _fuzzy checkpoints_ which occur even while other transactions run, to minimize recovery time after a crash, without bringing the database to a halt during forward processing.
 
@@ -122,7 +123,7 @@ As an example, if we had 200 DPT entries and 300 tranasction table entries, we w
 * EndCheckpoint with 240 transaction table entries
 * EndCheckpoint with 8 transaction table entries
 
-(If an end checkpoint has 200 DPT entries, a maximum of 52 table entries can fit in the remaining space. A maximum of 240 transaction table entries can fit in a single end checkpoint.)
+\(If an end checkpoint has 200 DPT entries, a maximum of 52 table entries can fit in the remaining space. A maximum of 240 transaction table entries can fit in a single end checkpoint.\)
 
 You may find the `EndCheckpoint.fitsInOneRecord` static method useful for this; it takes in two parameters:
 
@@ -146,7 +147,7 @@ the corresponding call is:
 EndCheckpoint.fitsInOneRecord(3, 2); // # of dpt entries, # of txnTable entries
 ```
 
-# Restart Recovery
+## Restart Recovery
 
 ![](../../.gitbook/assets/proj5-db-off-the-cliff%20%283%29%20%284%29%20%281%29.png)
 
@@ -159,7 +160,7 @@ In addition to the three phases of recovery, the `restart` method does two thing
 * between the redo and undo phases, any page in the dirty page table that isn't actually dirty \(has changes in-memory that have not been flushed\) should be removed from the dirty page table. These pages may be present in the DPT as a result of the analysis phase, if we are uncertain about whether a change has been flushed to disk successfully or not.
 * after the undo phase, recovery has finished. To avoid having to abort all the transactions again should we crash, we take a checkpoint.
 
-## Task 5: Analysis
+### Task 5: Analysis
 
 This section concerns just the `restartAnalysis` method, which performs the analysis pass of restart recovery.
 
@@ -185,7 +186,7 @@ These are the records that involve a transaction, and therefore, we need to upda
 The dirty page table will need to be updated for certain page-related log records:
 
 * UpdatePage/UndoUpdatePage both may dirty a page in memory, without flushing changes to disk.
-* FreePage/UndoAllocPage both make their changes visible on disk immediately, and can be seen as flushing the freed page to disk (remove page from DPT)
+* FreePage/UndoAllocPage both make their changes visible on disk immediately, and can be seen as flushing the freed page to disk \(remove page from DPT\)
 * You don't need to do anything for AllocPage/UndoFreePage
   * If you're curious about how the data from before the page was freed is restored in this case, we work around this by always writing an update log records that go from \[old bytes\] -&gt; \[zeroes\] right before freeing the page. After undoing the free page, undoing these updates would restore the old bytes \(\[zeroes\] -&gt; \[old\_bytes\]\).
 
@@ -204,9 +205,11 @@ When a BeginCheckpoint record is encountered, no action is required.
 When an EndCheckpoint record is encountered, the tables stored in the record should be combined with the tables currently in memory:
 
 For each entry in the checkpoint's snapshot of the dirty page table:
+
 * The recLSN of a page in the checkpoint should always be used, even if we have a record in the dirty page table already, since the checkpoint is always more accurate than anything we can infer from just the log.
 
 For each entry in the checkpoint's snapshot of the transaction table:
+
 * Before updating a transaction table entry, check if the corresponding transaction is already in `endedTransactions`. If so, the transaction is already complete and the entry can be ignored, since any information it contains is no longer relevant. Otherwise:
 * If we don't have a corresponding entry for the transaction in our reconstruction of the transaction table, it should be added \(the `newTransaction` function object can be used to create a `Transaction` object, which can be passed to `startTransaction`\).
 * The lastLSN of a transaction in the checkpoint should be used if it is greater than or equal to the lastLSN of the transaction in the in-memory transaction table.
@@ -233,7 +236,7 @@ The transaction table at this point should have transactions that are in one of 
 
 After completing this task you should be passing `testRestartAnalysis` and `testAnalysisCheckpoints`.
 
-## Task 6: Redo
+### Task 6: Redo
 
 This section concerns just the `restartRedo` method, which performs the redo pass of restart recovery. Recall from lecture that the redo phase begins at the lowest recLSN in the dirty page table. Scanning from that point on, we redo a record if it is redoable and if it is either:
 
@@ -261,7 +264,7 @@ Be sure to account for the case where `restartRedo` is called on an empty log!
 
 After finishing this task you should be passing `testRestartRedo`.
 
-## Task 7: Undo
+### Task 7: Undo
 
 This section concerns just the `restartUndo` method, which performs the undo pass of restart recovery. Recall from lecture that during the undo phase we do not abort and undo the transactions one by one due to a large number of random I/Os incurred as a result. Instead, we repeatedly undo the log record \(that needs to be undone\) with the highest LSN until we are done, making only one pass through the log.
 
@@ -277,7 +280,7 @@ We repeatedly fetch the log record of the largest of these LSNs and:
 
 After finishing this task you should be passing `testRestartUndo`, `testUndoCLR`, and `testUndoDPTAndFlush`. Additionally, if you've implemented all tasks correctly every test in `TestRecoveryManager.java` should now be passing.
 
-# Important differences from ARIES as presented in lecture
+## Important differences from ARIES as presented in lecture
 
 There are a few important differences between ARIES as presented in the lecture, and the implementation of the recovery manager that you need to do in this project, which are mostly implementation details. **On exams, you should use the simplified version of ARIES as described in lecture whenever this project and lecture diverge.**
 
@@ -321,7 +324,7 @@ There are a few important differences between ARIES as presented in the lecture,
 
   **Explanation:** See explanation about these records under forward processing. In some cases \(free page/undo alloc page\), we remove a page from the dirty page table, and in others \(alloc page/undo free page\), we do not need to add the page to the dirty page table. This is because these operations all update on-disk data immediately. For example, allocating a page to the end of a partition will immediately increase the size of the file on disk backing that partition.
 
-# Further Reading
+## Further Reading
 
 If you enjoyed the material in this project and the previous project \(Locking\), we recommend reading through the ARIES paper \([link here](https://cs.stanford.edu/people/chrismre/cs345/rl/aries.pdf)\)!
 
