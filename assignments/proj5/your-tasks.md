@@ -272,7 +272,7 @@ The undo phase begins with the set of lastLSN of each of the aborting transactio
 
 We repeatedly fetch the log record of the largest of these LSNs and:
 
-* if the record is undoable, we undo it\* and write the CLR out, updating the DPT as necessary;
+* if the record is undoable, we write the CLR out and undo it\*
 * replace the LSN in the set with the undoNextLSN of the record if it has one, or the prevLSN otherwise;
 * end the transaction if the LSN from the previous step is 0, removing it from the set and the transaction table. Refer to the Ending Transactions subsection of the Analysis task for a more comprehensive overview on what ending a transaction entails.
 
