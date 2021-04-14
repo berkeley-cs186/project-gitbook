@@ -250,7 +250,7 @@ This section concerns just the `restartRedo` method, which performs the redo pas
 In order to check the pageLSN of a page, you'll need to fetch it from the buffer manager. We recommend you use the following template:
 
 ```text
-Page page = bufferManager.fetchPage(new DummyLockContext(), pageNum, false);
+Page page = bufferManager.fetchPage(new DummyLockContext(), pageNum);
 try {
     // Do anything that requires the page here
 } finally {
