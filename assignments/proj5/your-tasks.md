@@ -105,7 +105,7 @@ The approach is outlined below. Note that part of the implementation is already 
 
 First, a begin checkpoint record is added to the log.
 
-Then, we write end checkpoint records, accounting for the fact that we may have to break up end checkpoint records due to too many DPT/Xact table entries. This is similar to how we sometimes had to break apart UpdatePage records into two in order to fit the change on one page; we may also need to write multiple end checkpoint records, if there too many DPT/transaction table entries.
+Then, we write end checkpoint records, accounting for the fact that we may have to break up end checkpoint records due to too many DPT/Xact table entries.
 
 An end checkpoint record should be written even if all tables are empty, and multiple end checkpoint records should only be written if necessary.
 
