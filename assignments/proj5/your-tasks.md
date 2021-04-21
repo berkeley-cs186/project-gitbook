@@ -176,7 +176,7 @@ The many types of log records encountered while scanning fall into three categor
 
 **Log Records for Transaction Operations**
 
-These are the records that involve a transaction, and therefore, we need to update the transaction table whenever we encounter one of these records. The following applies to any function with a non-empty result for `LogRecord#getTransNum()`
+These are the records that involve a transaction, and therefore, we need to update the transaction table whenever we encounter one of these records. The following applies to any record with a non-empty result for `LogRecord#getTransNum()`
 
 * If the transaction is not in the transaction table, it should be added to the table \(the `newTransaction` function object can be used to create a `Transaction` object, which can be passed to `startTransaction`\).
 * The lastLSN of the transaction should be updated.
