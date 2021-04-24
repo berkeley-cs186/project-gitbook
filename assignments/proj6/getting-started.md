@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Sunday, 5/2/2021 at 11:59PM PDT (GMT-7)**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Sunday, 5/2/2021 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 

@@ -14,5 +14,5 @@ If your GitHub account has access to many repos, the Gradescope UI might time ou
 
 ## Grading
 
-* This project will be worth 6% of your overall grade in the class. 100% of your grade will come from the public tests provided to you.
+* This project will be worth 5% of your overall grade in the class. 100% of your grade will come from the public tests provided to you.
 
