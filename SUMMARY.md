@@ -40,6 +40,9 @@
   * [Testing](assignments/proj5/testing.md)
   * [Submitting the Assignment](assignments/proj5/submitting-the-assignment.md)
 * [Project 6: NoSQL](assignments/proj6/README.md)
+  * [Getting Started](assignments/proj6/getting-started.md)
+  * [Your Tasks](assignments/proj6/your-tasks.md)
+  * [Submitting the Assignment](assignments/proj6/submitting-the-assignment.md)
 
 ## Common
 
