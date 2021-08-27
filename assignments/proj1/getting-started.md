@@ -38,7 +38,7 @@ If you don't have access to your repo at all after following these steps, feel f
 
 Check if you already have sqlite3 instead by opening a terminal and running `sqlite3 --version`. Any version at 3.8.3 or higher should be fine.
 
-If you don't already have SQLite on your machine, the simplest way to start using it is to download a precompiled binary from the [SQLite website](http://www.sqlite.org/download.html). The latest version of SQLite at the time of writing is 3.34.1, but you can check for additional updates on the website.
+If you don't already have SQLite on your machine, the simplest way to start using it is to download a precompiled binary from the [SQLite website](http://www.sqlite.org/download.html). The latest version of SQLite at the time of writing is 3.36.0, but you can check for additional updates on the website.
 
 #### Windows <a id="windows"></a>
 
@@ -49,7 +49,7 @@ If you don't already have SQLite on your machine, the simplest way to start usin
 
 #### macOS Yosemite \(10.10\), El Capitan \(10.11\), Sierra \(10.12\) <a id="macos-yosemite-10-10-el-capitan-10-11-sierra-10-12"></a>
 
-SQLite comes pre-installed. Check that you have a version that's greater than 3.8.3 `./sqlite3 --version`
+SQLite comes pre-installed. Check that you have a version that's greater than 3.8.3 `sqlite3 --version`
 
 #### Mac OS X Mavericks \(10.9\) or older <a id="mac-os-x-mavericks-10-9-or-older"></a>
 
