@@ -135,7 +135,7 @@ Note: Some birth years have no players; your answer can simply skip those years.
 
 * Note: a player may appear in the results multiple times \(once per year in a college in California\).
 
-**iii.** Find the `playerid`, `namefirst`, `namelast` and `schoolid` of all people who were successfully inducted into the Hall of Fame -- whether or not they played in college. Return people in _descending_ order of `playerid`. Break ties on `playerid` by `schoolid` \(ascending\). \(Note: `schoolid` will be `NULL` if they did not play in college.\)
+**iii.** Find the `playerid`, `namefirst`, `namelast` and `schoolid` of all people who were successfully inducted into the Hall of Fame -- whether or not they played in college. Return people in _descending_ order of `playerid`. Break ties on `playerid` by `schoolid` \(ascending\). \(Note: `schoolid` should be `NULL` if they did not play in college.\)
 
 ### Task 3: [**SaberMetrics**](https://en.wikipedia.org/wiki/Sabermetrics)
 
