@@ -139,7 +139,7 @@ Note: Some birth years have no players; your answer can simply skip those years.
 
 ### Task 3: [**SaberMetrics**](https://en.wikipedia.org/wiki/Sabermetrics)
 
-**i.** Find the `playerid`, `namefirst`, `namelast`, `yearid` and single-year `slg` \(Slugging Percentage\) of the players with the 10 best annual Slugging Percentage recorded over all time. For statistical significance, only include players with more than 50 at-bats in the season. Order the results by `slg` descending, and break ties by `yearid, playerid` \(ascending\).
+**i.** Find the `playerid`, `namefirst`, `namelast`, `yearid` and single-year `slg` \(Slugging Percentage\) of the players with the 10 best annual Slugging Percentage recorded over all time. A player can appear multiple times in the output. For example, if Babe Ruth’s `slg` in 2000 and 2001 both landed in the top 10 best annual Slugging Percentage of all time, then we should include Babe Ruth twice in the output. For statistical significance, only include players with more than 50 at-bats in the season. Order the results by `slg` descending, and break ties by `yearid, playerid` \(ascending\).
 
 * Baseball note: Slugging Percentage is not provided in the database; it is computed according to a [simple formula](https://en.wikipedia.org/wiki/Slugging_percentage) you can calculate from the data in the database.
 * SQL note: You should compute `slg` properly as a floating point number---you'll need to figure out how to convince SQL to do this!
