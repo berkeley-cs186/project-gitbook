@@ -14,17 +14,7 @@ The GitHub Classroom link for this project is in the Project 1 release post on [
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/fa21-proj1-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. If you have access to your repo but the starter code is not there, run the following commands in a terminal \(again replacing `username` with your GitHub username\):
-
-```text
-git clone https://github.com/berkeley-cs186/fa21-proj1
-cd fa21-proj1/
-git remote remove origin
-git remote add origin https://github.com/berkeley-cs186-student/fa21-proj1-username.git
-git push -u origin master
-```
-
-Then, you can proceed as usual.
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/fa21-proj1-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
 
 ### 404 Not Found
 
