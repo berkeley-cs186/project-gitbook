@@ -20,7 +20,7 @@ A record in a table is uniquely identified by its page number \(the number of th
 
 The [`index`](https://github.com/berkeley-cs186/fa21-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index%20) directory contains a partial implementation of an Alternative 2 B+ tree, an implementation that you will complete in this project. Some of the important files in this directory are:
 
-* [`BPlusTree.java`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java) - This file contains the class that manages the structure of the B+ tree. Every B+ tree maps keys of a type `DataBox` \(a single value or "cell" in a table\) to values of type `RecordId` \(identifiers for records on data pages\). An example of inserting and a retrieving records using keys can be found in the comments at [`@BPlusTree.java#L12`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L124)
+* [`BPlusTree.java`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java) - This file contains the class that manages the structure of the B+ tree. Every B+ tree maps keys of a type `DataBox` \(a single value or "cell" in a table\) to values of type `RecordId` \(identifiers for records on data pages\). An example of inserting and a retrieving records using keys can be found in the comments at [`@BPlusTree.java#L130`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L130)
 * [`BPlusNode.java`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java) - A B+ node represents a node in the B+ tree, and contains similar methods to `BPlusTree` such as `get`, `put` and `delete`. `BPlusNode` is an abstract class and is implemented as either a `LeafNode` or an `InnerNode`
 * * [`LeafNode.java`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java) - A leaf node is a node with no descendants that contains pairs of keys and Record IDs that point to the relevant records in the table, as well a pointer to its right sibling. More details can be found [`@LeafNode.java#L15`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java#L15)
   * [`InnerNode.java`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java) - An inner node is a node that stores keys and pointers \(page numbers\) to child nodes \(which themselves may either be an inner node or a leaf node\). More details can be found [`@InnerNode.java#L15`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java#L15)
@@ -84,7 +84,7 @@ You will need to implement the following methods in `BPlusTree`:
 * `scanAll`
 * `scanGreaterEqual`
 
-In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/912d6248a59d1f27117796d9e4c5d7e6ee194b91/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L413) inner class in `BPlusTree.java`to complete these two methods.
+In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L422) inner class in `BPlusTree.java`to complete these two methods.
 
 After completing this Task you should be passing `TestBPlusTree::testRandomPuts`
 
@@ -92,7 +92,7 @@ Your implementation **does not** have to account for the tree being modified dur
 
 ### Task 4: Bulk Load
 
-Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L139) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 \([powerpoint slides here](https://docs.google.com/presentation/d/1_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)\):
+Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L162) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 \([powerpoint slides here](https://docs.google.com/presentation/d/1_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)\):
 
 ![](../../.gitbook/assets/vis%20%281%29%20%281%29%20%282%29%20%283%29%20%283%29%20%281%29.gif)
 
