@@ -28,31 +28,31 @@ You will have to implement the `QueryPlan#execute` method. To do so, you will al
 ## \[Optional\] Visualizing the Naive Query Optimizer
 This section is optional, but we recommend that you run through the steps.
 
-Our database supports an `EXPLAIN` command which outputs the query plan for a given query. Let's test out our current query optimizer!
+Our database supports an `EXPLAIN` command which outputs the query plan for a given query. Let's test out our current query optimizer! Navigate to `CommandLineInterface.java` and run the code to start our CLI. This should open a new panel in IntelliJ at the bottom. Click on this panel. We've provided 3 demo tables (Students, Courses, Enrollments). Let's try running the following query:
 
-Navigate to `CommandLineInterface.java` and run the code to start our CLI. This should open a new panel in IntelliJ at the bottom. Click on this panel. 
-
-We've provided 3 demo tables (Students, Courses, Enrollments). Let's try running the following query:
-
-`SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;`
+```sql
+SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;
+```
 
 Let's display the query plan used to execute the above query by running the following command:
 
-`EXPLAIN SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;`
+```sql
+EXPLAIN SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;
+```
 
-An estimated 603 I/Os, a very costly query! Our current naive query optimizer joins the table in the order given and only uses SNLJs for joins, which can become very expensive.
+An estimated 603 I/Os, a very costly query! Our current naive query optimizer joins the table in the order given and only uses SNLJs for joins, which can become very expensive. Let's try a more complex query. The following computes the distribution of majors in CS186.
 
-Let's try a more complex query. The following computes the distribution of majors in CS186.
-
-`SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;`
+```sql
+SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;
+```
 
 Like before, let's inspect the query plan.
 
-`EXPLAIN SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;`
+```sql
+EXPLAIN SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;
+```
 
-This query also performs very poorly. Run `exit` to terminate the CLI.
-
-In the next few tasks, we'll implement an optimizer that will drastically improve the cost of our queries!
+This query also performs very poorly. Run `exit` to terminate the CLI. In the next few tasks, we'll implement an optimizer that will drastically improve the cost of our queries!
 
 ## Your Tasks
 
@@ -109,15 +109,15 @@ After this, you should pass all the tests we have provided to you in `database.q
 ## \[Optional\] Visualizing the Query Optimizer
 This section is also optional, but we recommend that you run through the steps.
 
-Now that we've finished implementing a better query optimizer, let's visualize the results and compare it with the [naive query optimizer](https://cs186.gitbook.io/project-staging/assignments/proj3/part-2-query-optimization#visualizing-the-naive-query-optimizer)!
+Now that we've finished implementing a better query optimizer, let's visualize the results and compare it with the [naive query optimizer](https://cs186.gitbook.io/project/assignments/proj3/part-2-query-optimization#optional-visualizing-the-naive-query-optimizer)! Navigate to `CommandLineInterface.java` and run the code to start our CLI. Let's try running the following two queries again:
 
-Navigate to `CommandLineInterface.java` and run the code to start our CLI. 
+```sql
+EXPLAIN SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;
+```
 
-Let's try running the following two queries again:
-
-`EXPLAIN SELECT * FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid;`
-
-`EXPLAIN SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;`
+```sql
+EXPLAIN SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;
+```
 
 The outputted query plans are much better than before! Notice how we now push down selects and use more efficient joins.
 
