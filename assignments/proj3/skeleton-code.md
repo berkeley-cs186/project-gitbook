@@ -100,7 +100,7 @@ All of the select predicates for the query are stored inside the selectPredicate
 
 **JoinPredicate**
 
-JoinPredicate is a helper class insode of QueryPlan.java that stores information about the conditions on which tables are joined together, for example: `leftTable.leftColumn = rightTable.rightColumn`. All joins in RookieDB are equijoins. JoinPredicates have five values:
+JoinPredicate is a helper class inside of QueryPlan.java that stores information about the conditions on which tables are joined together, for example: `leftTable.leftColumn = rightTable.rightColumn`. All joins in RookieDB are equijoins. JoinPredicates have five values:
 
 * `joinTable`: the name of one of the table's being joined in. Only used for toString\(\)
 * `leftTable`: the name of the table on the left side of the equality
