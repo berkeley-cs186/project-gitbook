@@ -13,7 +13,7 @@ To find cases that you've accounted for in your implementation but are not being
 Here are a few cases mentioned in the spec but not tested for in the public test set:
 
 * The checkpoint test provided checkpoints with a small number of transaction table and dirty page table entries -- enough to fit within 1 to 2 pages. Make sure your code still works even when there's a large amount of entries. If the entries aren't split up properly and too many entries are inserted into a single EndCheckpointLogRecord, your code will fail to flush the entry for exceeding the log tail size.
-* For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L30) \(calling cleanup\(\) on a transaction should set that flag\).
+* For appropriate transactions after analysis/undo, make sure that transactions [have been cleaned up](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/DummyTransaction.java#L29) \(calling cleanup\(\) on a transaction should set that flag\).
 
 And here are two common cases that your code should be prepared to handle:
 
@@ -53,7 +53,7 @@ The following variables of the RecoveryManager can be used for testing purposes:
 
 You may have noticed calls to `setupRedoChecks` and `finishRedoChecks`. To help with testing, every time redo is called on a LogRecord we make a [call to a provided method](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L156). During regular operation this will just be a no-op function, but during testing we can set this to be whatever we want using [onRedoHandler](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java#L225-L232).
 
-To make it more straight forward to do a series of checks, setupRedoChecks accepts a list of functional objects that take a LogRecord as an argument. Every time redo is called, the first LogRecord in the list is removed and is called using the LogRecord that was redone. For example, in [testAbortingEnd](https://github.com/berkeley-cs186/fa21-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestForwardProcessing.java#L159-L163) we use this to check that the expected CLR's are emitted and redone in the order that we anticipated. This is useful when:
+To make it more straight forward to do a series of checks, setupRedoChecks accepts a list of functional objects that take a LogRecord as an argument. Every time redo is called, the first LogRecord in the list is removed and is called using the LogRecord that was redone. For example, in [testAbortingEnd](https://github.com/berkeley-cs186/fa21-rookiedb/blob/688a7bc5c0dfdc4f787d16cde2d2be5b482a88ec/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java#L196-L199) we use this to check that the expected CLR's are emitted and redone in the order that we anticipated. This is useful when:
 
 * when ending an aborted transaction, rolling back changes should involve calling redo on CLRs as they are generated
 * during the undo phase, rolling back changes should involve calling redo on CLRs as they are generated
