@@ -244,7 +244,7 @@ This section concerns just the `restartRedo` method, which performs the redo pas
 * a record that allocates a page \(AllocPage, UndoFreePage\)
 * a record that modifies a page \(UpdatePage, UndoUpdatePage, UndoAllocPage, FreePage\) where all of the following hold:
   * the page is in the DPT
-  * the LSN is greater than or equal to the recLSN of the page
+  * the record's LSN is greater than or equal to the DPT's recLSN for that page.
   * the pageLSN on the page itself is strictly less than the LSN of the record.
 
 In order to check the pageLSN of a page, you'll need to fetch it from the buffer manager. We recommend you use the following template:
