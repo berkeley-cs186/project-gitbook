@@ -525,7 +525,7 @@ db.movies_metadata.aggregate([
 }
 ```
 
-* Useful operators: [$elemMatch](https://docs.mongodb.com/manual/reference/operator/aggregation/or/), [$gte](https://docs.mongodb.com/manual/reference/operator/aggregation/gte/) for matching
+* Useful operators: [$elemMatch](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/), [$gte](https://docs.mongodb.com/manual/reference/operator/aggregation/gte/) for matching
 * Hint: genre names are case sensitive!
 
 **iii.** Do movies get more good reviews than bad reviews? Is it the other way around? We want to know! For each possible rating find how many times that rating was given. Include the rating and the number of the times the rating was given and output in descending order of the rating. The output documents should have the following fields:
@@ -550,7 +550,7 @@ db.movies_metadata.aggregate([
 ```
 
 * Useful operators: Look into the [$push](https://docs.mongodb.com/manual/reference/operator/aggregation/push/) operator
-* Hint: You may find it helpful to see what happens when you [group by null](https://docs.mongodb.com/manual/reference/operator/aggregation/group/#null-example).
+* Hint: You may find it helpful to see what happens when you [group by null](https://docs.mongodb.com/manual/reference/operator/aggregation/group/#group-by-null).
 
 ### Task 2: Movie Night
 
@@ -574,7 +574,6 @@ We would like to set a minimum number of votes to make sure the score is accurat
 ```
 
 * Useful operators: Look up what the [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/), [`$multiply`](https://docs.mongodb.com/manual/reference/operator/aggregation/multiply/), [`$divide`](https://docs.mongodb.com/manual/reference/operator/aggregation/divide/) , and [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/) operators do \(you may find this question reminiscent of Scheme from 61a!\)
-* **Expected output note**: If you got your copy of the skeleton code before 11/18/20, your expected output may be out of date. You can update your expected out in your copy of the skeleton by copying and pasting the contents of [this file](https://github.com/berkeley-cs186/fa21-proj6/blob/master/expected_output/q2i.dat) into `expected_output/q2i.dat`
 
 **ii.** The TAs consider the prospect of making their own feature film on the beauty and joy of databases, and want to think of a catchy tagline. Run the following to see some examples taglines:
 
