@@ -78,7 +78,7 @@ Question 1: What is the current value of 'leafKeys'?
 
 #### Step into
 
-Click on the button shown below to step into the LeafNode constructor. This will open step into the LeafNode constructor function definition.
+Click on the button shown below to step into the LeafNode constructor.
 
 ![](<../../.gitbook/assets/Screen Shot 2022-01-18 at 12.00.53 AM copy.jpg>)
 
