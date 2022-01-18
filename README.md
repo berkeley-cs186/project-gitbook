@@ -1,6 +1,6 @@
 # Overview
 
-![The official unofficial mascot of the projects](.gitbook/assets/derpydb-small%20%281%29%20%285%29%20%284%29%20%281%29%20%283%29.jpg)
+![The official unofficial mascot of the projects](<.gitbook/assets/derpydb-small (1) (5) (4) (1) (6).jpg>)
 
 RookieDB is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 
@@ -12,11 +12,11 @@ As you will be working with this codebase for the rest of the semester, it is a 
 
 ### cli
 
-The `cli` directory contains all the logic for the database's command line interface. Running the main method of `CommandLineInterface.java` will create an instance of the database and create a simple text interface that you can send and review the results of queries in. **The inner workings of this section are beyond the scope of the class** \(although you're free to look around\), you'll just need to know how to run the Command Line Interface.
+The `cli` directory contains all the logic for the database's command line interface. Running the main method of `CommandLineInterface.java` will create an instance of the database and create a simple text interface that you can send and review the results of queries in. **The inner workings of this section are beyond the scope of the class** (although you're free to look around), you'll just need to know how to run the Command Line Interface.
 
 #### cli/parser
 
-The subdirectory `cli/parser` contains a lot of scary looking code! Don't be intimidated, this is all automatically generated automatically from the file `RookieParser.jjt` in the root directory of the repo. The code here handles the logic to convert from user inputted queries \(strings\) into a tree of nodes representing the query \(parse tree\).
+The subdirectory `cli/parser` contains a lot of scary looking code! Don't be intimidated, this is all automatically generated automatically from the file `RookieParser.jjt` in the root directory of the repo. The code here handles the logic to convert from user inputted queries (strings) into a tree of nodes representing the query (parse tree).
 
 #### cli/visitor
 
@@ -32,7 +32,7 @@ The `concurrency` directory contains a skeleton for adding multigranularity lock
 
 ### databox
 
-Our database has, like most DBMS's, a type system distinct from that of the programming language used to implement the DBMS. \(Our DBMS doesn't quite provide SQL types either, but it's modeled on a simplified version of SQL types\).
+Our database has, like most DBMS's, a type system distinct from that of the programming language used to implement the DBMS. (Our DBMS doesn't quite provide SQL types either, but it's modeled on a simplified version of SQL types).
 
 The `databox` directory contains classes which represents values stored in a database, as well as their types. The various `DataBox` classes represent values of certain types, whereas the `Type` class represents types used in the database.
 
@@ -52,33 +52,33 @@ The `index` directory contains a skeleton for implementing B+ tree indices. You 
 
 ### memory
 
-The `memory` directory contains classes for managing the loading of data into and out of memory \(in other words, buffer management\).
+The `memory` directory contains classes for managing the loading of data into and out of memory (in other words, buffer management).
 
-The `BufferFrame` class represents a single buffer frame \(page in the buffer pool\) and supports pinning/unpinning and reading/writing to the buffer frame. All reads and writes require the frame be pinned \(which is often done via the `requireValidFrame` method, which reloads data from disk if necessary, and then returns a pinned frame for the page\).
+The `BufferFrame` class represents a single buffer frame (page in the buffer pool) and supports pinning/unpinning and reading/writing to the buffer frame. All reads and writes require the frame be pinned (which is often done via the `requireValidFrame` method, which reloads data from disk if necessary, and then returns a pinned frame for the page).
 
 The `BufferManager` interface is the public interface for the buffer manager of our DBMS.
 
-The `BufferManagerImpl` class implements a buffer manager using a write-back buffer cache with configurable eviction policy. It is responsible for fetching pages \(via the disk space manager\) into buffer frames, and returns Page objects to allow for manipulation of data in memory.
+The `BufferManagerImpl` class implements a buffer manager using a write-back buffer cache with configurable eviction policy. It is responsible for fetching pages (via the disk space manager) into buffer frames, and returns Page objects to allow for manipulation of data in memory.
 
 The `Page` class represents a single page. When data in the page is accessed or modified, it delegates reads/writes to the underlying buffer frame containing the page.
 
-The `EvictionPolicy` interface defines a few methods that determine how the buffer manager evicts pages from memory when necessary. Implementations of these include the `LRUEvictionPolicy` \(for LRU\) and `ClockEvictionPolicy` \(for clock\).
+The `EvictionPolicy` interface defines a few methods that determine how the buffer manager evicts pages from memory when necessary. Implementations of these include the `LRUEvictionPolicy` (for LRU) and `ClockEvictionPolicy` (for clock).
 
 ### io
 
-The `io` directory contains classes for managing data on-disk \(in other words, disk space management\).
+The `io` directory contains classes for managing data on-disk (in other words, disk space management).
 
 The `DiskSpaceManager` interface is the public interface for the disk space manager of our DBMS.
 
-The `DiskSpaceMangerImpl` class is the implementation of the disk space manager, which maps groups of pages \(partitions\) to OS-level files, assigns each page a virtual page number, and loads/writes these pages from/to disk.
+The `DiskSpaceMangerImpl` class is the implementation of the disk space manager, which maps groups of pages (partitions) to OS-level files, assigns each page a virtual page number, and loads/writes these pages from/to disk.
 
 ### query
 
 The `query` directory contains classes for managing and manipulating queries.
 
-The various operator classes are query operators \(pieces of a query\), some of which you will be implementing in Project 3.
+The various operator classes are query operators (pieces of a query), some of which you will be implementing in Project 3.
 
-The `QueryPlan` class represents a plan for executing a query \(which we will be covering in more detail later in the semester\). It currently executes the query as given \(runs things in logical order, and performs joins in the order given\), but you will be implementing a query optimizer in Project 3 to run the query in a more efficient manner.
+The `QueryPlan` class represents a plan for executing a query (which we will be covering in more detail later in the semester). It currently executes the query as given (runs things in logical order, and performs joins in the order given), but you will be implementing a query optimizer in Project 3 to run the query in a more efficient manner.
 
 ### recovery
 
@@ -90,9 +90,9 @@ The `table` directory contains classes representing entire tables and records.
 
 The `Table` class is, as the name suggests, a table in our database. See the comments at the top of this class for information on how table data is layed out on pages.
 
-The `Schema` class represents the _schema_ of a table \(a list of column names and their types\).
+The `Schema` class represents the _schema_ of a table (a list of column names and their types).
 
-The `Record` class represents a record of a table \(a single row\). Records are made up of multiple DataBoxes \(one for each column of the table it belongs to\).
+The `Record` class represents a record of a table (a single row). Records are made up of multiple DataBoxes (one for each column of the table it belongs to).
 
 The `RecordId` class identifies a single record in a table.
 
@@ -112,9 +112,9 @@ This interface is partially implemented by the `AbstractTransaction` abstract cl
 
 ### TransactionContext.java
 
-The `TransactionContext` interface is the _internal_ interface of a transaction - it contains methods tied to the current transaction that internal methods \(such as a table record fetch\) may utilize.
+The `TransactionContext` interface is the _internal_ interface of a transaction - it contains methods tied to the current transaction that internal methods (such as a table record fetch) may utilize.
 
-The current running transaction's transaction context is set at the beginning of a `Database.Transaction` call \(and available through the static `getCurrentTransaction` method\) and unset at the end of the call.
+The current running transaction's transaction context is set at the beginning of a `Database.Transaction` call (and available through the static `getCurrentTransaction` method) and unset at the end of the call.
 
 This interface is partially implemented by the `AbstractTransactionContext` abstract class, and fully implemented in the `Database.TransactionContext` inner class.
 
@@ -157,4 +157,3 @@ db.close();
 ```
 
 More complex queries can be found in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java).
-
