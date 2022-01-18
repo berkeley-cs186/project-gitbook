@@ -56,7 +56,7 @@ If launching IntelliJ takes you to an existing workspace instead of showing you 
 
 If you are using IntelliJ and wish to run the tests for a given assignment follow the instructions below.
 
-1. Navigate to one of the test files for the project. For example, for Project 2 navigate to src/java/test/.../index/BPlusNode.java.&#x20;
+1. Navigate to one of the test files for the project. For example, for Project 2 navigate to src/java/test/.../index/TestBPlusNode.java.&#x20;
 2. Navigate to one of the tests (as shown below). Click on the green arrow and run the test (it should fail).
 
 ![](<../../.gitbook/assets/Screen Shot 2022-01-17 at 10.56.04 PM.png>)
