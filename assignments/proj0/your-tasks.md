@@ -73,7 +73,7 @@ Select the green arrow next to the function header for testFromBytes. In the dro
 ![The debugger allows you to inspect relevant variables in the code](<../../.gitbook/assets/Screen Shot 2022-01-17 at 11.56.14 PM copy.jpg>)
 
 {% hint style="info" %}
-Question 1: What is the current value of 'leafKeys'?
+Question 1: What is the current size of 'leafKeys'?
 {% endhint %}
 
 #### Step into
@@ -89,7 +89,7 @@ Click on the button shown below to step forward one line.
 ![](<../../.gitbook/assets/Screen Shot 2022-01-18 at 12.00.53 AM copy 2.jpg>)
 
 {% hint style="info" %}
-Question 2: What is the current value of 'rids'?
+Question 2: What is the current size of 'rids'?
 {% endhint %}
 
 #### Resume execution
