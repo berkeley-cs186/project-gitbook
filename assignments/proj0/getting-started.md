@@ -22,13 +22,13 @@ If you'd like to use git for managing your own code versioning, there are many g
 
 For each project, we will provide a GitHub Classroom link. Follow the link to create a GitHub repository with the starter code for the project you are working on. Use `git clone` to get a local copy of the newly created repository. For example, if your GitHub username is `oski` after being assigned your repo through GitHub Classroom you would run:
 
-`git clone https://github.com/berkeley-cs186-student/sp22-proj0-oski`
+`git clone https://github.com/cs186-student/sp22-proj0-oski`
 
 The GitHub Classroom link for this project is provided in the project release post on [Piazza](https://piazza.com/class/kxz3whak4ma3rt).
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues (i.e. the page froze or some error message appeared), first check if you have access to your repo at `https://github.com/berkeley-cs186-student/sp22-proj0-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues (i.e. the page froze or some error message appeared), first check if you have access to your repo at `https://github.com/cs186-student/sp22-proj0-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
 
 #### 404 Not Found
 
