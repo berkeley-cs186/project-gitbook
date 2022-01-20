@@ -94,7 +94,7 @@ Question 2: What is the current size of 'rids'?
 
 #### Resume execution
 
-This button allows you to resume execution of your program until it reaches another breakpoint.
+This button allows you to resume execution of your program until it reaches another breakpoint. Don't worry if testFromBytes fails after resuming execution. You won't pass this test until project 2.
 
 ![](<../../.gitbook/assets/Screen Shot 2022-01-18 at 12.00.53 AM.png>)
 
