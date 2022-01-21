@@ -66,7 +66,7 @@ Download the data set for this project from the course's Google Drive [here](htt
 
 ## Running the tests
 
-If you followed the instructions above you should now be able to test your code. Navigate to your project directory and try using `python3 test.py`. You should get output similar to the following:
+If you followed the instructions above you should now be able to test your code. Navigate to your project directory and try using `python3 test.py`. If you're using windows and you find that the previous command doesn't work, try running `winpty ./sqlite3 lahman.db`. You should get output similar to the following:
 
 ```text
 FAIL q0 see diffs/q0.txt
