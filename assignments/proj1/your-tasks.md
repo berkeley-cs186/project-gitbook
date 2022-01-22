@@ -4,7 +4,7 @@
 
 In this project we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/) (our friends at the San Francisco Giants tell us they use it!) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2019. It includes data from the two current leagues (American and National), four other "major" leagues (American Association, Union Association, Players League, and Federal League), and the National Association of 1871-1875.
 
-At this point you should be able to run SQLite and view the database using either `./sqlite3 -header lahman.db` (if in the previous section you downloaded a precompiled binary) or `sqlite3 -header lahman.db` otherwise.
+At this point you should be able to run SQLite and view the database using either `./sqlite3 -header lahman.db` (if in the previous section you downloaded a precompiled binary) or `sqlite3 -header lahman.db` otherwise. If you're using windows and you find that the previous command doesn't work, try running `winpty ./sqlite3 lahman.db`.
 
 ```
 $ sqlite3 lahman.db
