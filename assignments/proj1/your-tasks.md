@@ -62,7 +62,7 @@ It is supplemented by these tables:
   Appearances - details on the positions a player appeared at
   Schools - list of colleges that players attended
   CollegePlaying - list of players and the colleges they attended
-  Parks - list of major league ballparls
+  Parks - list of major league ballparks
   HomeGames - Number of homegames played by each team in each ballpark
 ```
 
