@@ -31,7 +31,7 @@ The [`index`](https://github.com/berkeley-cs186/sp22-rookiedb/tree/master/src/te
 
 You should read through all of the code in the [`index`](https://github.com/berkeley-cs186/sp22-rookiedb/tree/master/src/main/java/edu/berkeley/cs186/database/index) directory. Many comments contain critical information on how you must implement certain functions. For example, `BPlusNode::put` specifies how to redistribute entries after a split. You are responsible for reading these comments. Here are a few of the most notable points:
 
-* Our implementation of B+ trees **does not** support duplicate keys. You will throw an exception whenever a duplicate key is inserted.
+* Generally, B+ trees **do** support duplicate keys. However, our implementation of B+ trees **does not** support duplicate keys. You will throw an exception whenever a duplicate key is inserted.
 * Our implementation of B+ trees assumes that inner nodes and leaf nodes can be serialized on a single page. You **do not** have to support nodes that span multiple pages.
 * Our implementation of delete **does not** rebalance the tree. Thus, the invariant that all non-root leaf nodes in a B+ tree of order `d` contain between `d` and `2d` entries is broken. Note that actual B+ trees **do rebalance** after deletion, but we will **not** be implementing rebalancing trees in this project for the sake of simplicity.
 
