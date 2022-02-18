@@ -23,9 +23,9 @@ The GitHub Classroom link for this project is in the Project 3 release post on [
 
 If you're using IntelliJ you can follow the instructions in [Project 0](../proj0/getting-started.md#setting-up-your-local-development-environment) to set up your local environment again. Once you have your environment set up you can head to the next section [Part 0](skeleton-code.md) and begin working on the assignment.
 
-## Adding a partner
+## Working with a partner
 
-Once you've found a partner fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLScTldTWucZy5ljqP9Yt9P5ffGb_RqT9DA52XWSKStFq8hL2hQ/viewform?usp=sf_link) so we know who you're working with. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
+Only one partner has to submit, but please make sure to add the other partner to the Gradescope submission. If you want to share code over GitHub you can follow the instructions [here](../../common/adding-a-partner-on-github.md).
 
 ## Debugging Issues with GitHub Classroom
 
