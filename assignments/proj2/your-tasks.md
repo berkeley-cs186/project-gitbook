@@ -95,7 +95,7 @@ Your implementation **does not** have to account for the tree being modified dur
 
 Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L162) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 ([powerpoint slides here](https://docs.google.com/presentation/d/1\_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)):
 
-![](<../../.gitbook/assets/vis (1) (1) (2) (3) (3) (3) (5).gif>)
+![](<../../.gitbook/assets/vis (1) (1) (2) (3) (3) (2) (5).gif>)
 
 After this you should pass all the Project 2 tests we have provided to you (and any you add yourselves). These are all the provided tests in [`database.index.*`](https://github.com/berkeley-cs186/sp22-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index).
 

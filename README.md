@@ -1,6 +1,6 @@
 # Overview
 
-![The official unofficial mascot of the projects](<.gitbook/assets/derpydb-small (1) (5) (4) (1) (6).jpg>)
+![The official unofficial mascot of the projects](<.gitbook/assets/derpydb-small (1) (5) (4) (1) (2) (5).jpg>)
 
 RookieDB is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 

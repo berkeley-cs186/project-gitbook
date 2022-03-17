@@ -65,7 +65,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### PNLJ 1x1
 
-![](<../../../.gitbook/assets/1x1 (3) (5).gif>)
+![](<../../../.gitbook/assets/1x1 (3) (2) (4).gif>)
 
 ### PNLJ 2x2
 
@@ -73,7 +73,7 @@ Here's some animations of how we expect each test format to be traversed.
 
 ### BNLJ 2x2 (B=4)
 
-![](<../../../.gitbook/assets/2x2bnlj (4) (4) (4) (5).gif>)
+![](<../../../.gitbook/assets/2x2bnlj (4) (4) (2) (5).gif>)
 
 ## Cases
 

@@ -25,7 +25,7 @@ A tree of `QueryOperator` objects is formed when we have multiple tables joined 
 
 You will have to implement the `QueryPlan#execute` method. To do so, you will also have to implement two helper methods: `QueryPlan#minCostSingleAccess` \(pass 1 of the dynamic programming algorithm\) and `QueryPlan#minCostJoins` \(pass i &gt; 1\).
 
-## \[Optional\] Visualizing the Naive Query Optimizer
+## Visualizing the Naive Query Optimizer
 This section is optional, but we recommend that you run through the steps.
 
 Our database supports an `EXPLAIN` command which outputs the query plan for a given query. Let's test out our current query optimizer! Navigate to `CommandLineInterface.java` and run the code to start our CLI. This should open a new panel in IntelliJ at the bottom. Click on this panel. We've provided 3 demo tables (Students, Courses, Enrollments). Let's try running the following query:
@@ -106,7 +106,7 @@ You will need to add the remaining group by and projection operators that are a 
 
 After this, you should pass all the tests we have provided to you in `database.query.*`.
 
-## \[Optional\] Visualizing the Query Optimizer
+## Visualizing the Query Optimizer
 This section is also optional, but we recommend that you run through the steps.
 
 Now that we've finished implementing a better query optimizer, let's visualize the results and compare it with the [naive query optimizer](https://cs186.gitbook.io/project/assignments/proj3/part-2-query-optimization#optional-visualizing-the-naive-query-optimizer)! Navigate to `CommandLineInterface.java` and run the code to start our CLI. Let's try running the following two queries again:
