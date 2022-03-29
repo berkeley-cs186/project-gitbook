@@ -54,6 +54,8 @@ You will need to implement the following methods of `LockManager`:
 * [`promote`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L237): this method allows a transaction to explicitly promote/upgrade a held lock. The lock the transaction holds on a resource is replaced with a stronger lock on the same resource. This method has priority over any queued requests (it should proceed even if there is a queue, and it is placed in the front of the queue if it cannot proceed). We do not allow promotions to SIX, those types of requests should go to `acquireAndRelease`. This is because during SIX lock upgrades, it is possible we might need to also release redundant locks, so we need to handle these upgrades with `acquireAndRelease`.
 * [`getLockType`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/concurrency/LockManager.java#L255): this is the main way to query the lock manager, and returns the type of lock that a transaction has on a specific resource., which was implemented in the previous step.
 
+The following helper methods may come in handy for this task: methods of the `ResourceEntry` class which you will implement, `getResourceEntry`, methods of the `LockType` class.
+
 ### Queues
 
 Whenever a request for a lock cannot be satisfied (either because it conflicts with locks other transactions already have on the resource, or because there's a queue of requests for locks on the resource and the operation does not have priority over the queue), it should be placed on the queue (at the back, unless otherwise specified) for the resource, and the transaction making the request should be blocked.
