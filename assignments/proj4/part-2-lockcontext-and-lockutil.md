@@ -139,7 +139,7 @@ We can display all the locks held by this transaction by running `\locks`.
 Now let's run:
 
 ```sql
-INSERT INTO Students VALUES (3000, "Name", "Major", 5.0);
+INSERT INTO Students VALUES (3000, 'Name', 'Major', 5.0);
 ```
 
 and display the locks held using `\locks`. Notice how we've upgraded some locks and now hold an X lock on a page of the Students table.
