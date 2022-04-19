@@ -98,6 +98,8 @@ We suggest breaking up the logic of this method into two phases: ensuring that w
 
 At this point, you should have a working system to acquire and release locks on different resources in the database. In this task you'll add logic to acquire and release locks throughout the course of a transaction.
 
+*Tip: for all the files mentioned below, you can use IntelliJ's `Ctrl/Cmd + Shift + N` to search for the file quickly! If you still couldn't find the file, click into the link that will launch you into the Github repo.*
+
 #### Acquisition Phase
 
 **Reads and Writes:** The simplest scheme for locking is to simply lock pages as we need them. As all reads and writes to pages are performed via the `Page.PageBuffer` class, it suffices to change only that. Modify the [`get`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L209) and [`put`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L225) methods of [`Page.PageBuffer`](https://github.com/berkeley-cs186/sp22-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L188) to lock the page (and acquire locks up the hierarchy as needed) with the least permissive lock types possible.

@@ -23,7 +23,7 @@ Once all of your files are prepared in your repo you can submit to Gradescope th
 
 ### Submitting via upload <a id="submitting-via-upload"></a>
 
-If your GitHub account has access to many repos, the Gradescope UI might time out while trying to load which repos you have available. If this is the case for you, you can submit your code directly using via upload. You can zip up your source code with `python3 zip.py --assignment proj3` and submit that directly to the autograder.
+If your GitHub account has access to many repos, the Gradescope UI might time out while trying to load which repos you have available. If this is the case for you, you can submit your code directly using via upload. You can zip up your source code with `python3 zip.py --assignment proj4` and submit that directly to the autograder.
 
 ## Partners
 
