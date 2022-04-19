@@ -10,7 +10,7 @@ You should watch all the recovery lectures before starting this project. We also
 
 ## Fetching the released code
 
-Complete [this form](https://docs.google.com/forms/d/e/1FAIpQLSehUCsZ2cbJcfTfx7Xkhhnmisf8sEsWZsAqB4i3Ntrz3gmRgQ/viewform?usp=sf_link) to get a Github Classroom link. Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 5 release post on [Piazza](https://piazza.com/class/kxz3whak4ma3rt). Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -26,7 +26,7 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Piazza](https://piazza.com/class/kxz3whak4ma3rt).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 5 release post on [Piazza](https://piazza.com/class/kxz3whak4ma3rt).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
 
