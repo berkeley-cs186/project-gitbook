@@ -124,7 +124,7 @@ You should pass the all the tests in [`TestDatabaseDeadlockPrecheck`](https://gi
 
 ## Putting it all together
 
-After implementing project 4, our database now supports locking! Navigate to `CommandLineInterface.java` and uncomment [line 41](https://github.com/berkeley-cs186/sp22-rookiedb/blob/db9c94a34e3f015240d57afd29e68e05e8bd5e3d/src/main/java/edu/berkeley/cs186/database/cli/CommandLineInterface.java#L41). Run the code to start our CLI. This should open a new panel in IntelliJ at the bottom. Click on this panel. We've provided 3 demo tables (Students, Courses, Enrollments). Recall from project 0 that we can run queries on this CLI. Let's try starting a transaction and querying a table by running:
+After implementing project 4, our database now supports locking, a fundamentally important functionality for database concurrency and isolation! Navigate to `CommandLineInterface.java` and uncomment [line 41](https://github.com/berkeley-cs186/sp22-rookiedb/blob/db9c94a34e3f015240d57afd29e68e05e8bd5e3d/src/main/java/edu/berkeley/cs186/database/cli/CommandLineInterface.java#L41) and comment out line 38. Run the code to start our CLI. This should open a new panel in IntelliJ at the bottom. Click on this panel. We've provided 3 demo tables (Students, Courses, Enrollments). Recall from project 0 that we can run queries on this CLI. Let's try starting a transaction and querying a table by running:
 
 ```sql
 BEGIN TRANSACTION;
@@ -151,8 +151,6 @@ Let's commit and end our transaction by running `COMMIT;`.
 Locking is important when we have multiple clients modifying and querying the database. The demo below shows how this works. We run RookieDB as a server and open connections to this server to run transactions and interact with the database.
 
 {% embed url="https://youtu.be/4Vs8UI0r454" %}
-
-Not the most flashy thing ever but a fundamentally important functionality for database concurrency and isolation.
 
 You can try it yourself by running Server.java. You can open multiple connections via client.py. Check out these files for more information!
 
