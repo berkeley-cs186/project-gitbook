@@ -180,7 +180,7 @@ _Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](ht
 
 Some useful information:
 
-* You may find it helpful to use the provided helper table containing all the possible `binid`s. We'll only be testing with these possible binid's (there aren't any hidden tests using say, 100 bins) so using the hardcoded table is fine
+* In the lahman.db, you may find it helpful to use the provided helper table `binids`, which contains all the possible `binid`s. Get a feel of what the data looks like by running `SELECT * FROM binids;` in a sqlite terminal. We'll only be testing with these possible binids (there aren't any hidden tests using say, 100 bins) so using the hardcoded table is fine
 * If you want to take the [floor ](https://en.wikipedia.org/wiki/Floor\_and\_ceiling\_functions)of a positive float value you can do `CAST (some_value AS INT)`
 
 **iii.** Now let's compute the Year-over-Year change in min, max and average player salary. For each year with recorded salaries after the first, return the `yearid`, `mindiff`, `maxdiff`, and `avgdiff` with respect to the previous year. Order the output by `yearid` in _ascending_ order. (You should omit the very first year of recorded salaries from the result.)
