@@ -18,7 +18,7 @@ There are no hard prerequisites for this project. The spec will walk you through
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 6 release post on [Piazza](https://piazza.com/class/$piazza-link$). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/$edstem-link$/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
 
 ## Required Software
 
@@ -114,7 +114,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 Download the data set from the class drive [here](https://drive.google.com/file/d/1VIA9unz82zVSeHV2EiohAwO7vYiPY56i/view).
 
-Unzip the `data.zip` file inside your `sp22-proj6-yourname` directory. You should now have a `data/` directory in your `sp22-proj6-yourname` directory.
+Unzip the `data.zip` file inside your `fa22-proj6-yourname` directory. You should now have a `data/` directory in your `fa22-proj6-yourname` directory.
 
 Afterwards, try running `python3 load.py`. You should see output like the following:
 
@@ -160,11 +160,11 @@ If so, move on to the next section to start the project. If you see `ERROR`inste
 
 ## Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp22-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/fa22-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Piazza](https://piazza.com/class/$piazza-link$).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/$edstem-link$/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
 

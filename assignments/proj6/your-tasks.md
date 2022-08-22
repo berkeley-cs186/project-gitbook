@@ -686,7 +686,7 @@ Showing formatted first document of the query
 }
 ```
 
-To run a test, from within the `sp22-proj6-yourname` directory:
+To run a test, from within the `fa22-proj6-yourname` directory:
 
 ```text
 $ python3 test.py     # This runs all of the tests
