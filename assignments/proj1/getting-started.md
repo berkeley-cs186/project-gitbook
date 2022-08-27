@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Wednesday, 2/2/2022 at 11:59PM PST (GMT-8)**. It is worth 5% of your overall grade in the class.
+This project is due **Friday, 9/9/2022 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class.
 
 ## Prerequisites
 
