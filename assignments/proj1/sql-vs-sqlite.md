@@ -48,6 +48,6 @@ SQLite is a much more tolerant language than SQL, so a lot of queries that raise
   ```
   In this SQL query, `s.sid` will be recognized without any issue, as it's the GROUP BY key; same for `SUM(a.attendance)`, as it is the Aggregate column. But how about `s.name`? It doesn't fall into either of the categories, so it is invalid to use it here.
 
-## OK, so SQLite sounds Untrustworthy...
+## OK, so SQLite Seems Untrustworthy...
 
 Now, you may be very concerned that some code that gets executed in SQLite engine will fail the autograder check. Don't worry about that, as SQLite is a commercial use database engine, it is quite fault-tolerant, that is to say, it catches a lot of syntax issues. The ones mentioned above are just slightly more demanding syntax rules in SQL. So if your code passes the SQLite check, and it is following the rule taught in class, you should be good to go!
