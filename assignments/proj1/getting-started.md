@@ -20,7 +20,7 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 1 release post on [Edstem](https://edstem.org/us/courses/24658/discussion/).
 
-If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
+If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 
 ## Required Software
 
@@ -88,5 +88,5 @@ FAIL q4iv see diffs/q4iv.txt
 FAIL q4v see diffs/q4v.txt
 ```
 
-If so, move on to the next section to start the project. If you see `ERROR`instead of `FAIL` create a followup on Piazza with details from your `your_output/` folder.
+If so, move on to the next section to start the project. If you see `ERROR`instead of `FAIL` create a followup on Edstem with details from your `your_output/` folder.
 

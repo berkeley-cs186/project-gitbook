@@ -10,6 +10,7 @@
   * [Submitting the Assignment](assignments/proj0/submitting.md)
 * [Project 1: SQL](assignments/proj1/README.md)
   * [Getting Started](assignments/proj1/getting-started.md)
+  * [SQL vs. SQLite](assignments/proj1/sql-vs-sqlite.md)
   * [Your Tasks](assignments/proj1/your-tasks.md)
   * [Testing](assignments/proj1/testing.md)
   * [Submitting the Assignment](assignments/proj1/submitting.md)

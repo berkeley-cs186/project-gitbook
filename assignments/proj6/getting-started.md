@@ -104,7 +104,7 @@ This should bring you into a container with the necessary requirements. Run `cd 
 
 If you exit the container and wish to access it again, you can run the command `docker start -ai mongo186` to re-enter the container.
 
-If your proj6 directory is empty, you most likely provided an invalid path when you ran `docker run`. In this case, run the following two commands: `docker kill mongo186` followed by `docker rm mongo186`. Afterwards, rerun the `docker run` command from above, making sure to replace the string after the `-v` accordingly. Followup on Piazza if you run into trouble with this step.
+If your proj6 directory is empty, you most likely provided an invalid path when you ran `docker run`. In this case, run the following two commands: `docker kill mongo186` followed by `docker rm mongo186`. Afterwards, rerun the `docker run` command from above, making sure to replace the string after the `-v` accordingly. Followup on Edstem if you run into trouble with this step.
 
 ### Python
 
@@ -156,7 +156,7 @@ q3i   FAIL: Empty output
 q3ii  FAIL: Empty output
 ```
 
-If so, move on to the next section to start the project. If you see `ERROR`instead of `FAIL` create a followup on Piazza with details from your `your_output/` folder.
+If so, move on to the next section to start the project. If you see `ERROR`instead of `FAIL` create a followup on Edstem with details from your `your_output/` folder.
 
 ## Debugging Issues with GitHub Classroom
 
@@ -166,5 +166,5 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/$edstem-link$/discussion/).
 
-If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Piazza.
+If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 
