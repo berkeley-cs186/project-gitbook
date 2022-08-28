@@ -2,7 +2,7 @@
 
 This project is due on **Friday, 9/9/2022 at 11:59PM PDT (GMT-7)**.
 
-Push your changes to your GitHub Classroom private repository and then submit through Gradescope. You may find it helpful to read through the project 0 submission procedure again [here](submitting.md). Alternatively you can submit your `proj1.sql` file directly \(make sure it is named `proj1.sql` or the autograder won't recognize it\).
+Push your changes to your GitHub Classroom private repository and then submit through Gradescope. You may find it helpful to read through the project 0 submission procedure again [here](../proj0/submitting.md). Alternatively you can submit your `proj1.sql` file directly \(make sure it is named `proj1.sql` or the autograder won't recognize it\).
 
 A full list of files that you may modify are as follows:
 
