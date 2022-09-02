@@ -32,7 +32,7 @@ SQLite is a much more tolerant language than SQL, so a lot of queries that raise
   
   Something that you may learn in the first day of a CS class includes that computers start at index 0, and "=" is the assignment operator rather than comparison. This convention will be broken in SQL world, where you should use "=" for direct comparison. 
 
-- `LEFT/RIGHT INNER/OUTER JOIN` without a join condition
+- `(INNER | { LEFT | RIGHT | FULL } [OUTER]) JOIN` without a join condition
 
   In SQL, only `NATURAL JOIN` does not require a join condition as it automatically infers the common column names. It is the language's rule that you are required to give some condition with the `ON` clause.
 
