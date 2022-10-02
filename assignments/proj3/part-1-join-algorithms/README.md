@@ -31,7 +31,7 @@ PNLJ has already been implemented for you as a special case of BNLJ with B=3. Th
 
 You should read through the given skeleton code in `BNLJOperator`. The `next` and `hasNext` methods of the iterator have already been filled out for you, but you will need to implement the `fetchNextRecord` method, which should do most of the heavy lifting of the BNLJ algorithm.
 
-There are also two suggested helper methods: `fetchNextLeftBlock`, which should fetch the next non-empty block of left table pages from `leftIterator`, and `fetchNextRightPage`, which should fetch the next non-empty page of the right table \(from `rightIterator`\).
+There are also two suggested helper methods: `fetchNextLeftBlock`, which should fetch the next non-empty block of left table pages from `leftSourceIterator`, and `fetchNextRightPage`, which should fetch the next non-empty page of the right table \(from `rightSourceIterator`\).
 
 The `fetchNextRecord` method should, as its name suggests, fetches the next record of the join output. When implementing this method there are 4 important cases you should consider:
 
