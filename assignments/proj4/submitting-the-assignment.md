@@ -27,7 +27,7 @@ If your GitHub account has access to many repos, the Gradescope UI might time ou
 
 ## Partners
 
-Only one partner has to submit, but please make sure to add the other partner to the Gradescope submission. Slip minutes will be calculated individually. For example, if partner A has 10 slip minutes remaining and partner B has 20 slip minutes remaining and they submit 20 minutes late, partner A will be subject to the late penalty (1/3 off partner A's score) while partner B will have 0 remaining slip minutes and no late penalty applied to partner B's score. If you wish to make individual submissions at separate times, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLScUcuBNesd984X1I_3RbXGDxmS5v2pebTS_sF2QrbuvAK1sgg/viewform?usp=sf_link) so you aren't flagged for academic dishonesty.
+Only one partner has to submit, but please make sure to add the other partner to the Gradescope submission. Slip minutes will be calculated individually. For example, if partner A has 10 slip minutes remaining and partner B has 20 slip minutes remaining and they submit 20 minutes late, partner A will be subject to the late penalty (1/3 off partner A's score) while partner B will have 0 remaining slip minutes and no late penalty applied to partner B's score. If you wish to make individual submissions at separate times, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfunDJNsm_O5cifGAtLGsj_T-bkK4xzOtFWWB4zpDssOiXpvQ/viewform?usp=sf_link) so you aren't flagged for academic dishonesty.
 
 ## Grading
 
