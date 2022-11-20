@@ -117,7 +117,7 @@ This is done as follows:
 
 Finally, we must rewrite the master record with the LSN of the begin checkpoint record of the new successful checkpoint.
 
-As an example, if we had 200 DPT entries and 300 tranasction table entries, we would output the following end checkpoint records in the following order:
+As an example, if we had 200 DPT entries and 300 transaction table entries, we would output the following end checkpoint records in the following order:
 
 * EndCheckpoint with 200 DPT entries and 52 transaction table entries
 * EndCheckpoint with 240 transaction table entries
