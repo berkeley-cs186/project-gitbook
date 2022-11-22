@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **$due-date$**. It is worth 6% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Monday, 12/5/2022 at 11:59PM PST (GMT-8)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
@@ -18,7 +18,7 @@ There are no hard prerequisites for this project. The spec will walk you through
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/$edstem-link$/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/24658/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
 
 ## Required Software
 
@@ -164,7 +164,7 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/$edstem-link$/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/24658/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 
