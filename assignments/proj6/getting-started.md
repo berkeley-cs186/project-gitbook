@@ -63,7 +63,15 @@ brew install mongodb-community@4.4
 brew services start mongodb-community@4.4
 ```
 
-If you run into a CompilerSelectionError, run `xcode-select --install` and repeat the commands above. Check that everything is installed by running `mongo --version` and `mongoimport --version`. If both of these commands work then you should be good to go.
+If you run into a CompilerSelectionError, run `xcode-select --install` and repeat the commands above. Check that everything is installed by running `mongo --version` and `mongoimport --version`. If both of these commands work then you should be good to go. 
+
+* If your Mac is M1-based or later, and you install mongodb through homebrew, it's likely that you will get an error saying `mongo: command not found`. In the output of `brew install mongodb-community@4.4`, you should have gotten a message giving a command on how to do this. It should look similar (not necessarily the same) to 
+
+```
+echo 'export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"' >> ~/.zshrc
+```
+
+Run that command, open a new terminal session, (this is important!) and your error should be gone.
 
 If your version of Mac can't support Mongo 4.4 then we recommend you use the Docker approach to complete this assignment. Otherwise, if it doesn't support Docker either then you can use Mongo 4.2 instead. This will work the same as 4.4 except the following functions recommended in the spec will not be available, so you'll have to modify the advice slightly:
 
