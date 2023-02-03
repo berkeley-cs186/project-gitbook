@@ -103,16 +103,6 @@ PASS q0
 
 More details on testing can be found in the [Testing](testing.md) section.
 
-### Changes from Lecture
-
-SQLite doesn't support every SQL feature covered in lecture, specifically:
-
-* There is support for `LEFT OUTER JOIN` but not `RIGHT OUTER` or `FULL OUTER`.
-  * To get equivalent output to `RIGHT OUTER` you can reverse the order of the tables (i.e. `A RIGHT JOIN B` is the same as `B LEFT JOIN A`.
-  * While it isn't required to complete this assignment, the equivalent to `FULL OUTER JOIN` can be done by `UNION`ing `RIGHT OUTER` and `LEFT OUTER`
-* There is no regex match (`~`) tilde operator. You can use `LIKE` instead.
-* There is no `ANY` or `ALL` operator.
-
 ## Your Tasks
 
 ### Task 1: **Basics**

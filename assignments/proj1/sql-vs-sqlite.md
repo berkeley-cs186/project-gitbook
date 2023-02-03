@@ -16,6 +16,13 @@ Starting this semester, we will be using a new autograder integrating [Cosette](
 
 SQLite is a much more tolerant language than SQL, so a lot of queries that raise an error in SQL will be inferred and run successfully by SQLite. We do not wish that you utilize this tolerance to write "incorrect" queries. Next, we will go over some most common errors that students make and which Cosette Solver will complain about.
 
+Specifically: 
+* There is support for `LEFT OUTER JOIN` but not `RIGHT OUTER` or `FULL OUTER`.
+  * To get equivalent output to `RIGHT OUTER` you can reverse the order of the tables (i.e. `A RIGHT JOIN B` is the same as `B LEFT JOIN A`.
+  * While it isn't required to complete this assignment, the equivalent to `FULL OUTER JOIN` can be done by `UNION`ing `RIGHT OUTER` and `LEFT OUTER`
+* There is no regex match (`~`) tilde operator. You can use `LIKE` instead.
+* There is no `ANY` or `ALL` operator.
+
 ## Most Common SQL Errors
 - Use the alias directly in `WHERE/HAVING` clause
   ``` sql
