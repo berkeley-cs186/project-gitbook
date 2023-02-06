@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Monday, 1/24/2022 at 11:59PM PST (GMT-8)**.
+This project is due on **Tuesday, 1/24/2023 at 11:59PM PST (GMT-8)**.
 
 ## Pushing changes to GitHub Classroom
 
