@@ -61,7 +61,7 @@ In this course, a majority of the projects are written in Java and involve modif
 As you follow along with the steps below, please submit your answers to this [Gradescope assignment](https://www.gradescope.com/courses/487942/assignments/2555375). You must complete this for full credit.
 {% endhint %}
 
-Let's start by navigating to src/java/test/.../index/TestBPlusNode.java.&#x20;
+Let's start by navigating to src/test/java/.../index/TestBPlusNode.java.&#x20;
 
 #### Breakpoints
 
