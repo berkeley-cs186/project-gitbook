@@ -1,6 +1,6 @@
 # Your Tasks
 
-In this project you will implement write-ahead logging and support for savepoints, rollbacks, and ACID compliant restart recovery. If you haven't already, we recommend reading through the [recovery notes](https://cs186berkeley.net/resources/static/notes/n12-Recovery.pdf) and referencing them as needed while you work through this project. The tests for this project are all located in [`TestRecoveryManager.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java).
+In this project you will implement write-ahead logging and support for savepoints, rollbacks, and ACID compliant restart recovery. If you haven't already, we recommend reading through the [recovery notes](https://cs186berkeley.net/resources/static/notes/n14-Recovery.pdf) and referencing them as needed while you work through this project. The tests for this project are all located in [`TestRecoveryManager.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java).
 
 ## Understanding the Skeleton Code
 

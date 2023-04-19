@@ -6,7 +6,7 @@ This project is due **Tuesday, 4/26/2022 at 11:59PM PDT (GMT-7)**. It is worth 8
 
 ## Prerequisites
 
-You should watch all the recovery lectures before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/resources/static/notes/n12-Recovery.pdf).
+You should watch all the recovery lectures before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/resources/static/notes/n14-Recovery.pdf).
 
 ## Fetching the released code
 
