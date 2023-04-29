@@ -36,12 +36,12 @@ If you don't already have MongoDB on your machine, follow the instructions for y
 
 #### Windows
 
-Follow the instructions [here](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/).
+Follow the instructions [here](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/). For both of them, **download the 4.4 versions, not the 6.0**.
 
 Once you have everything installed you'll want to locate the location of the mongo shell and mongoimport binaries. Confirm the location of the binaries at the following spots:
 
-* The mongo shell binary \(mongo.exe\) should be located `C:\Program Files\MongoDB\Server\4.4\bin\`.
-* `C:\Program Files\MongoDB\Tools\100\bin\`. If you can't find it at that exact location, check other directories under `C:\Program Files\MongoDB\Tools\`. If your file has a long name like `windows-x86-64-bit-mongoimport.exe` then rename it to just `mongoimport.exe`
+* The mongo shell binary \(mongo.exe\) should be located at `C:\Program Files\MongoDB\Server\4.4\bin\`.
+* The mongoimport binary \(mongoimport.exe\) should be located at `C:\Program Files\MongoDB\Tools\100\bin\`. If you can't find it at that exact location, check other directories under `C:\Program Files\MongoDB\Tools\`. If your file has a long name like `windows-x86-64-bit-mongoimport.exe` then rename it to just `mongoimport.exe`
 
 Add the two directories to your PATH. To edit your environment variables on Windows 10, use the following steps:
 
