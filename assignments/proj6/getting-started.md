@@ -36,7 +36,7 @@ If you don't already have MongoDB on your machine, follow the instructions for y
 
 #### Windows
 
-Follow the instructions [here](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/).
+Follow the instructions [here](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/).
 
 Once you have everything installed you'll want to locate the location of the mongo shell and mongoimport binaries. Confirm the location of the binaries at the following spots:
 
