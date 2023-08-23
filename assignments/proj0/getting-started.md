@@ -24,7 +24,7 @@ For each project, we will provide a GitHub Classroom link. Follow the link to cr
 
 `git clone https://github.com/cs186-student/fa23-proj0-oski`
 
-The GitHub Classroom link for this project is provided in the project release post on [Edstem](https://edstem.org/us/courses/33907/discussion/).
+The GitHub Classroom link for this project is provided in the project release post on [Edstem](https://edstem.org/us/courses/43381/discussion/).
 
 ### Debugging Issues with GitHub Classroom
 
@@ -32,7 +32,7 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 #### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 0 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 0 release post on [Edstem](https://edstem.org/us/courses/43381/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 
