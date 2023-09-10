@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Monday, 9/25/2023 at 11:59PM PDT (GMT-7)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/edstem-link/discussion/1699965)!
+This project is due **Monday, 9/25/2023 at 11:59PM PDT (GMT-7)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/43381/discussion/3350165)!
 
 ## Prerequisites
 
