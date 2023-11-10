@@ -5,7 +5,7 @@ This assignment is due on 12/4. It has an extra credit component that works as f
 - The top 10 submissions get a linearly decreasing grade starting at 1% (rank 1 gets 1%, rank 2 gets 0.9%, all the way until rank 9 that gets 0.1%)
 - 0.1% of your total grade if you beat 7650 I/Os. This will be additive to your rank-achieved extra-credit.
 
-You can use gradescope {LINK} to access the leaderboard and see the position of your submission. Your submission’s ranking is updated every time when any team submits a new gradescope submission.
+You can use [gradescope](https://www.gradescope.com/courses/580455/assignments/3385076) to access the leaderboard and see the position of your submission. Your submission’s ranking is updated every time when any team submits a new gradescope submission.
 
 ### Partners
 
