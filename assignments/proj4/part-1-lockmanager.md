@@ -4,6 +4,8 @@
 
 In this part you will implement some helpers functions for lock types and the queuing system for locks. The `concurrency` directory contains a partial implementation of a lock manager (`LockManager.java`), which you will be completing.
 
+Note that you may **not** modify the signature of any methods or classes that we provide to you, but you're free to add helper methods.
+
 Note on terminology: in this project, "children" and "parent" refer to the resource(s) directly below/above a resource in the hierarchy. "Descendants" and "ancestors" are used when we wish to refer to all resource(s) below/above in the hierarchy.
 
 ## Task 1: LockType
@@ -157,5 +159,3 @@ resourceEntries: { db => { locks: [ {2, X(db)} ], queue: [] } }
 ## Submission
 
 After this, you should pass all the tests we have provided to you in [`database.concurrency.TestLockType`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockType.java) and [`database.concurrency.TestLockManager`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/concurrency/TestLockManager.java). Remember that for the Part 1 submission you only need to pass the first 5 tests of TestLockManager for full credit.
-
-Note that you may **not** modify the signature of any methods or classes that we provide to you, but you're free to add helper methods. Also, you should only modify code in the `concurrency` directory for this part.
