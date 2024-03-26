@@ -2,7 +2,7 @@
 
 This assignment is due on 5/3. It has an extra credit component that works as follows:
 
-- The top 10 submissions get a linearly decreasing grade starting at 2% (rank 1 gets 2%, rank 2 gets 1.9%, all the way until rank 9 that gets 1.1%)
+- The top 5 submissions get a linearly decreasing grade starting at 2% (rank 1 gets 2%, rank 2 gets 1.9%, all the way until rank 9 that gets 1.6%)
 - 0.3% of your total grade if go under 7900 I/Os. This will be additive to your rank-achieved extra-credit.
 
 You can use [gradescope](https://www.gradescope.com/courses/705212/assignments/4278849/leaderboard) to access the leaderboard and see the position of your submission. Your submission’s ranking is updated every time when any team submits a new gradescope submission.
