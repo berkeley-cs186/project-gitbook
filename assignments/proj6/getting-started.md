@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Monday, 05/01/2023 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Wednesday, 05/01/2024 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
