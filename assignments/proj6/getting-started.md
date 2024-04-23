@@ -120,7 +120,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Extract the data set
 
-Download the data set from the class drive [here](https://drive.google.com/file/d/1VIA9unz82zVSeHV2EiohAwO7vYiPY56i/view).
+Download the data set from the class drive [here](https://drive.google.com/file/d/1NNtxIdlY2yWJxfLRGVCzqG4yCiU9KXBC/view?usp=sharing).
 
 Unzip the `data.zip` file inside your `sp24-proj6-yourname` directory. You should now have a `data/` directory in your `sp24-proj6-yourname` directory.
 
