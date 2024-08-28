@@ -1,15 +1,15 @@
 ### Logistics
 
-This assignment is due on 5/3. It has an extra credit component that works as follows:
+This assignment is due on 12/4. It has an extra credit component that works as follows:
 
-- The top 5 submissions get a linearly decreasing grade starting at 2% (rank 1 gets 2%, rank 2 gets 1.9%, all the way until rank 9 that gets 1.6%)
-- 0.3% of your total grade if go under 7900 I/Os. This will be additive to your rank-achieved extra-credit.
+- The top 10 submissions get a linearly decreasing grade starting at 1% (rank 1 gets 1%, rank 2 gets 0.9%, all the way until rank 9 that gets 0.1%)
+- 0.1% of your total grade if you beat 7650 I/Os. This will be additive to your rank-achieved extra-credit.
 
-You can use [gradescope](https://www.gradescope.com/courses/705212/assignments/4278849/leaderboard) to access the leaderboard and see the position of your submission. Your submission’s ranking is updated every time when any team submits a new gradescope submission.
+You can use gradescope {LINK} to access the leaderboard and see the position of your submission. Your submission’s ranking is updated every time when any team submits a new gradescope submission.
 
 ### Partners
 
-Partners are allowed for this project. We recommend keeping the same project partner as the partner you have for Project 4, to avoid risk of plagiarism.
+This will be an individual project, so no partners will be allowed.
 
 ### Prerequisites
 
@@ -17,7 +17,7 @@ This assignment requires that you have a complete and functioning implementation
 
 ### Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 4 competition release post on Edstem. Once your private repo is set up clone the Project 4 competition skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 4 competition release post on Edstem {HYPERLINK}. Once your private repo is set up clone the Project 4 competition skeleton code onto your local machine.
 
 ### Copying over your local Projects 2 and 3
 

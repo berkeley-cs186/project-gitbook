@@ -4,7 +4,7 @@
 
 RookieDB is a bare-bones database implementation which supports executing simple transactions in series. In the assignments of this class you will be adding support for B+ tree indices, efficient join algorithms, query optimization, multigranularity locking to allow concurrent execution of transactions, and database recovery.
 
-For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/sp24-rookiedb/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one.
+For convenience, the staff will be maintaining a read-only public repo [here](https://github.com/berkeley-cs186/fa24-rookiedb/) containing the project skeleton. When starting projects remember to work off of the private repos provided to you through GitHub Classroom rather than the public one.
 
 ## Code Overview
 
@@ -156,4 +156,4 @@ try (Transaction t2 = db.beginTransaction()) {
 db.close();
 ```
 
-More complex queries can be found in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java).
+More complex queries can be found in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/fa24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java).
