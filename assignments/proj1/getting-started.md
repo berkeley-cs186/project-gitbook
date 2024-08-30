@@ -62,7 +62,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Download and extract the data set
 
-Download the data set for this project from the course's Google Drive [here](https://drive.google.com/file/d/1WLMFAiNzrA0Qv3p80epO71uN8J6fTXYG/view?usp=sharing). You should get a file called `lahman.db.zip`. Unzip the `lahman.db.zip` file inside your `fa24-proj1-yourname` directory. You should now have a `lahman.db` file in your `fa24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
+Download the data set for this project from the course's Google Drive [here](https://drive.google.com/drive/u/1/folders/1j9eyruR1MaPa2qlL0fJCSVtcrT7FMD8A). You should get a file called `lahman.db.zip`. Unzip the `lahman.db.zip` file inside your `fa24-proj1-yourname` directory. You should now have a `lahman.db` file in your `fa24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 ## Running the tests
 
