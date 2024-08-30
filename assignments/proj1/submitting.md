@@ -12,6 +12,6 @@ A full list of files that you may modify are as follows:
 
 * 75% of your grade will be made up of tests released to you
 * 20% will be determined by hidden tests unreleased tests that we will run on your submission after the deadline
-* $style-weight$ will be determined by the correctness of your SQL syntax (see [`SQL vs. SQLite`](./sql-vs-sqlite.md#new-autograder) for more information)
+* 5% will be determined by the correctness of your SQL syntax (see [`SQL vs. SQLite`](./sql-vs-sqlite.md#new-autograder) for more information)
 * This project will be worth 5% of your overall grade in the class
 
