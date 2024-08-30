@@ -66,7 +66,7 @@ It is supplemented by these tables:
   HomeGames - Number of homegames played by each team in each ballpark
 ```
 
-For more detailed information, see the [docs online](http://www.seanlahman.com/files/database/readme2019.txt).
+For more detailed information, see the [docs online](https://www.dropbox.com/scl/fi/9i2nhlskvfkqy7mbuqem7/readme2023.txt?rlkey=odnwx7ujztm0z4ob8dmggfcr0&e=1&dl=0).
 
 ## Writing Queries
 
@@ -151,7 +151,7 @@ You may include Willie Mays' `playerid` in your query (`mayswi01`), but you _may
 
 _Just for fun_: For those of you who are baseball buffs, variants of the above queries can be used to find other more detailed SaberMetrics, like [Runs Created](https://en.wikipedia.org/wiki/Runs\_created) or [Value Over Replacement Player](https://en.wikipedia.org/wiki/Value\_over\_replacement\_player). Wikipedia has a nice page on [baseball statistics](https://en.wikipedia.org/wiki/Baseball\_statistics); most of these can be computed fairly directly in SQL.
 
-_Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](https://www.mlb.com/giants/team/front-office/yeshayah-goldfarb), suggested the following:
+_Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](https://www.mlb.com/giants/team/front-office/yeshaya-goldfarb), suggested the following:
 
 > Using the Lahman database as your guide, make an argument for when MLBs “Steroid Era” started and ended. There are a number of different ways to explore this question using the data.
 

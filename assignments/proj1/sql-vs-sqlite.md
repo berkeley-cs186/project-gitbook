@@ -1,6 +1,6 @@
 # SQL vs. SQLite
 
-[*Note: You can skip this section for now and come back to it while you're doing project 1.*]
+[*Note: You can skip this section for now and come back to it while you're doing the tasks in Project 1.*]
 
 ## Why Are We Using SQLite in This Class?
 
