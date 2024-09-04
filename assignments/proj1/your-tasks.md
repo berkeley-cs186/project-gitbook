@@ -2,7 +2,7 @@
 
 ![Databaseball](<../../.gitbook/assets/databaseball (2) (3) (3) (3) (2) (8).jpg>)
 
-In this project we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/) (our friends at the San Francisco Giants tell us they use it!) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2019. It includes data from the two current leagues (American and National), four other "major" leagues (American Association, Union Association, Players League, and Federal League), and the National Association of 1871-1875.
+In this project we will be working with the commonly-used [Lahman baseball statistics database](http://seanlahman.com/) (our friends at the San Francisco Giants tell us they use it!) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2019. It includes data from the two current leagues (American and National), four other "major" leagues (American Association, Union Association, Players League, and Federal League), and the National Association of 1871-1875.
 
 At this point you should be able to run SQLite and view the database using either `./sqlite3 -header lahman.db` (if in the previous section you downloaded a precompiled binary) or `sqlite3 -header lahman.db` otherwise. If you're using windows and you find that the previous command doesn't work, try running `winpty ./sqlite3 lahman.db`.
 
@@ -66,7 +66,7 @@ It is supplemented by these tables:
   HomeGames - Number of homegames played by each team in each ballpark
 ```
 
-For more detailed information, see the [docs online](http://www.seanlahman.com/files/database/readme2019.txt).
+For more detailed information, see the [docs online](https://www.dropbox.com/scl/fi/9i2nhlskvfkqy7mbuqem7/readme2023.txt?rlkey=odnwx7ujztm0z4ob8dmggfcr0&e=1&dl=0).
 
 ## Writing Queries
 
@@ -151,7 +151,7 @@ You may include Willie Mays' `playerid` in your query (`mayswi01`), but you _may
 
 _Just for fun_: For those of you who are baseball buffs, variants of the above queries can be used to find other more detailed SaberMetrics, like [Runs Created](https://en.wikipedia.org/wiki/Runs\_created) or [Value Over Replacement Player](https://en.wikipedia.org/wiki/Value\_over\_replacement\_player). Wikipedia has a nice page on [baseball statistics](https://en.wikipedia.org/wiki/Baseball\_statistics); most of these can be computed fairly directly in SQL.
 
-_Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](https://www.mlb.com/giants/team/front-office/yeshayah-goldfarb), suggested the following:
+_Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](https://www.mlb.com/giants/team/front-office/yeshaya-goldfarb), suggested the following:
 
 > Using the Lahman database as your guide, make an argument for when MLBs “Steroid Era” started and ended. There are a number of different ways to explore this question using the data.
 

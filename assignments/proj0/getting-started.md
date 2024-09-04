@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This assignment is due **Wednesday, 1/24/2024 at 11:59PM PST (GMT-8)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
+This assignment is due **Thursday, 9/5/2024 at 11:59PM PDT (GMT-7)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
 
 ## Prerequisites
 
@@ -22,17 +22,17 @@ If you'd like to use git for managing your own code versioning, there are many g
 
 For each project, we will provide a GitHub Classroom link. Follow the link to create a GitHub repository with the starter code for the project you are working on. Use `git clone` to get a local copy of the newly created repository. For example, if your GitHub username is `oski` after being assigned your repo through GitHub Classroom you would run:
 
-`git clone https://github.com/cs186-student/sp24-proj0-oski`
+`git clone https://github.com/cs186-student/fa24-proj0-oski`
 
-The GitHub Classroom link for this project is provided in the project release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+The GitHub Classroom link for this project is provided in the project release post on [Edstem](https://edstem.org/us/courses/62108/discussion/).
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues (i.e. the page froze or some error message appeared), first check if you have access to your repo at `https://github.com/cs186-student/sp24-proj0-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues (i.e. the page froze or some error message appeared), first check if you have access to your repo at `https://github.com/cs186-student/fa24-proj0-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
 
 #### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 0 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 0 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 

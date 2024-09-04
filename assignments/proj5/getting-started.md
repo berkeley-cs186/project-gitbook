@@ -2,15 +2,15 @@
 
 ## Logistics
 
-This project is due **Tuesday, 4/23/2024 at 11:59PM PDT (GMT-7)**. It is worth 8% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/53125/discussion/4129301)!
+This project is due **Wednesday, 4/26/2023 at 11:59PM PDT (GMT-7)**. It is worth 8% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/33907/discussion/1699965)!
 
 ## Prerequisites
 
-You should watch all the recovery lectures before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/notes/note14/).
+You should watch all the recovery lectures before starting this project. We also highly recommend reviewing the [recovery notes](https://cs186berkeley.net/resources/static/notes/n14-Recovery.pdf).
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 5 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/). Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 5 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/). Once your private repo is set up clone the Project 5 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -22,11 +22,11 @@ Only one partner has to submit, but please make sure to add the other partner to
 
 ## Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp24-proj5-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp23-proj5-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual.
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 5 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 5 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 

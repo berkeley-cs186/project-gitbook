@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Friday, 2/2/2024 at 11:59PM PST (GMT-8)**. It is worth 5% of your overall grade in the class.
+This project is due **Thursday, 9/12/2024 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class.
 
 ## Prerequisites
 
@@ -10,15 +10,15 @@ You should watch the SQL I lecture before beginning this project. Later question
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 1 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/). Once your private repo is set up clone the project 1 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 1 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/). Once your private repo is set up clone the project 1 skeleton code onto your local machine.
 
 ### Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp24-proj1-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/fa24-proj1-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 1 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 1 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 
@@ -35,7 +35,7 @@ If you don't already have SQLite on your machine, the simplest way to start usin
 1. Visit the download page linked above and navigate to the section **Precompiled Binaries for Windows**. Click on the link **sqlite-tools-win32-x86-\*.zip** to download the binary.
 2. Unzip the file. There should be a `sqlite3.exe` file in the directory after extraction.
 3. Navigate to the folder containing the `sqlite3.exe` file and check that the version is at least 3.8.3: `cd path/to/sqlite_folder` `./sqlite3 --version`
-4. Move the `sqlite3.exe` executable into your `sp24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
+4. Move the `sqlite3.exe` executable into your `fa24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 #### macOS Yosemite \(10.10\), El Capitan \(10.11\), Sierra \(10.12\) <a id="macos-yosemite-10-10-el-capitan-10-11-sierra-10-12"></a>
 
@@ -48,7 +48,7 @@ SQLite comes pre-installed, but it is the wrong version.
 1. Visit the download page linked above and navigate to the section **Precompiled Binaries for Mac OS X \(x86\)**. Click on the link **sqlite-tools-osx-x86-\*.zip** to download the binary.
 2. Unzip the file. There should be a `sqlite3` file in the directory after extraction.
 3. Navigate to the folder containing the `sqlite3` file and check that the version is at least 3.8.3: `cd path/to/sqlite_folder` `./sqlite3 --version`
-4. Move the `sqlite3` file into your `sp24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
+4. Move the `sqlite3` file into your `fa24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 #### Ubuntu
 
@@ -62,7 +62,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Download and extract the data set
 
-Download the data set for this project from the course's Google Drive [here](https://drive.google.com/file/d/1WLMFAiNzrA0Qv3p80epO71uN8J6fTXYG/view?usp=sharing). You should get a file called `lahman.db.zip`. Unzip the `lahman.db.zip` file inside your `sp24-proj1-yourname` directory. You should now have a `lahman.db` file in your `sp24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
+Download the data set for this project from the course's Google Drive [here](https://drive.google.com/drive/u/1/folders/1j9eyruR1MaPa2qlL0fJCSVtcrT7FMD8A). You should get a file called `lahman.db.zip`. Unzip the `lahman.db.zip` file inside your `fa24-proj1-yourname` directory. You should now have a `lahman.db` file in your `fa24-proj1-yourname` directory \(the same place as the `proj1.sql` file\)
 
 ## Running the tests
 

@@ -45,30 +45,30 @@ The `query` directory contains what are called query operators. A single query t
 
 ### Join Operators
 
-[`JoinOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) is the base class of all the join operators. **Reading this file and understanding the methods given to you can save you a lot of time on Part 1.** It provides methods you may need to deal with tables and the current transaction. You should not be dealing directly with `Table` objects nor `TransactionContext` objects while implementing join algorithms in Part 1 \(aside from passing them into methods that require them\). Subclasses of JoinOperator are all located in `query/join`.
+[`JoinOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) is the base class of all the join operators. **Reading this file and understanding the methods given to you can save you a lot of time on Part 1.** It provides methods you may need to deal with tables and the current transaction. You should not be dealing directly with `Table` objects nor `TransactionContext` objects while implementing join algorithms in Part 1 \(aside from passing them into methods that require them\). Subclasses of JoinOperator are all located in `query/join`.
 
-Some helper methods you might want to be aware of are located [here](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java#L167-L207).
+Some helper methods you might want to be aware of are located [here](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java#L167-L207).
 
 ### Scan Operators
 
 The scan operators fetch data directly from a table.
 
-* [`SequentialScanOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SequentialScanOperator.java) - Takes a table name provides an iterator over all the records of that table
-* [`IndexScanOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/IndexScanOperator.java) - Takes a table name, column name, a PredicateOperator \(&gt;, &lt;, &lt;=, &gt;=, =\) and a value. The column specified must have an index built on it for this operator to work. If so, the index scan will use take advantage of the index to yield records with columns satisfying the given predicate and value \(e.g. `salaries.yearid >= 2000`\) efficiently
+* [`SequentialScanOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SequentialScanOperator.java) - Takes a table name provides an iterator over all the records of that table
+* [`IndexScanOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/IndexScanOperator.java) - Takes a table name, column name, a PredicateOperator \(&gt;, &lt;, &lt;=, &gt;=, =\) and a value. The column specified must have an index built on it for this operator to work. If so, the index scan will use take advantage of the index to yield records with columns satisfying the given predicate and value \(e.g. `salaries.yearid >= 2000`\) efficiently
 
 ### Special Operators
 
 The remaining operators don't fall into a specific category, but rather perform some specific purpose.
 
-* [`SelectOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SelectOperator.java) - Corresponds to the **σ** operator of relational algebra. This operator takes a column name, a PredicateOperator \(&gt;, &lt;, &lt;=, &gt;=, =, !=\) and a value. It will only yields records from the source operator for which the predicate is satisfied, for example \(`yearid >= 2000`\)[`ProjectOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/ProjectOperator.java) - Corresponds to the **π** operator of relational algebra. This operator takes a list of column names and filters out any columns that weren't listed. Can also compute aggregates, but that is out of scope for this project
-* [`SortOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SortOperator.java) - Yields records from the source operator in sorted order. You'll be implementing this in Part 1
+* [`SelectOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SelectOperator.java) - Corresponds to the **σ** operator of relational algebra. This operator takes a column name, a PredicateOperator \(&gt;, &lt;, &lt;=, &gt;=, =, !=\) and a value. It will only yields records from the source operator for which the predicate is satisfied, for example \(`yearid >= 2000`\)[`ProjectOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/ProjectOperator.java) - Corresponds to the **π** operator of relational algebra. This operator takes a list of column names and filters out any columns that weren't listed. Can also compute aggregates, but that is out of scope for this project
+* [`SortOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/SortOperator.java) - Yields records from the source operator in sorted order. You'll be implementing this in Part 1
 
 ### Other Operators
 
 These operators are **out of scope** and directly relevant to the code you'll be writing in this project.
 
-* [`MaterializeOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/MaterializeOperator.java) - Materializes the source operator into a temporary table immediately, and then acts as a sequential scan over the temporary table. Mainly used in testing to control when IOs take place
-* [`GroupByOperator.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) - Out of scope for this project. This operator accepts a column name and yields the records of the source operator but with the records grouped by their value and each separated by a marker record. For example, if the source operator had singleton records `[0,1,2,1,2,0,1]` the group by operator might yield `[0,0,M,1,1,1,M,2,2]` where `M` is a marker record.
+* [`MaterializeOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/MaterializeOperator.java) - Materializes the source operator into a temporary table immediately, and then acts as a sequential scan over the temporary table. Mainly used in testing to control when IOs take place
+* [`GroupByOperator.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/JoinOperator.java) - Out of scope for this project. This operator accepts a column name and yields the records of the source operator but with the records grouped by their value and each separated by a marker record. For example, if the source operator had singleton records `[0,1,2,1,2,0,1]` the group by operator might yield `[0,0,M,1,1,1,M,2,2]` where `M` is a marker record.
 
 ## query/disk
 
@@ -86,7 +86,7 @@ This is the _volcano model_, where the operators are layered atop one another, a
 
 A query plan is a composition of query operators, and it describes _how_ a query is executed. Recall that SQL is a _declarative_ language - the user does not specify _how_ a query is run, and only _what_ the query should return. Therefore, there are often many possible query plans for a given query.
 
-The [`QueryPlan`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/QueryPlan.java) class represents a query. Users of the database create queries using the public methods \(such as `join()`, `select()`, etc.\) and then call `execute` to generate a query plan for the query and get back an iterator over the resulting data set \(which is _not_ fully materialized: the iterator generates each tuple as requested\). The current implementation of `execute` simply calls `executeNaive`, which joins tables in the order given; your task in Part 2 will be to generate better query plans.
+The [`QueryPlan`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/QueryPlan.java) class represents a query. Users of the database create queries using the public methods \(such as `join()`, `select()`, etc.\) and then call `execute` to generate a query plan for the query and get back an iterator over the resulting data set \(which is _not_ fully materialized: the iterator generates each tuple as requested\). The current implementation of `execute` simply calls `executeNaive`, which joins tables in the order given; your task in Part 2 will be to generate better query plans.
 
 **SelectPredicate**
 
@@ -112,7 +112,7 @@ All of the join predicates for the query are stored inside of the joinPredicates
 
 ### Interface for querying
 
-You should read through the `Database.java` section of the [main overview](../../#database-java) and browse through examples in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java) to familiarize yourself with how queries are written in our database.
+You should read through the `Database.java` section of the [main overview](../../#database-java) and browse through examples in [`src/test/java/edu/berkeley/cs186/database/TestDatabase.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/TestDatabase.java) to familiarize yourself with how queries are written in our database.
 
 After `execute()` has been called on a `QueryPlan` object, you can print the final query plan:
 

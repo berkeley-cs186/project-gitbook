@@ -581,7 +581,7 @@ We would like to set a minimum number of votes to make sure the score is accurat
 
 Notice how the second one is "Roll the dice and unleash the excitement!" We want to see the 20 most common words \(length &gt; 3\) across all taglines in descending order. In order to do this, we would need to split our sample tagline into its constituent words \("Roll", "the", "dice", "and", "unleash", "the", "excitement!"\).
 
-To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any surrounding punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement", without the exclamation mark\). Do not trim off any other punctuation character that is not mentioned. Order your output by descending order of `count`. Your output documents should have the following fields:
+To make things interesting, we will limit the words to length &gt;3 to remove filler words, prepositions, and some pronouns \(in the previous example, remove "the" and "and"\). We also want to trim off any surrounding punctuation \(periods, commas, question marks, or exclamation points\) in a word and set all words to lowercase \(our final set of words that will be included in our table for our example tagline is "roll, "dice", "unleash", "excitement", without the exclamation mark\). Order your output by descending order of `count`. Your output documents should have the following fields:
 
 ```typescript
 {
@@ -686,7 +686,7 @@ Showing formatted first document of the query
 }
 ```
 
-To run a test, from within the `sp24-proj6-yourname` directory:
+To run a test, from within the `sp23-proj6-yourname` directory:
 
 ```text
 $ python3 test.py     # This runs all of the tests

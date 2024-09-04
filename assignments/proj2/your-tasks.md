@@ -1,7 +1,5 @@
 # Your Tasks
 
-**In light of recent advancements in Generative AI, CS186 staff has developed a variety of techniques to detect usage of ChatGPT, Bard, Copilot, and other Generative AI tools. Students are cautioned to use such tools in accordance with our Generative AI policy, as per the Syllabus.**
-
 ![Datarake](../../.gitbook/assets/b\_tree.jpg)
 
 In this project you'll be implementing B+ tree indices. Since you'll be diving into the code base for the first time we've provided an introduction to the existing skeleton code.
@@ -12,26 +10,26 @@ In this project you'll be implementing B+ tree indices. Since you'll be diving i
 
 Every modern database supports a variety of data types to use in records, and RookieDB is no exception. For consistency and convenience most implementations choose to have their own internal representation of their data types built on top of the implementation language's defaults. In RookieDB we represent them using data boxes.
 
-A data box can contain data of the following types: `Boolean` (1 byte), `Int` (4 bytes), `Float` (4 bytes), `Long` (8 bytes) and `String(N)` (N bytes). For this project you'll be working with the abstract [`DataBox`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/databox/DataBox.java) class which implements `Comparable<DataBox>`. You may find it useful to review how the [Comparable interface works](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) for this project.
+A data box can contain data of the following types: `Boolean` (1 byte), `Int` (4 bytes), `Float` (4 bytes), `Long` (8 bytes) and `String(N)` (N bytes). For this project you'll be working with the abstract [`DataBox`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/databox/DataBox.java) class which implements `Comparable<DataBox>`. You may find it useful to review how the [Comparable interface works](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) for this project.
 
 ### RecordId
 
-A record in a table is uniquely identified by its page number (the number of the page on which it resides) and its entry number (the record's index on the page). These two numbers (pageNum, entryNum) comprise a [`RecordId`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/table/RecordId.java). For this project we'll be using record IDs in our leaf nodes as pointers to records in the data pages.
+A record in a table is uniquely identified by its page number (the number of the page on which it resides) and its entry number (the record's index on the page). These two numbers (pageNum, entryNum) comprise a [`RecordId`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/table/RecordId.java). For this project we'll be using record IDs in our leaf nodes as pointers to records in the data pages.
 
 ### Index
 
-The [`index`](https://github.com/berkeley-cs186/sp24-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index) directory contains a partial implementation of an Alternative 2 B+ tree, an implementation that you will complete in this project. Some of the important files in this directory are:
+The [`index`](https://github.com/berkeley-cs186/sp23-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index) directory contains a partial implementation of an Alternative 2 B+ tree, an implementation that you will complete in this project. Some of the important files in this directory are:
 
-* [`BPlusTree.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java) - This file contains the class that manages the structure of the B+ tree. Every B+ tree maps keys of a type `DataBox` (a single value or "cell" in a table) to values of type `RecordId` (identifiers for records on data pages). An example of inserting and a retrieving records using keys can be found in the comments at [`@BPlusTree.java#L130`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L130)
-* [`BPlusNode.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java) - A B+ node represents a node in the B+ tree, and contains similar methods to `BPlusTree` such as `get`, `put` and `delete`. `BPlusNode` is an abstract class and is implemented as either a `LeafNode` or an `InnerNode`
+* [`BPlusTree.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java) - This file contains the class that manages the structure of the B+ tree. Every B+ tree maps keys of a type `DataBox` (a single value or "cell" in a table) to values of type `RecordId` (identifiers for records on data pages). An example of inserting and a retrieving records using keys can be found in the comments at [`@BPlusTree.java#L130`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L130)
+* [`BPlusNode.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java) - A B+ node represents a node in the B+ tree, and contains similar methods to `BPlusTree` such as `get`, `put` and `delete`. `BPlusNode` is an abstract class and is implemented as either a `LeafNode` or an `InnerNode`
 *
-  * [`LeafNode.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java) - A leaf node is a node with no descendants that contains pairs of keys and Record IDs that point to the relevant records in the table, as well a pointer to its right sibling. More details can be found [`@LeafNode.java#L15`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java#L15)
-  * [`InnerNode.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java) - An inner node is a node that stores keys and pointers (page numbers) to child nodes (which themselves may either be an inner node or a leaf node). More details can be found [`@InnerNode.java#L15`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java#L15)
-* [`BPlusTreeMetadata.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTreeMetadata.java)- This file contains a class that stores useful information such as the order and height of the tree. You can access instances of this class using the `this.metadata` instance variables available in all of the classes listed above.
+  * [`LeafNode.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java) - A leaf node is a node with no descendants that contains pairs of keys and Record IDs that point to the relevant records in the table, as well a pointer to its right sibling. More details can be found [`@LeafNode.java#L15`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/LeafNode.java#L15)
+  * [`InnerNode.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java) - An inner node is a node that stores keys and pointers (page numbers) to child nodes (which themselves may either be an inner node or a leaf node). More details can be found [`@InnerNode.java#L15`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/InnerNode.java#L15)
+* [`BPlusTreeMetadata.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTreeMetadata.java)- This file contains a class that stores useful information such as the order and height of the tree. You can access instances of this class using the `this.metadata` instance variables available in all of the classes listed above.
 
 #### Implementation Details
 
-You should read through all of the code in the [`index`](https://github.com/berkeley-cs186/sp24-rookiedb/tree/master/src/main/java/edu/berkeley/cs186/database/index) directory. Many comments contain critical information on how you must implement certain functions. For example, `BPlusNode::put` specifies how to redistribute entries after a split. You are responsible for reading these comments. Here are a few of the most notable points:
+You should read through all of the code in the [`index`](https://github.com/berkeley-cs186/sp23-rookiedb/tree/master/src/main/java/edu/berkeley/cs186/database/index) directory. Many comments contain critical information on how you must implement certain functions. For example, `BPlusNode::put` specifies how to redistribute entries after a split. You are responsible for reading these comments. Here are a few of the most notable points:
 
 * Generally, B+ trees **do** support duplicate keys. However, our implementation of B+ trees **does not** support duplicate keys. You will throw an exception whenever a duplicate key is inserted. But you **don't** have to do so for deleting an absent key.
 * Our implementation of B+ trees assumes that inner nodes and leaf nodes can be serialized on a single page. You **do not** have to support nodes that span multiple pages.
@@ -61,7 +59,7 @@ Here's a diagram that shows the structure of the project with color-coded compon
 
 ### Task 1: LeafNode::fromBytes
 
-You should first implement the `fromBytes` in `LeafNode`. This method reads a `LeafNode` from a page. For information on how a leaf node is serialized, see `LeafNode::toBytes`. For an example on how to read a node from disk, see `InnerNode::fromBytes`. Your code should be similar to the inner node version but should account for the differences between how inner nodes and leaf nodes are serialized. You may find the documentation in [`ByteBuffer.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/common/ByteBuffer.java#L5) helpful.
+You should first implement the `fromBytes` in `LeafNode`. This method reads a `LeafNode` from a page. For information on how a leaf node is serialized, see `LeafNode::toBytes`. For an example on how to read a node from disk, see `InnerNode::fromBytes`. Your code should be similar to the inner node version but should account for the differences between how inner nodes and leaf nodes are serialized. You may find the documentation in [`ByteBuffer.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/common/ByteBuffer.java#L5) helpful.
 
 Once you have implemented `fromBytes` you should be passing `TestLeafNode::testToAndFromBytes`.
 
@@ -87,7 +85,7 @@ You will need to implement the following methods in `BPlusTree`:
 * `scanAll`
 * `scanGreaterEqual`
 
-In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L422) inner class in `BPlusTree.java`to complete these two methods.
+In order to implement these, you will have to complete the [`BPlusTreeIterator`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusTree.java#L422) inner class in `BPlusTree.java`to complete these two methods.
 
 After completing this Task you should be passing `TestBPlusTree::testRandomPuts`
 
@@ -95,11 +93,11 @@ Your implementation **does not** have to account for the tree being modified dur
 
 ### Task 4: Bulk Load
 
-Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L162) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 ([powerpoint slides here](https://docs.google.com/presentation/d/1\_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)):
+Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L162) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 ([powerpoint slides here](https://docs.google.com/presentation/d/1\_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)):
 
 ![](<../../.gitbook/assets/vis (1) (1) (2) (3) (3) (2) (5).gif>)
 
-After this you should pass all the Project 2 tests we have provided to you (and any you add yourselves). These are all the provided tests in [`database.index.*`](https://github.com/berkeley-cs186/sp24-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index).
+After this you should pass all the Project 2 tests we have provided to you (and any you add yourselves). These are all the provided tests in [`database.index.*`](https://github.com/berkeley-cs186/sp23-rookiedb/tree/master/src/test/java/edu/berkeley/cs186/database/index).
 
 ## Debugging
 

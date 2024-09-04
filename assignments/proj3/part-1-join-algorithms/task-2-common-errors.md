@@ -2,7 +2,7 @@
 
 ## Index out of bounds error while partitioning
 
-Hash codes can be negative. Make sure you handle that case. The hash codes can also be larger than the number of partitions, so make sure you handle that too. We recommend you look at [SHJOperator'](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/join/SHJOperator.java#L73-L76)s implementation to make sure you partition correctly with hash codes.
+Hash codes can be negative. Make sure you handle that case. The hash codes can also be larger than the number of partitions, so make sure you handle that too. We recommend you look at [SHJOperator'](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/join/SHJOperator.java#L73-L76)s implementation to make sure you partition correctly with hash codes.
 
 ## Reached the max number of passes cap
 

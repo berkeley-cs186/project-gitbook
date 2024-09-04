@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This project is due **Wednesday, 05/01/2024 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
+This project is due **Saturday, 5/6/2023 at 11:59PM PDT (GMT-7)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
 Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
@@ -18,7 +18,7 @@ There are no hard prerequisites for this project. The spec will walk you through
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
 
 ## Required Software
 
@@ -120,9 +120,9 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Extract the data set
 
-Download the data set from the class drive [here](https://drive.google.com/file/d/1NNtxIdlY2yWJxfLRGVCzqG4yCiU9KXBC/view?usp=sharing).
+Download the data set from the class drive [here](https://drive.google.com/file/d/1VIA9unz82zVSeHV2EiohAwO7vYiPY56i/view).
 
-Unzip the `data.zip` file inside your `sp24-proj6-yourname` directory. You should now have a `data/` directory in your `sp24-proj6-yourname` directory.
+Unzip the `data.zip` file inside your `sp23-proj6-yourname` directory. You should now have a `data/` directory in your `sp23-proj6-yourname` directory.
 
 Afterwards, try running `python3 load.py`. You should see output like the following:
 
@@ -168,11 +168,11 @@ If so, move on to the next section to start the project. If you see `ERROR`inste
 
 ## Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp24-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp23-proj6-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
 
 ### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 6 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 

@@ -4,10 +4,10 @@
 
 This project is worth 8% of your overall grade in the class.
 
-* Part 1 is due **Sunday, 03/24/2024 at 11:59PM PDT (GMT-7)** and will be worth 20% of your score. Your score will be determined by public tests only.
-* Part 2 is due **Wednesday, 04/10/2024 at 11:59PM PDT (GMT-7)** and will be worth the remaining 80% of your score. We'll be running the public tests for Part 2 and all hidden tests for both Part 1 and Part 2 on this submission.
+* Part 1 is due **Friday, 3/24/2023 at 11:59PM PDT (GMT-7)** and will be worth 20% of your score. Your score will be determined by public tests only.
+* Part 2 is due **Monday, 4/10/2023 at 11:59PM PDT (GMT-7)** and will be worth the remaining 80% of your score. We'll be running the public tests for Part 2 and all hidden tests for both Part 1 and Part 2 on this submission.
 
-The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same as the one you had for previous assignments. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/53125/discussion/4129301)!
+The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same as the one you had for previous assignments. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/33907/discussion/1699965)!
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Debugging walkthrough video for project 4 task 2 can be found [here](https://dri
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 4 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/). Once your private repo is set up clone the Project 4 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 4 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/). Once your private repo is set up clone the Project 4 skeleton code onto your local machine.
 
 ### Setting up your local development environment
 
@@ -31,11 +31,11 @@ Only one partner has to submit, but please make sure to add the other partner to
 
 ## Debugging Issues with GitHub Classroom
 
-Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp24-proj4-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
+Feel free to skip this section if you don't have any issues with GitHub Classroom. If you are having issues \(i.e. the page froze or some error message appeared\), first check if you have access to your repo at `https://github.com/cs186-student/sp23-proj4-username`, replacing `username` with your GitHub username. If you have access to your repo and the starter code is there, then you can proceed as usual. 
 
 #### 404 Not Found
 
-If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 4 release post on [Edstem](https://edstem.org/us/courses/53125/discussion/).
+If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 4 release post on [Edstem](https://edstem.org/us/courses/33907/discussion/).
 
 If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
 

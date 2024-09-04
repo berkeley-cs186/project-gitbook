@@ -13,7 +13,7 @@ This can help you catch any syntax errors in your SQLite.
 
 To help debug your logic, we've provided output from each of the views you need to define in questions 1-4 for the data set you've been given. Your views should match ours, but note that your SQL queries should work on ANY data set. **We will test your queries on a \(set of\) different database\(s\), so it is** _**NOT**_ **sufficient to simply return these results in all cases!** Please also note that queries that join on extra, unnecessary tables will slow down queries and not receive full credit on the hidden tests.
 
-To run the test, from within the `sp24-proj1-yourname` directory:
+To run the test, from within the `fa24-proj1-yourname` directory:
 
 ```text
 $ python3 test.py

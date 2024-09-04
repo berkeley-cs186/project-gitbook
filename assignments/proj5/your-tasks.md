@@ -1,6 +1,6 @@
 # Your Tasks
 
-In this project you will implement write-ahead logging and support for savepoints, rollbacks, and ACID compliant restart recovery. If you haven't already, we recommend reading through the [recovery notes](https://cs186berkeley.net/notes/note14/) and referencing them as needed while you work through this project. The tests for this project are all located in [`TestRecoveryManager.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java).
+In this project you will implement write-ahead logging and support for savepoints, rollbacks, and ACID compliant restart recovery. If you haven't already, we recommend reading through the [recovery notes](https://cs186berkeley.net/resources/static/notes/n14-Recovery.pdf) and referencing them as needed while you work through this project. The tests for this project are all located in [`TestRecoveryManager.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/test/java/edu/berkeley/cs186/database/recovery/TestRecoveryManager.java).
 
 ## Understanding the Skeleton Code
 
@@ -10,11 +10,11 @@ Recall that there are two distinct modes of operation: _forward processing_ wher
 
 Some files that will be useful to read through are:
 
-* [`RecoveryManager.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/RecoveryManager.java) provides an overview of each of the methods you'll be implementing and when they're called
-* [`TransactionTableEntry.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/TransactionTableEntry.java) represents an entry in our transaction table and tracks thing like the lastLSN and active savepoints.
-* [`LogManager.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogManager.java) contains the implementation for the log manager, which provides an interface for appending, fetching, and flushing logs
-* [`LogRecord.java`](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java) contains the super class for all of the different types of logs that we support. Every log has a type and an LSN. Certain subclasses of LogRecord optionally support extra methods.
-* The [`records/`](https://github.com/berkeley-cs186/sp24-rookiedb/tree/master/src/main/java/edu/berkeley/cs186/database/recovery/records) directory contains all the subclasses of LogRecord. It may seem a bit overwhelming at first but they'll be introduced as you progress through the project.
+* [`RecoveryManager.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/RecoveryManager.java) provides an overview of each of the methods you'll be implementing and when they're called
+* [`TransactionTableEntry.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/TransactionTableEntry.java) represents an entry in our transaction table and tracks thing like the lastLSN and active savepoints.
+* [`LogManager.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogManager.java) contains the implementation for the log manager, which provides an interface for appending, fetching, and flushing logs
+* [`LogRecord.java`](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/recovery/LogRecord.java) contains the super class for all of the different types of logs that we support. Every log has a type and an LSN. Certain subclasses of LogRecord optionally support extra methods.
+* The [`records/`](https://github.com/berkeley-cs186/sp23-rookiedb/tree/master/src/main/java/edu/berkeley/cs186/database/recovery/records) directory contains all the subclasses of LogRecord. It may seem a bit overwhelming at first but they'll be introduced as you progress through the project.
 
 #### Disk Space Manager
 
@@ -258,7 +258,7 @@ try {
 }
 ```
 
-The buffer manager always returns a pinned page which is why we use a try-finally block to ensure that the page is always unpinned once we're done using it. Note that we can use a dummy lock context here without worrying about isolation issues since no other operations can run at the same time as the redo phase. You may find [this method](https://github.com/berkeley-cs186/sp24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L164-L169) of the Page class useful here.
+The buffer manager always returns a pinned page which is why we use a try-finally block to ensure that the page is always unpinned once we're done using it. Note that we can use a dummy lock context here without worrying about isolation issues since no other operations can run at the same time as the redo phase. You may find [this method](https://github.com/berkeley-cs186/sp23-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/memory/Page.java#L164-L169) of the Page class useful here.
 
 Be sure to account for the case where `restartRedo` is called on an empty log!
 
