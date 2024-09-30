@@ -36,5 +36,5 @@ Feel free to skip this section if you don't have any issues with GitHub Classroo
 
 If you're getting a 404 not found page when trying to access your repo, make sure you've set up your repo using the GitHub Classroom link in the Project 2 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/).
 
-If you don't have access to your repo at all after following these steps, feel free to contact the course staff on Edstem.
+If you don't have access to your repo at all after following these steps, feel free to follow up on the Project 2 release post on Edstem.
 
