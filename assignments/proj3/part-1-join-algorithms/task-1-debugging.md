@@ -4,7 +4,7 @@ We put together some extra tests with detailed error outputs that should give yo
 
 ## Overview
 
-These tests are designed to give you visualizations that might hint as to where you're going wrong. **You should try to get the test cases working in order**, that is, start with the _1x1 PNLJ_ tests, followed by the _2x2 PNLJ_ tests, and then finally the _2x2 BNLJ_ tests. When you fail a test, it should give you a detailed description of why you failed. Here's some example output from failing `testPNLJ1x1Full`:
+These tests are designed to give you visualizations that might hint as to where you're going wrong. **You should try to get the test cases working in order**, that is, start with the 1x1 PNLJ tests, followed by the 2x2 PNLJ tests, and then finally the 2x2 BNLJ tests. When you fail a test it should give you a detailed description of why you failed. Here's some example output from failing `testPNLJ1x1Full`:
 
 ```
 edu.berkeley.cs186.database.query.QueryPlanException:
@@ -27,9 +27,9 @@ You either excluded or included records when you shouldn't have. Key:
  - a blank means we expected this record to be excluded and you excluded it
 ```
 
-In this example, we expect every single record in the left table to be joined with every single table in the right table. The question marks on the top row of the box tell you that you're missing 4 records. A likely reason for why this is the case is that your join logic exits too early, before the last left record is ever compared against the right records. The exact cause of this particular problem is stopping iteration as soon as `!this.leftRecordIterator.hasNext()`, before considering the last left record against any right records.
+In this example we expect every single record in the left table to be joined with every single table in the right table. The question marks on the top row of the box tell you that you're missing 4 records. A likely reason for why this is the case is that your join logic exits too early, before the last left record is ever compared against the right records. The exact cause of this particular problem is stopping iteration as soon as `!this.leftRecordIterator.hasNext()`, before considering the last left record against any right records.
 
-Here's a more complicated case that we see in office hours a lot in `testPNLJ2x2Full` :
+Here's a more complicated case that we see in office hours a lot in testPNLJ2x2Full :
 
 ```
 edu.berkeley.cs186.database.query.QueryPlanException:
@@ -57,7 +57,7 @@ the join when the mismatch occurred. Key:
  - A was the record that you actually yielded
 ```
 
-This example found a record returned in the wrong order. To help you debug, we give the position of where we expected the next record to be, and where it actually was. Can you spot the bug? We were expecting the first record on right page #2 to be compared with the first record in left page #1. It appears that leftRecord was still set to the last record on page #1. The mistake was that the leftRecord wasn't reset back to the first record in the left page. Many students will remember to call `leftIterator.reset()` but forget to do `leftRecord = leftIterator.next()` afterwards, causing this issue.
+This example found a record returned in the wrong order. To help you debug we give the position of where we expected the next record to be, and where it actually was. Can you spot the bug? We were expecting the first record on right page #2 to be compared with the first record in left page #1. It appears that leftRecord was still set to the last record on page #1. The mistake was that the leftRecord wasn't reset back to the first record in the left page. Many students will remember to call `leftIterator.reset()`, but forget to do `leftRecord = leftIterator.next()` afterwards, causing this issue.
 
 ## Animations
 

@@ -2,7 +2,7 @@
 
 ## Index out of bounds error while partitioning
 
-Hash codes can be negative. Make sure you handle that case. The hash codes can also be larger than the number of partitions, so make sure you handle that too. We recommend you look at [SHJOperator](https://github.com/berkeley-cs186/fa24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/join/SHJOperator.java#L73-L76)'s implementation to make sure you partition correctly with hash codes.
+Hash codes can be negative. Make sure you handle that case. The hash codes can also be larger than the number of partitions, so make sure you handle that too. We recommend you look at [SHJOperator'](https://github.com/berkeley-cs186/fa24-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/query/join/SHJOperator.java#L73-L76)s implementation to make sure you partition correctly with hash codes.
 
 ## Reached the max number of passes cap
 
@@ -16,5 +16,5 @@ Make sure every time you make a recursive call to run that you increment the pas
 
 ## AssertionError: Expected: 1674 Actual: 91
 
-Make sure when you recursively call `run` that you add all of the resulting records to your output. Additionally, make sure that whenever you call `buildAndProbe`, you also add those records to your output.
+Make sure when you recursively call run that you add all of the resulting records to your output. Additionally make sure that whenever you call buildAndProbe that you also add those records to your output.
 

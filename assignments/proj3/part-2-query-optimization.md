@@ -46,7 +46,7 @@ An estimated 603 I/Os, a very costly query! Our current naive query optimizer jo
 SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;
 ```
 
-Like before, let's inspect the query plan:
+Like before, let's inspect the query plan.
 
 ```sql
 EXPLAIN SELECT c.name, s.major, COUNT(*) FROM Students AS s INNER JOIN Enrollments AS e ON s.sid = e.sid INNER JOIN Courses AS c ON e.cid = c.cid WHERE c.name = 'CS 186' GROUP BY s.major, c.name;
@@ -100,7 +100,7 @@ where the single predicate cannot be evaluated until after `t1`, `t2`, _and_ `t3
 
 Your final task is to write the outermost driver method of the optimizer, `QueryPlan#execute`, which should utilize the two helper methods you have implemented to find the best query plan.
 
-You will need to add the remaining group by and projection operators that are a part of the query but have not yet been added to the query plan \(see the private helper methods implemented for you in the `QueryPlan` class\).
+You will need to add the remaining group by and projection operators that are a part of the query, but have not yet been added to the query plan \(see the private helper methods implemented for you in the `QueryPlan` class\).
 
 **Note:** The tables in `QueryPlan` are kept in the variable `tableNames`. 
 
