@@ -8,6 +8,14 @@ This project is due **Thursday, 9/12/2024 at 11:59PM PDT (GMT-7)**. It is worth 
 
 You should watch the SQL I lecture before beginning this project. Later questions will require material from the SQL II lecture.
 
+## Academic Integrity Policy
+
+“_As a member of the UC Berkeley community, I act with honesty, integrity, and respect for others._” — UC Berkeley Honor Code
+
+**Read through the academic integrity guidelines** [**here**](https://cs186berkeley.net/integrityguidelines/)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://conduct.berkeley.edu/wp-content/uploads/2024/01/Academic-Misconduct-Resource-Sheet-for-Students-UPDATED.pdf) and a grade penalty based on the severity of the infraction.
+
+As long as you follow the guidelines, there isn't anything to worry about here. While we do rely on software to find possible cases of academic dishonesty, every case is reviewed by multiple TAs who can filter out false positives.
+
 ## Fetching the released code
 
 The GitHub Classroom link for this project is in the Project 1 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/). Once your private repo is set up clone the project 1 skeleton code onto your local machine.

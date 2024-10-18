@@ -7,7 +7,7 @@ This project is worth 8% of your overall grade in the class.
 * Part 1 is due **Thursday, 10/10/2024 at 11:59PM PDT (GMT-7)** and will be worth 30% of your score. Your score will be determined by public tests only.
 * Part 2 is due **Thursday, 10/17/2024 at 11:59PM PDT (GMT-7)** and will be worth the remaining 70% of your score. We'll be running the public tests for Part 2 and all hidden tests for both Part 1 and Part 2 on this submission.
 
-The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same one as you had for Project 2. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/62108/discussion/)!
+The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Your partner does not have to be the same one as you had for Project 2. Feel free to search for a partner on [this Edstem thread](https://edstem.org/us/courses/62108/discussion/5189302)!
 
 ## Prerequisites
 
