@@ -4,21 +4,29 @@
 
 This project is due **Thursday, 12/5/2024 at 11:59PM PST (GMT-8)**. It is worth 5% of your overall grade in the class. 100% of your grade will come from the public tests released with the data set.
 
-Like Project 1 this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
+Like Project 1, this project **must be completed individually.** Note that while this means we expect you to write all your queries on your own, all of the following are **permitted** under our academic integrity guidelines:
 
 * Discussion of approaches for solving a problem.
 * Giving away or receiving conceptual ideas towards a problem solution.
 * Discussion of specific syntax issues and bugs in your code.
-* Looking at another student's code for the sole purpose of helping that student debug
+* Looking at another student's code for the sole purpose of helping that student debug.
 * Using small snippets of code that you find online for solving tiny problems \(e.g. Googling “number to string mongo” may lead you to some sample code that you copy and paste into your solution\). Such code should always be cited with relevant code comments.
 
 ## Prerequisites
 
-There are no hard prerequisites for this project. The spec will walk you through writing a query in Mongo's syntax. However, you may find watching the NoSQL lectures \(after they're released\) to help contextualize how Mongo differs from the traditional SQL databases we've been working with for the majority of this semester.
+There are no hard prerequisites for this project. The spec will walk you through writing a query in Mongo's syntax. However, you may find watching the NoSQL lectures \(after they're released\) helpful to help contextualize how Mongo differs from the traditional SQL databases we've been working with for the majority of this semester.
+
+## Academic Integrity Policy
+
+“_As a member of the UC Berkeley community, I act with honesty, integrity, and respect for others._” — UC Berkeley Honor Code
+
+**Read through the academic integrity guidelines** [**here**](https://cs186berkeley.net/integrityguidelines/)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://conduct.berkeley.edu/wp-content/uploads/2024/01/Academic-Misconduct-Resource-Sheet-for-Students-UPDATED.pdf) and a grade penalty based on the severity of the infraction.
+
+As long as you follow the guidelines, there isn't anything to worry about here. While we do rely on software to find possible cases of academic dishonesty, every case is reviewed by multiple TAs who can filter out false positives.
 
 ## Fetching the released code
 
-The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/). Once your private repo is set up clone the Project 6 skeleton code onto your local machine.
+The GitHub Classroom link for this project is in the Project 6 release post on [Edstem](https://edstem.org/us/courses/62108/discussion/). Once your private repo is set up, clone the Project 6 skeleton code onto your local machine.
 
 ## Required Software
 
@@ -120,7 +128,7 @@ You'll need a copy of Python 3.5 or higher to run the tests for this project loc
 
 ## Extract the data set
 
-Download the data set from the class drive [here](https://drive.google.com/file/d/1VIA9unz82zVSeHV2EiohAwO7vYiPY56i/view).
+Download the data set from the class drive [here](https://drive.google.com/file/d/18LE8OaZSXp1GHi29epdK7nu9Z5Sgx5n6/view?usp=drive_link).
 
 Unzip the `data.zip` file inside your `fa24-proj6-yourname` directory. You should now have a `data/` directory in your `fa24-proj6-yourname` directory.
 
