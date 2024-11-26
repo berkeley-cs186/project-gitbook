@@ -46,12 +46,19 @@ If you don't already have MongoDB on your machine, follow the instructions for y
 
 Follow the instructions [here](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/). For both of them, **download the 4.4 versions, not the 6.0**.
 
+Follow these instructions to install MongoDB and the MongoDB Database Tools on Windows:
+
+1. MongoDB [Tutorial](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition)
+   - You won't see an option for MongoDB 4.4; feel free to install any higher version other than 6.0. Please post on Ed if you have any issues running commands with your MongoDB version; we're looking to weed out versions that don't work!
+2. MongoDB Command Line Database Tools [Tutorial](https://www.mongodb.com/docs/database-tools/installation/installation-windows/)
+   - Please use the `msi` download [here](https://fastdl.mongodb.org/tools/db/mongodb-database-tools-windows-x86_64-100.10.0.msi) instead of the download link provided in the above tutorial. Specifically, you should go to the [MongoDB Download Center -> MongoDB Command Line Database Tools Download](https://www.mongodb.com/try/download/database-tools), select `Windows x86_64` as the _Platform_, and select `msi` as the _Package_.
+
 Once you have everything installed you'll want to locate the location of the mongo shell and mongoimport binaries. Confirm the location of the binaries at the following spots:
 
 * The mongo shell binary \(mongo.exe\) should be located at `C:\Program Files\MongoDB\Server\4.4\bin\`.
 * The mongoimport binary \(mongoimport.exe\) should be located at `C:\Program Files\MongoDB\Tools\100\bin\`. If you can't find it at that exact location, check other directories under `C:\Program Files\MongoDB\Tools\`. If your file has a long name like `windows-x86-64-bit-mongoimport.exe` then rename it to just `mongoimport.exe`
 
-Add the two directories to your PATH. To edit your environment variables on Windows 10, use the following steps:
+Add the two directories to your `PATH`. To edit your environment variables on Windows 10, use the following steps:
 
 1. Open up search and type in "Edit the system environment variables"
 2. Open that up and click "Environment Variables..." near the bottom
