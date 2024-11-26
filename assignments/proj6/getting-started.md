@@ -44,8 +44,6 @@ If you don't already have MongoDB on your machine, follow the instructions for y
 
 #### Windows
 
-Follow the instructions [here](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/) to install MongoDB on Windows. You'll also need to install Database Tools from [here](https://docs.mongodb.com/database-tools/installation/installation-windows/). For both of them, **download the 4.4 versions, not the 6.0**.
-
 Follow these instructions to install MongoDB and the MongoDB Database Tools on Windows:
 
 1. MongoDB [Tutorial](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition)
