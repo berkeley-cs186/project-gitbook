@@ -58,7 +58,7 @@ Navigate to`src/test/java/edu/berkeley/cs186/database/databox/TestWelcome.java` 
 In this course, a majority of the projects are written in Java and involve modifying a large codebase. Knowing how to effectively utilize the IntelliJ debugger will be important in identifying errors with your code. Let's cover the basics of using the IntelliJ debugger!
 
 {% hint style="info" %}
-As you follow along with the steps below, please submit your answers to this [Gradescope assignment](https://www.gradescope.com/courses/932632/assignments/5640412). You must complete this for full credit.
+As you follow along with the steps below, please submit your answers to this [Gradescope assignment](https://www.gradescope.com/courses/932632/assignments/5640417). You must complete this for full credit.
 {% endhint %}
 
 Let's start by navigating to src/test/java/.../index/TestBPlusNode.java.&#x20;
