@@ -1,6 +1,6 @@
 # Submitting the Assignment
 
-This project is due on **Thursday, 9/5/2024 at 11:59PM PDT (GMT-7)**.
+This project is due on **Wednesday, 1/1/2025 at 11:59PM PST (GMT-8)**.
 
 ## Pushing changes to GitHub Classroom
 
