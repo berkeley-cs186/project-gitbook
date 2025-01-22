@@ -2,7 +2,7 @@
 
 ## Logistics
 
-This assignment is due **Wednesday, 1/1/2025 at 11:59PM PST (GMT-8)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
+This assignment is due **Thursday, 1/30/2025 at 11:59PM PST (GMT-8)**. It is worth 0% of your overall grade, but failure to complete it may result in being **administratively dropped from the class**.
 
 ## Prerequisites
 
