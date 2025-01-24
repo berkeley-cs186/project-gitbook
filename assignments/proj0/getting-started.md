@@ -42,7 +42,7 @@ You are free to use any text editor or IDE to complete the assignments, but **we
 
 We recommend setting up a local development environment by installing Java 11 locally (the version our Docker container runs) and using an IDE such as IntelliJ. (*Please make sure you have at least Intellij 2019 version, some of the issues from previous semesters are from a too old Intellij*)
 
-[Java 11 downloads](https://www.oracle.com/java/technologies/downloads/#java11) (or alternatively, you're free to use [OpenJDK](https://openjdk.java.net/install/))
+[Java 11 downloads](https://www.oracle.com/java/technologies/downloads/#java11) (or alternatively, you're free to use [OpenJDK](https://openjdk.java.net/install/)). You may find a local version of JDK version 11.0.23 [here](https://drive.google.com/file/d/1DZIXu-3u-A6Duo_nisQC2Z5OZToBbh6I/view?usp=drive_link).
 
 To import the project into IntelliJ, click `Open`, and select the `pom.xml` file when importing. `pom.xml` is what stores the configuration and dependencies you need for the project. Once it is scanned, Maven will use the information in it to build the project for you!
 
