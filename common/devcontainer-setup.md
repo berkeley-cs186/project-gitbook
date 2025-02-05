@@ -32,19 +32,19 @@ Install your preferred IDE. Note that course staff will only support IntelliJ ID
 
 IntelliJ is currently configured to use the [EAP](https://www.jetbrains.com/idea/nextversion/) (early access) version of its IDE to connect to the container by default. The EAP version is the beta version of the IDE that is both less stable and on a license which expires after 30-45 days. To disable this, go to `Settings > Advanced Settings` and uncheck the box "Always use the latest backend" (see [here](https://youtrack.jetbrains.com/articles/SUPPORT-A-551) for the article).
 
-![Screenshot - Uncheck "Always use the latest backend.".png](../images/dc-0.png)
+![Screenshot - Uncheck "Always use the latest backend.".png](<../.gitbook/assets/dc-0.png>)
 
 Start the IDE and navigate to "Dev Containers":
 
-![Screenshot - Select Dev Containers](../images/dc-1.png)
+![Screenshot - Select Dev Containers](<../.gitbook/assets/dc-1.png>)
 
 Create a "New Dev Container":
 
-![Screenshot - Select New Dev Container](../images/dc-2.png)
+![Screenshot - Select New Dev Container](<../.gitbook/assets/dc-2.png>)
 
 Use the HTTPS address of the rookiedb repository for the relevant project. For example, a student with GitHub username `oski` working on Project 0 would use the repository address `https://github.com/cs186-student/sp25-proj0-oski.git`:
 
-![Screenshot - Add Repository and Branch information](../images/dc-6.png)
+![Screenshot - Add Repository and Branch information](<../.gitbook/assets/dc-6.png>)
 
 Click "Build Container and Continue" and wait for Docker to download and build the image (this will take a few minutes).
 
@@ -60,7 +60,7 @@ If you're creating a dev container using the SSH URL instead of the HTTPS URL, y
 
 ## Visual Studio Code (VS Code) (local)
 
-Select ![Remote Explorer](../images/dc-4.png) and click the ![plus icon](../images/dc-5.png) to create a new dev container.
+Select ![Remote Explorer](<../.gitbook/assets/dc-4.png>) and click the ![plus icon](<../.gitbook/assets/dc-5.png>) to create a new dev container.
 
 Then select `Clone Repository in Container Volume` and follow prompts to clone the repository into the container.
 
@@ -70,7 +70,7 @@ A [GitHub Codespace](https://github.com/features/codespaces) runs the build cont
 
 Either open VS Code or the web-based editor for the repository, `https://github.dev/cs186-student/sp25-projX-username`, by navigating through `github.dev` instead of `github.com`.
 
-Select ![Remote Explorer](../images/dc-4.png) and click on "Create Codespace."
+Select ![Remote Explorer](<../.gitbook/assets/dc-4.png>) and click on "Create Codespace."
 
 Please consult the documentation for latest pricing information. GitHub currently provides 120 core-hours (60 hours in the least-capable image) per month to all users for free. If you elect to run in this or another remote configuration, course staff may be unable to provide support.
 
