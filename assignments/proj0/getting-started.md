@@ -52,7 +52,7 @@ If launching IntelliJ takes you to an existing workspace instead of showing you 
 
 If you previously had used other versions of Java to build the project, you can change to Java 11 by `File -> Project Structure... -> Change Project SDK to the one you want to use`.
 
-### Alternate development environment setup
+### Alternate development environment setup 
 
 If the above setup instructions don't work, most often due to unresolvable Maven or JDK issues, you may use a development container; see [here](../../common/devcontainer-setup.md) for instructions. Note that this option is only for students whose devices are incompatible with the above setup instructions.
 
