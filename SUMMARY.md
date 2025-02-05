@@ -23,6 +23,7 @@
 ## Common
 
 * [Adding a partner on GitHub](common/adding-a-partner-on-github.md)
+* [Development Container Setup](common/devcontainer-setup.md)
 * [Miscellaneous](common/misc/README.md)
   * [Nested Loop Join Animations](common/misc/nested-loop-join-animations.md)
 
