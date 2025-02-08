@@ -6,7 +6,7 @@ This project is due **Thursday, 2/20/2025 at 11:59PM PST (GMT-8)**. It is worth 
 
 ## Prerequisites
 
-You should watch the B+ Trees lectures before working on this project.
+The disks, buffers, and files lecture covers reading from / writing to disks, the B+ tree lectures cover B+ tree operations.
 
 ## Academic Integrity Policy
 
@@ -15,7 +15,7 @@ You should watch the B+ Trees lectures before working on this project.
 **Read through the academic integrity guidelines** [**here**](https://cs186berkeley.net/integrityguidelines/)**.** We will be running plagiarism detection software on every submission against our own database of this semester's submissions, past submissions, and publicly hosted implementations on platforms such as GitHub and GitLab, followed by a thorough manual review process. Plagiarism on any assignment will result in a [non-reportable warning](https://conduct.berkeley.edu/wp-content/uploads/2024/01/Academic-Misconduct-Resource-Sheet-for-Students-UPDATED.pdf) and a grade penalty based on the severity of the infraction.
 
 As long as you follow the guidelines, there isn't anything to worry about here. While we do rely on software to find possible cases of academic dishonesty, every case is reviewed by multiple TAs who can filter out false positives.
-eq
+
 ## Fetching the released code
 
 The GitHub Classroom link for this project is in the Project 2 release post on [Edstem](https://edstem.org/us/courses/70276/discussion/). You'll be working off a fresh copy of the RookieDB skeleton instead of reusing the one from Project 0.
