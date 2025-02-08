@@ -4,6 +4,8 @@
 
 This project is due **Thursday, 2/6/2025 at 11:59PM PST (GMT-8)**. It is worth 5% of your overall grade in the class.
 
+**A gentle reminder that though our projects have tight release schedules, projects don't tend to take the entire time given to complete them :)**
+
 ## Prerequisites
 
 You should watch the SQL I lecture before beginning this project. Later questions will require material from the SQL II lecture.

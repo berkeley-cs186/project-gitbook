@@ -4,6 +4,8 @@
 
 This project is due **Thursday, 2/20/2025 at 11:59PM PST (GMT-8)**. It is worth 6% of your overall grade in the class. The workload for the project is designed to be completed solo, but this semester we're allowing students to work on this project with a partner if you want to. Feel free to search for a partner [here](https://edstem.org/us/courses/70276/discussion/5999429)!
 
+**A gentle reminder that though our projects have tight release schedules, projects don't tend to take the entire time given to complete them :)**
+
 ## Prerequisites
 
 The disks, buffers, and files lecture covers reading from / writing to disks, the B+ tree lectures cover B+ tree operations.
