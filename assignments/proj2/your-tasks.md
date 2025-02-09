@@ -66,13 +66,21 @@ Here's a diagram that shows the structure of the project with color-coded compon
 
 ## Your Tasks
 
+Based on student feedback from previous semesters, we estimate that this project will take approximately 15-20 hours to complete. We have also included a star-based difficulty ranking per task, relative to the rest of the project, as a guide for pacing your work.
+
+_Please note that every student works at a different pace, and it's absolutely ok to spend more or less time on the project than the provided estimates!_
+
 ### Task 1: `LeafNode::fromBytes`
+
+_Difficulty: ★☆☆☆☆_
 
 You should first implement the `fromBytes` in `LeafNode`. This method reads a `LeafNode` from a page. For information on how a leaf node is serialized, see `LeafNode::toBytes`. For an example on how to read a node from disk, see `InnerNode::fromBytes`. Your code should be similar to the inner node version but should account for the differences between how inner nodes and leaf nodes are serialized. You may find the documentation in [`ByteBuffer.java`](https://github.com/berkeley-cs186/sp25-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/common/ByteBuffer.java#L5) helpful.
 
 Once you have implemented `fromBytes` you should be passing `TestLeafNode::testToAndFromBytes`.
 
 ### Task 2: `get`, `getLeftmostLeaf`, `put`, `remove`
+
+_Difficulty: ★★★★★_
 
 After implementing `fromBytes`, you will need to implement the following methods in `LeafNode`, `InnerNode`, and `BPlusTree`:
 
@@ -89,6 +97,8 @@ We've provided a `sync()` method in `LeafNode` and `InnerNode`. The purpose of `
 
 ### Task 3: Scans
 
+_Difficulty: ★★☆☆☆_
+
 You will need to implement the following methods in `BPlusTree`:
 
 * `scanAll`
@@ -101,6 +111,8 @@ After completing this task, you should be passing `TestBPlusTree::testRandomPuts
 Your implementation **does not** have to account for the tree being modified during a scan. For the time being you can think of this as there being a lock that prevents scanning and mutation from overlapping, and that the behavior of iterators created before a modification is undefined (you can handle any problems with these iterators however you like, or not at all).
 
 ### Task 4: Bulk Load
+
+_Difficulty: ★★★☆☆_
 
 Much like the methods from the Task 2 you'll need to implement `bulkLoad` within all three of `LeafNode`, `InnerNode`, and `BPlusTree`. Since bulk loading is a mutating operation you will need to call `sync()`. Be sure to read the instructions in [`BPluNode::bulkLoad`](https://github.com/berkeley-cs186/sp25-rookiedb/blob/master/src/main/java/edu/berkeley/cs186/database/index/BPlusNode.java#L162) carefully to ensure you split your nodes properly. We've provided a visualization of bulk loading for an order 2 tree with fill factor 0.75 ([powerpoint slides here](https://docs.google.com/presentation/d/1\_ghdp60NV6XRHnutFAL20k2no6tr2PosXGokYtR8WwU/edit?usp=sharing)):
 

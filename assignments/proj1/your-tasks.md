@@ -105,7 +105,13 @@ More details on testing can be found in the [Testing](testing.md) section.
 
 ## Your Tasks
 
+Based on student feedback from previous semesters, we estimate that this project will take approximately 5-10 hours to complete. We have also included a star-based difficulty ranking per task, relative to the rest of the project, as a guide for pacing your work.
+
+_Please note that every student works at a different pace, and it's absolutely ok to spend more or less time on the project than the provided estimates!_
+
 ### Task 1: **Basics**
+
+_Difficulty: ★☆☆☆☆_
 
 **i.** In the `people` table, find the `namefirst`, `namelast` and `birthyear` for all players with weight greater than 300 pounds.
 
@@ -119,6 +125,8 @@ Note: Some birth years have no players; your answer can simply skip those years.
 
 ### Task 2: **Hall of Fame Schools**
 
+_Difficulty: ★★☆☆☆_
+
 **i.** Find the `namefirst`, `namelast`, `playerid` and `yearid` of all people who were successfully inducted into the Hall of Fame in _descending_ order of `yearid`. Break ties on `yearid` by `playerid` (ascending).
 
 **ii.** Find the people who were successfully inducted into the Hall of Fame and played in college at a school located in the state of California. For each person, return their `namefirst`, `namelast`, `playerid`, `schoolid`, and `yearid` in _descending_ order of `yearid`. Break ties on `yearid` by `schoolid, playerid` (ascending). For this question, `yearid` refers to the year of induction into the Hall of Fame.
@@ -128,6 +136,8 @@ Note: Some birth years have no players; your answer can simply skip those years.
 **iii.** Find the `playerid`, `namefirst`, `namelast` and `schoolid` of all people who were successfully inducted into the Hall of Fame -- whether or not they played in college. Return people in _descending_ order of `playerid`. Break ties on `playerid` by `schoolid` (ascending). (Note: `schoolid` should be `NULL` if they did not play in college.)
 
 ### Task 3: [**SaberMetrics**](https://en.wikipedia.org/wiki/Sabermetrics)
+
+_Difficulty: ★★★★☆_
 
 **i.** Find the `playerid`, `namefirst`, `namelast`, `yearid` and single-year `slg` (Slugging Percentage) of the players with the 10 best annual Slugging Percentage recorded over all time. A player can appear multiple times in the output. For example, if Babe Ruth’s `slg` in 2000 and 2001 both landed in the top 10 best annual Slugging Percentage of all time, then we should include Babe Ruth twice in the output. For statistical significance, only include players with more than 50 at-bats in the season. Order the results by `slg` descending, and break ties by `yearid, playerid` (ascending).
 
@@ -158,6 +168,8 @@ _Also just for fun_: SF Giants VP of Baseball Operations, [Yeshayah Goldfarb](ht
 (Please do not include your "just for fun" answers in your solution file! They will break the autograder.)
 
 ### Task 4: **Salaries**
+
+_Difficulty: ★★★★★_
 
 **i.** Find the `yearid`, min, max and average of all player salaries for each year recorded, ordered by `yearid` in _ascending_ order.
 
