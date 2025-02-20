@@ -97,7 +97,7 @@ We've provided a `sync()` method in `LeafNode` and `InnerNode`. The purpose of `
 
 ### Task 3: Scans
 
-_Difficulty: ★★☆☆☆_
+_Difficulty: ★★★☆☆_
 
 You will need to implement the following methods in `BPlusTree`:
 
