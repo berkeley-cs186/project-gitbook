@@ -19,5 +19,14 @@ public void testEverythingDeleted() {
 }
 ```
 
+To test that your implementation throws a specific exception, you may use the following decorator:
+
+```java
+@Test(expected = BPlusTreeException.class)
+public void testSomething() {
+    // your test code here
+}
+```
+
 Many test classes have some setup code done for you already: take a look at other tests in the file for an idea of how to write the test code.
 
