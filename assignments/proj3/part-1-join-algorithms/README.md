@@ -97,9 +97,10 @@ Now that you have a working external sort, you can now implement Sort Merge Join
 
 For simplicity, your implementation of SMJ should _not_ utilize the optimization discussed in lecture in any case \(where the final merge pass of sorting happens at the same time as the join\). Therefore, you should use `SortOperator` to sort during the sort phase of SMJ.
 
-You will need to implement the `SortMergeIterator` inner class of `SortMergeOperator`.
+You will need to implement `fetchNextRecord()` in the `SortMergeIterator` inner class of `SortMergeOperator`.
 
-Your implementation in `SortMergeOperator` and your implementation of `SortOperator` may be tested independently. You **must not** use any method of `SortOperator` in `SortMergeOperator`, aside from the public methods given in the skeleton \(in other words: don't add a new public method to `SortOperator` and call it from `SortMergeOperator`\).
+Your implementation of `SortMergeOperator` and your implementation of `SortOperator` may be tested independently. Remember that you may **not** add a new public method to `SortOperator` and call it from `SortMergeOperator`.
+<!-- You **must not** use any method of `SortOperator` in `SortMergeOperator`, aside from the public methods given in the skeleton \(in other words: don't add a new public method to `SortOperator` and call it from `SortMergeOperator`\). -->
 
 Once you have implemented `SortMergeIterator`, all the tests in `TestSortMergeJoin` should pass.
 
