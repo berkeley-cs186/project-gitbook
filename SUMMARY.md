@@ -29,6 +29,12 @@
   * [Testing](assignments/proj3/testing.md)
   * [Submitting the Assignment](assignments/proj3/submitting-the-assignment.md)
 * [Project 4: Concurrency](assignments/proj4/README.md)
+  * [Getting Started](assignments/proj4/getting-started.md)
+  * [Part 0: Skeleton Code](assignments/proj4/skeleton-code.md)
+  * [Part 1: Queuing](assignments/proj4/part-1-lockmanager.md)
+  * [Part 2: Multigranularity](assignments/proj4/part-2-lockcontext-and-lockutil.md)
+  * [Testing](assignments/proj4/testing.md)
+  * [Submitting the Assignment](assignments/proj4/submitting-the-assignment.md)
 * [Project 5: Recovery](assignments/proj5/README.md)
 * [Project 6: NoSQL](assignments/proj6/README.md)
 
