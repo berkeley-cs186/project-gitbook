@@ -172,6 +172,8 @@ In addition to the three phases of recovery, the `restart` method does two thing
 * between the redo and undo phases, any page in the dirty page table that isn't actually dirty (has changes in-memory that have not been flushed) should be removed from the dirty page table. These pages may be present in the DPT as a result of the analysis phase, if we are uncertain about whether a change has been flushed to disk successfully or not.
 * after the undo phase, recovery has finished. To avoid having to abort all the transactions again should we crash, we take a checkpoint.
 
+After completing this task `testSimpleCheckpoint` and `testFullCheckpoint` should be passing.
+
 ### Task 5: Analysis
 
 _Difficulty: ★★★★★_
@@ -248,7 +250,7 @@ The transaction table at this point should have transactions that are in one of 
 * All transactions in the `RUNNING` state should be moved into the `RECOVERY_ABORTING` state, and an abort transaction record should be written.
 * Nothing needs to be done for transactions in the `RECOVERY_ABORTING` state.
 
-After completing this task you should be passing `testRestartAnalysis` and `testAnalysisCheckpoints`.
+After completing this task you should be passing `testRestartAnalysis`, `testAnalysisCheckpoints`, and `testAnalysisFuzzyCheckpointStatus`.
 
 ### Task 6: Redo
 
