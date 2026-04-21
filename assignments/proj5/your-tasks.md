@@ -159,6 +159,8 @@ the corresponding call is:
 EndCheckpoint.fitsInOneRecord(3, 2); // # of dpt entries, # of txnTable entries
 ```
 
+After completing this task `testSimpleCheckpoint` and `testFullCheckpoint` should be passing.
+
 ## Restart Recovery
 
 ![](<../../.gitbook/assets/proj5-db-off-the-cliff (3) (4) (1) (2) (4).png>)
@@ -171,8 +173,6 @@ In addition to the three phases of recovery, the `restart` method does two thing
 
 * between the redo and undo phases, any page in the dirty page table that isn't actually dirty (has changes in-memory that have not been flushed) should be removed from the dirty page table. These pages may be present in the DPT as a result of the analysis phase, if we are uncertain about whether a change has been flushed to disk successfully or not.
 * after the undo phase, recovery has finished. To avoid having to abort all the transactions again should we crash, we take a checkpoint.
-
-After completing this task `testSimpleCheckpoint` and `testFullCheckpoint` should be passing.
 
 ### Task 5: Analysis
 
